@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    Seán O&#39;Doherty
+        |
+        Homework 1
+      
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.113.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Seán O&#39;Doherty" />
+  <meta
+    name="description"
+    content="E628 Portfolio Website"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.1147aa5bacb4bce677a0e264073829caedb82fd18ea07a5f1d80521f539d1c45.css"
+      integrity="sha256-EUeqW6y0vOZ3oOJkBzgpyu24L9GOoHpfHYBSH1OdHEU="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://seanodoherty-portfolio-website.netlify.app/english/post/homework1_seanodoherty/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanodoherty-portfolio-website.netlify.app/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Homework 1"/>
+<meta name="twitter:description" content="Data Manipulation Problem 1: Use logical operators to find flights that: - Had an arrival delay of two or more hours (\&gt; 120 minutes) - Flew to Houston (IAH or HOU) - Were operated by United (`UA`), American (`AA`), or Delta (`DL`) - Departed in summer (July, August, and September) - Arrived more than two hours late, but didn&#39;t leave late - Were delayed by at least an hour, but made up over 30 minutes in flight # Had an arrival delay of two or more hours (&gt; 120 minutes) flights %&gt;% filter(arr_delay &gt; 120) ## # A tibble: 10,034 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 1 1 811 630 101 1047 830 ## 2 2013 1 1 848 1835 853 1001 1950 ## 3 2013 1 1 957 733 144 1056 853 ## 4 2013 1 1 1114 900 134 1447 1222 ## 5 2013 1 1 1505 1310 115 1638 1431 ## 6 2013 1 1 1525 1340 105 1831 1626 ## 7 2013 1 1 1549 1445 64 1912 1656 ## 8 2013 1 1 1558 1359 119 1718 1515 ## 9 2013 1 1 1732 1630 62 2028 1825 ## 10 2013 1 1 1803 1620 103 2008 1750 ## # ℹ 10,024 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; # Flew to Houston (IAH or HOU) flights %&gt;% filter(dest %in% c(&#34;IAH&#34;, &#34;Hou&#34;)) ## # A tibble: 7,198 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 1 1 517 515 2 830 819 ## 2 2013 1 1 533 529 4 850 830 ## 3 2013 1 1 623 627 -4 933 932 ## 4 2013 1 1 728 732 -4 1041 1038 ## 5 2013 1 1 739 739 0 1104 1038 ## 6 2013 1 1 908 908 0 1228 1219 ## 7 2013 1 1 1028 1026 2 1350 1339 ## 8 2013 1 1 1044 1045 -1 1352 1351 ## 9 2013 1 1 1114 900 134 1447 1222 ## 10 2013 1 1 1205 1200 5 1503 1505 ## # ℹ 7,188 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; # Were operated by United (`UA`), American (`AA`), or Delta (`DL`) flights %&gt;% filter(carrier %in% c(&#34;UA&#34;, &#34;AA&#34;, &#34;DL&#34;)) ## # A tibble: 139,504 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 1 1 517 515 2 830 819 ## 2 2013 1 1 533 529 4 850 830 ## 3 2013 1 1 542 540 2 923 850 ## 4 2013 1 1 554 600 -6 812 837 ## 5 2013 1 1 554 558 -4 740 728 ## 6 2013 1 1 558 600 -2 753 745 ## 7 2013 1 1 558 600 -2 924 917 ## 8 2013 1 1 558 600 -2 923 937 ## 9 2013 1 1 559 600 -1 941 910 ## 10 2013 1 1 559 600 -1 854 902 ## # ℹ 139,494 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; # Departed in summer (July, August, and September) flights %&gt;% filter(month %in% c(7, 8, 9)) ## # A tibble: 86,326 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 7 1 1 2029 212 236 2359 ## 2 2013 7 1 2 2359 3 344 344 ## 3 2013 7 1 29 2245 104 151 1 ## 4 2013 7 1 43 2130 193 322 14 ## 5 2013 7 1 44 2150 174 300 100 ## 6 2013 7 1 46 2051 235 304 2358 ## 7 2013 7 1 48 2001 287 308 2305 ## 8 2013 7 1 58 2155 183 335 43 ## 9 2013 7 1 100 2146 194 327 30 ## 10 2013 7 1 100 2245 135 337 135 ## # ℹ 86,316 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; # Arrived more than two hours late, but didn&#39;t leave late flights %&gt;% filter(arr_delay &gt; 120, dep_delay &lt;= 0) ## # A tibble: 29 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 1 27 1419 1420 -1 1754 1550 ## 2 2013 10 7 1350 1350 0 1736 1526 ## 3 2013 10 7 1357 1359 -2 1858 1654 ## 4 2013 10 16 657 700 -3 1258 1056 ## 5 2013 11 1 658 700 -2 1329 1015 ## 6 2013 3 18 1844 1847 -3 39 2219 ## 7 2013 4 17 1635 1640 -5 2049 1845 ## 8 2013 4 18 558 600 -2 1149 850 ## 9 2013 4 18 655 700 -5 1213 950 ## 10 2013 5 22 1827 1830 -3 2217 2010 ## # ℹ 19 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; # Were delayed by at least an hour, but made up over 30 minutes in flight flights %&gt;% filter(dep_delay &gt;= 60, dep_delay - arr_delay &gt; 30) ## # A tibble: 1,844 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 1 1 2205 1720 285 46 2040 ## 2 2013 1 1 2326 2130 116 131 18 ## 3 2013 1 3 1503 1221 162 1803 1555 ## 4 2013 1 3 1839 1700 99 2056 1950 ## 5 2013 1 3 1850 1745 65 2148 2120 ## 6 2013 1 3 1941 1759 102 2246 2139 ## 7 2013 1 3 1950 1845 65 2228 2227 ## 8 2013 1 3 2015 1915 60 2135 2111 ## 9 2013 1 3 2257 2000 177 45 2224 ## 10 2013 1 4 1917 1700 137 2135 1950 ## # ℹ 1,834 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; Problem 2: What months had the highest and lowest proportion of cancelled flights?"/>
+
+
+
+  
+  <meta property="og:title" content="Homework 1" />
+<meta property="og:description" content="Data Manipulation Problem 1: Use logical operators to find flights that: - Had an arrival delay of two or more hours (\&gt; 120 minutes) - Flew to Houston (IAH or HOU) - Were operated by United (`UA`), American (`AA`), or Delta (`DL`) - Departed in summer (July, August, and September) - Arrived more than two hours late, but didn&#39;t leave late - Were delayed by at least an hour, but made up over 30 minutes in flight # Had an arrival delay of two or more hours (&gt; 120 minutes) flights %&gt;% filter(arr_delay &gt; 120) ## # A tibble: 10,034 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 1 1 811 630 101 1047 830 ## 2 2013 1 1 848 1835 853 1001 1950 ## 3 2013 1 1 957 733 144 1056 853 ## 4 2013 1 1 1114 900 134 1447 1222 ## 5 2013 1 1 1505 1310 115 1638 1431 ## 6 2013 1 1 1525 1340 105 1831 1626 ## 7 2013 1 1 1549 1445 64 1912 1656 ## 8 2013 1 1 1558 1359 119 1718 1515 ## 9 2013 1 1 1732 1630 62 2028 1825 ## 10 2013 1 1 1803 1620 103 2008 1750 ## # ℹ 10,024 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; # Flew to Houston (IAH or HOU) flights %&gt;% filter(dest %in% c(&#34;IAH&#34;, &#34;Hou&#34;)) ## # A tibble: 7,198 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 1 1 517 515 2 830 819 ## 2 2013 1 1 533 529 4 850 830 ## 3 2013 1 1 623 627 -4 933 932 ## 4 2013 1 1 728 732 -4 1041 1038 ## 5 2013 1 1 739 739 0 1104 1038 ## 6 2013 1 1 908 908 0 1228 1219 ## 7 2013 1 1 1028 1026 2 1350 1339 ## 8 2013 1 1 1044 1045 -1 1352 1351 ## 9 2013 1 1 1114 900 134 1447 1222 ## 10 2013 1 1 1205 1200 5 1503 1505 ## # ℹ 7,188 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; # Were operated by United (`UA`), American (`AA`), or Delta (`DL`) flights %&gt;% filter(carrier %in% c(&#34;UA&#34;, &#34;AA&#34;, &#34;DL&#34;)) ## # A tibble: 139,504 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 1 1 517 515 2 830 819 ## 2 2013 1 1 533 529 4 850 830 ## 3 2013 1 1 542 540 2 923 850 ## 4 2013 1 1 554 600 -6 812 837 ## 5 2013 1 1 554 558 -4 740 728 ## 6 2013 1 1 558 600 -2 753 745 ## 7 2013 1 1 558 600 -2 924 917 ## 8 2013 1 1 558 600 -2 923 937 ## 9 2013 1 1 559 600 -1 941 910 ## 10 2013 1 1 559 600 -1 854 902 ## # ℹ 139,494 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; # Departed in summer (July, August, and September) flights %&gt;% filter(month %in% c(7, 8, 9)) ## # A tibble: 86,326 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 7 1 1 2029 212 236 2359 ## 2 2013 7 1 2 2359 3 344 344 ## 3 2013 7 1 29 2245 104 151 1 ## 4 2013 7 1 43 2130 193 322 14 ## 5 2013 7 1 44 2150 174 300 100 ## 6 2013 7 1 46 2051 235 304 2358 ## 7 2013 7 1 48 2001 287 308 2305 ## 8 2013 7 1 58 2155 183 335 43 ## 9 2013 7 1 100 2146 194 327 30 ## 10 2013 7 1 100 2245 135 337 135 ## # ℹ 86,316 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; # Arrived more than two hours late, but didn&#39;t leave late flights %&gt;% filter(arr_delay &gt; 120, dep_delay &lt;= 0) ## # A tibble: 29 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 1 27 1419 1420 -1 1754 1550 ## 2 2013 10 7 1350 1350 0 1736 1526 ## 3 2013 10 7 1357 1359 -2 1858 1654 ## 4 2013 10 16 657 700 -3 1258 1056 ## 5 2013 11 1 658 700 -2 1329 1015 ## 6 2013 3 18 1844 1847 -3 39 2219 ## 7 2013 4 17 1635 1640 -5 2049 1845 ## 8 2013 4 18 558 600 -2 1149 850 ## 9 2013 4 18 655 700 -5 1213 950 ## 10 2013 5 22 1827 1830 -3 2217 2010 ## # ℹ 19 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; # Were delayed by at least an hour, but made up over 30 minutes in flight flights %&gt;% filter(dep_delay &gt;= 60, dep_delay - arr_delay &gt; 30) ## # A tibble: 1,844 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; ## 1 2013 1 1 2205 1720 285 46 2040 ## 2 2013 1 1 2326 2130 116 131 18 ## 3 2013 1 3 1503 1221 162 1803 1555 ## 4 2013 1 3 1839 1700 99 2056 1950 ## 5 2013 1 3 1850 1745 65 2148 2120 ## 6 2013 1 3 1941 1759 102 2246 2139 ## 7 2013 1 3 1950 1845 65 2228 2227 ## 8 2013 1 3 2015 1915 60 2135 2111 ## 9 2013 1 3 2257 2000 177 45 2224 ## 10 2013 1 4 1917 1700 137 2135 1950 ## # ℹ 1,834 more rows ## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, ## # tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, ## # hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt; Problem 2: What months had the highest and lowest proportion of cancelled flights?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seanodoherty-portfolio-website.netlify.app/english/post/homework1_seanodoherty/" /><meta property="og:image" content="https://seanodoherty-portfolio-website.netlify.app/images/site-feature-image.png"/><meta property="article:section" content="english" />
+<meta property="article:published_time" content="2023-05-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-14T00:00:00+00:00" /><meta property="og:site_name" content="Seán O&#39;Doherty - Portfolio Website" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "english",
+        "name": "Homework 1",
+        "headline": "Homework 1",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Data Manipulation Problem 1: Use logical operators to find flights that: - Had an arrival delay of two or more hours (\\\u0026gt; 120 minutes) - Flew to Houston (IAH or HOU) - Were operated by United (`UA`), American (`AA`), or Delta (`DL`) - Departed in summer (July, August, and September) - Arrived more than two hours late, but didn\u0026#39;t leave late - Were delayed by at least an hour, but made up over 30 minutes in flight # Had an arrival delay of two or more hours (\u0026gt; 120 minutes) flights %\u0026gt;% filter(arr_delay \u0026gt; 120) ## # A tibble: 10,034 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;dbl\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; ## 1 2013 1 1 811 630 101 1047 830 ## 2 2013 1 1 848 1835 853 1001 1950 ## 3 2013 1 1 957 733 144 1056 853 ## 4 2013 1 1 1114 900 134 1447 1222 ## 5 2013 1 1 1505 1310 115 1638 1431 ## 6 2013 1 1 1525 1340 105 1831 1626 ## 7 2013 1 1 1549 1445 64 1912 1656 ## 8 2013 1 1 1558 1359 119 1718 1515 ## 9 2013 1 1 1732 1630 62 2028 1825 ## 10 2013 1 1 1803 1620 103 2008 1750 ## # ℹ 10,024 more rows ## # ℹ 11 more variables: arr_delay \u0026lt;dbl\u0026gt;, carrier \u0026lt;chr\u0026gt;, flight \u0026lt;int\u0026gt;, ## # tailnum \u0026lt;chr\u0026gt;, origin \u0026lt;chr\u0026gt;, dest \u0026lt;chr\u0026gt;, air_time \u0026lt;dbl\u0026gt;, distance \u0026lt;dbl\u0026gt;, ## # hour \u0026lt;dbl\u0026gt;, minute \u0026lt;dbl\u0026gt;, time_hour \u0026lt;dttm\u0026gt; # Flew to Houston (IAH or HOU) flights %\u0026gt;% filter(dest %in% c(\u0026#34;IAH\u0026#34;, \u0026#34;Hou\u0026#34;)) ## # A tibble: 7,198 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;dbl\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; ## 1 2013 1 1 517 515 2 830 819 ## 2 2013 1 1 533 529 4 850 830 ## 3 2013 1 1 623 627 -4 933 932 ## 4 2013 1 1 728 732 -4 1041 1038 ## 5 2013 1 1 739 739 0 1104 1038 ## 6 2013 1 1 908 908 0 1228 1219 ## 7 2013 1 1 1028 1026 2 1350 1339 ## 8 2013 1 1 1044 1045 -1 1352 1351 ## 9 2013 1 1 1114 900 134 1447 1222 ## 10 2013 1 1 1205 1200 5 1503 1505 ## # ℹ 7,188 more rows ## # ℹ 11 more variables: arr_delay \u0026lt;dbl\u0026gt;, carrier \u0026lt;chr\u0026gt;, flight \u0026lt;int\u0026gt;, ## # tailnum \u0026lt;chr\u0026gt;, origin \u0026lt;chr\u0026gt;, dest \u0026lt;chr\u0026gt;, air_time \u0026lt;dbl\u0026gt;, distance \u0026lt;dbl\u0026gt;, ## # hour \u0026lt;dbl\u0026gt;, minute \u0026lt;dbl\u0026gt;, time_hour \u0026lt;dttm\u0026gt; # Were operated by United (`UA`), American (`AA`), or Delta (`DL`) flights %\u0026gt;% filter(carrier %in% c(\u0026#34;UA\u0026#34;, \u0026#34;AA\u0026#34;, \u0026#34;DL\u0026#34;)) ## # A tibble: 139,504 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;dbl\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; ## 1 2013 1 1 517 515 2 830 819 ## 2 2013 1 1 533 529 4 850 830 ## 3 2013 1 1 542 540 2 923 850 ## 4 2013 1 1 554 600 -6 812 837 ## 5 2013 1 1 554 558 -4 740 728 ## 6 2013 1 1 558 600 -2 753 745 ## 7 2013 1 1 558 600 -2 924 917 ## 8 2013 1 1 558 600 -2 923 937 ## 9 2013 1 1 559 600 -1 941 910 ## 10 2013 1 1 559 600 -1 854 902 ## # ℹ 139,494 more rows ## # ℹ 11 more variables: arr_delay \u0026lt;dbl\u0026gt;, carrier \u0026lt;chr\u0026gt;, flight \u0026lt;int\u0026gt;, ## # tailnum \u0026lt;chr\u0026gt;, origin \u0026lt;chr\u0026gt;, dest \u0026lt;chr\u0026gt;, air_time \u0026lt;dbl\u0026gt;, distance \u0026lt;dbl\u0026gt;, ## # hour \u0026lt;dbl\u0026gt;, minute \u0026lt;dbl\u0026gt;, time_hour \u0026lt;dttm\u0026gt; # Departed in summer (July, August, and September) flights %\u0026gt;% filter(month %in% c(7, 8, 9)) ## # A tibble: 86,326 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;dbl\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; ## 1 2013 7 1 1 2029 212 236 2359 ## 2 2013 7 1 2 2359 3 344 344 ## 3 2013 7 1 29 2245 104 151 1 ## 4 2013 7 1 43 2130 193 322 14 ## 5 2013 7 1 44 2150 174 300 100 ## 6 2013 7 1 46 2051 235 304 2358 ## 7 2013 7 1 48 2001 287 308 2305 ## 8 2013 7 1 58 2155 183 335 43 ## 9 2013 7 1 100 2146 194 327 30 ## 10 2013 7 1 100 2245 135 337 135 ## # ℹ 86,316 more rows ## # ℹ 11 more variables: arr_delay \u0026lt;dbl\u0026gt;, carrier \u0026lt;chr\u0026gt;, flight \u0026lt;int\u0026gt;, ## # tailnum \u0026lt;chr\u0026gt;, origin \u0026lt;chr\u0026gt;, dest \u0026lt;chr\u0026gt;, air_time \u0026lt;dbl\u0026gt;, distance \u0026lt;dbl\u0026gt;, ## # hour \u0026lt;dbl\u0026gt;, minute \u0026lt;dbl\u0026gt;, time_hour \u0026lt;dttm\u0026gt; # Arrived more than two hours late, but didn\u0026#39;t leave late flights %\u0026gt;% filter(arr_delay \u0026gt; 120, dep_delay \u0026lt;= 0) ## # A tibble: 29 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;dbl\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; ## 1 2013 1 27 1419 1420 -1 1754 1550 ## 2 2013 10 7 1350 1350 0 1736 1526 ## 3 2013 10 7 1357 1359 -2 1858 1654 ## 4 2013 10 16 657 700 -3 1258 1056 ## 5 2013 11 1 658 700 -2 1329 1015 ## 6 2013 3 18 1844 1847 -3 39 2219 ## 7 2013 4 17 1635 1640 -5 2049 1845 ## 8 2013 4 18 558 600 -2 1149 850 ## 9 2013 4 18 655 700 -5 1213 950 ## 10 2013 5 22 1827 1830 -3 2217 2010 ## # ℹ 19 more rows ## # ℹ 11 more variables: arr_delay \u0026lt;dbl\u0026gt;, carrier \u0026lt;chr\u0026gt;, flight \u0026lt;int\u0026gt;, ## # tailnum \u0026lt;chr\u0026gt;, origin \u0026lt;chr\u0026gt;, dest \u0026lt;chr\u0026gt;, air_time \u0026lt;dbl\u0026gt;, distance \u0026lt;dbl\u0026gt;, ## # hour \u0026lt;dbl\u0026gt;, minute \u0026lt;dbl\u0026gt;, time_hour \u0026lt;dttm\u0026gt; # Were delayed by at least an hour, but made up over 30 minutes in flight flights %\u0026gt;% filter(dep_delay \u0026gt;= 60, dep_delay - arr_delay \u0026gt; 30) ## # A tibble: 1,844 × 19 ## year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time ## \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; \u0026lt;dbl\u0026gt; \u0026lt;int\u0026gt; \u0026lt;int\u0026gt; ## 1 2013 1 1 2205 1720 285 46 2040 ## 2 2013 1 1 2326 2130 116 131 18 ## 3 2013 1 3 1503 1221 162 1803 1555 ## 4 2013 1 3 1839 1700 99 2056 1950 ## 5 2013 1 3 1850 1745 65 2148 2120 ## 6 2013 1 3 1941 1759 102 2246 2139 ## 7 2013 1 3 1950 1845 65 2228 2227 ## 8 2013 1 3 2015 1915 60 2135 2111 ## 9 2013 1 3 2257 2000 177 45 2224 ## 10 2013 1 4 1917 1700 137 2135 1950 ## # ℹ 1,834 more rows ## # ℹ 11 more variables: arr_delay \u0026lt;dbl\u0026gt;, carrier \u0026lt;chr\u0026gt;, flight \u0026lt;int\u0026gt;, ## # tailnum \u0026lt;chr\u0026gt;, origin \u0026lt;chr\u0026gt;, dest \u0026lt;chr\u0026gt;, air_time \u0026lt;dbl\u0026gt;, distance \u0026lt;dbl\u0026gt;, ## # hour \u0026lt;dbl\u0026gt;, minute \u0026lt;dbl\u0026gt;, time_hour \u0026lt;dttm\u0026gt; Problem 2: What months had the highest and lowest proportion of cancelled flights?
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seanodoherty-portfolio-website.netlify.app\/english\/post\/homework1_seanodoherty\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-05-14T00:00:00.00Z",
+        "datePublished": "2023-05-14T00:00:00.00Z",
+        "dateModified": "2023-05-14T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Seán O'Doherty",
+            "url": "https://seanodoherty-portfolio-website.netlify.app/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/seanodoherty-portfolio-website.netlify.app\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://seanodoherty-portfolio-website.netlify.app/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/seanodoherty-portfolio-website.netlify.app\/english\/post\/homework1_seanodoherty\/",
+        "wordCount" : "5663",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/Sean%20O%27Doherty.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Seán O&#39;Doherty - Portfolio Website</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>E628 Portfolio Website</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/sean-odoherty/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/seanodoherty"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="sodoherty.mba2024@london.edu"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Seán O&#39;Doherty
+        2023
+      
+    </li>
+    
+      <li class="footer__item">
+        <a
+          class="link"
+          href="/imprint/"
+          
+          title=""
+        >
+          imprint
+        </a>
+      </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+
+          <li class="nav__list-item">
+            <div class="optionswitch">
+              <input class="optionswitch__picker" type="checkbox" id="4" hidden />
+
+              
+              
+                
+
+              
+                
+
+              
+
+
+              <label class="optionswitch__label" for="4"
+                >Accomplishments <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></label>
+
+              <div class="optionswitch__triangle"></div>
+              <ul class="optionswitch__list">
+                
+                  <li class="optionswitch__list-item">
+                    
+                    <a
+                      href="/awards/"
+                      
+                      title=""
+                      >Awards</a
+                    >
+                  </li>
+                
+                  <li class="optionswitch__list-item">
+                    
+                    <a
+                      href="/certifications/"
+                      
+                      title=""
+                      >Certifications</a
+                    >
+                  </li>
+                
+              </ul>
+            </div>
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Homework 1</h1>
+      <h1 id="data-manipulation">Data Manipulation</h1>
+<h2 id="problem-1-use-logical-operators-to-find-flights-that">Problem 1: Use logical operators to find flights that:</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="o">-</span><span class="w">   </span><span class="n">Had</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">arrival</span><span class="w"> </span><span class="n">delay</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">two</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="nf">hours</span><span class="w"> </span><span class="p">(</span><span class="err">\</span><span class="o">&gt;</span><span class="w"> </span><span class="mi">120</span><span class="w"> </span><span class="n">minutes</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="w">   </span><span class="n">Flew</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="nf">Houston</span><span class="w"> </span><span class="p">(</span><span class="n">IAH</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">HOU</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="w">   </span><span class="n">Were</span><span class="w"> </span><span class="n">operated</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="nf">United</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">UA</span><span class="o">`</span><span class="p">),</span><span class="w"> </span><span class="nf">American</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">AA</span><span class="o">`</span><span class="p">),</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nf">Delta</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">DL</span><span class="o">`</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="w">   </span><span class="n">Departed</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">summer</span><span class="w"> </span><span class="p">(</span><span class="n">July</span><span class="p">,</span><span class="w"> </span><span class="n">August</span><span class="p">,</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">September</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="w">   </span><span class="n">Arrived</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">two</span><span class="w"> </span><span class="n">hours</span><span class="w"> </span><span class="n">late</span><span class="p">,</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">didn</span><span class="s1">&#39;t leave late
+</span></span></span><span class="line"><span class="cl"><span class="s1">-   Were delayed by at least an hour, but made up over 30 minutes in flight
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Had an arrival delay of two or more hours (&gt; 120 minutes)</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">arr_delay</span> <span class="o">&gt;</span> <span class="m">120</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 10,034 × 19
+</span></span><span class="line"><span class="cl">##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+</span></span><span class="line"><span class="cl">##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+</span></span><span class="line"><span class="cl">##  1  2013     1     1      811            630       101     1047            830
+</span></span><span class="line"><span class="cl">##  2  2013     1     1      848           1835       853     1001           1950
+</span></span><span class="line"><span class="cl">##  3  2013     1     1      957            733       144     1056            853
+</span></span><span class="line"><span class="cl">##  4  2013     1     1     1114            900       134     1447           1222
+</span></span><span class="line"><span class="cl">##  5  2013     1     1     1505           1310       115     1638           1431
+</span></span><span class="line"><span class="cl">##  6  2013     1     1     1525           1340       105     1831           1626
+</span></span><span class="line"><span class="cl">##  7  2013     1     1     1549           1445        64     1912           1656
+</span></span><span class="line"><span class="cl">##  8  2013     1     1     1558           1359       119     1718           1515
+</span></span><span class="line"><span class="cl">##  9  2013     1     1     1732           1630        62     2028           1825
+</span></span><span class="line"><span class="cl">## 10  2013     1     1     1803           1620       103     2008           1750
+</span></span><span class="line"><span class="cl">## # ℹ 10,024 more rows
+</span></span><span class="line"><span class="cl">## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
+</span></span><span class="line"><span class="cl">## #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+</span></span><span class="line"><span class="cl">## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Flew to Houston (IAH or HOU)</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">dest</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;IAH&#34;</span><span class="p">,</span> <span class="s">&#34;Hou&#34;</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 7,198 × 19
+</span></span><span class="line"><span class="cl">##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+</span></span><span class="line"><span class="cl">##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+</span></span><span class="line"><span class="cl">##  1  2013     1     1      517            515         2      830            819
+</span></span><span class="line"><span class="cl">##  2  2013     1     1      533            529         4      850            830
+</span></span><span class="line"><span class="cl">##  3  2013     1     1      623            627        -4      933            932
+</span></span><span class="line"><span class="cl">##  4  2013     1     1      728            732        -4     1041           1038
+</span></span><span class="line"><span class="cl">##  5  2013     1     1      739            739         0     1104           1038
+</span></span><span class="line"><span class="cl">##  6  2013     1     1      908            908         0     1228           1219
+</span></span><span class="line"><span class="cl">##  7  2013     1     1     1028           1026         2     1350           1339
+</span></span><span class="line"><span class="cl">##  8  2013     1     1     1044           1045        -1     1352           1351
+</span></span><span class="line"><span class="cl">##  9  2013     1     1     1114            900       134     1447           1222
+</span></span><span class="line"><span class="cl">## 10  2013     1     1     1205           1200         5     1503           1505
+</span></span><span class="line"><span class="cl">## # ℹ 7,188 more rows
+</span></span><span class="line"><span class="cl">## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
+</span></span><span class="line"><span class="cl">## #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+</span></span><span class="line"><span class="cl">## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Were operated by United (`UA`), American (`AA`), or Delta (`DL`)</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">carrier</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;UA&#34;</span><span class="p">,</span> <span class="s">&#34;AA&#34;</span><span class="p">,</span> <span class="s">&#34;DL&#34;</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 139,504 × 19
+</span></span><span class="line"><span class="cl">##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+</span></span><span class="line"><span class="cl">##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+</span></span><span class="line"><span class="cl">##  1  2013     1     1      517            515         2      830            819
+</span></span><span class="line"><span class="cl">##  2  2013     1     1      533            529         4      850            830
+</span></span><span class="line"><span class="cl">##  3  2013     1     1      542            540         2      923            850
+</span></span><span class="line"><span class="cl">##  4  2013     1     1      554            600        -6      812            837
+</span></span><span class="line"><span class="cl">##  5  2013     1     1      554            558        -4      740            728
+</span></span><span class="line"><span class="cl">##  6  2013     1     1      558            600        -2      753            745
+</span></span><span class="line"><span class="cl">##  7  2013     1     1      558            600        -2      924            917
+</span></span><span class="line"><span class="cl">##  8  2013     1     1      558            600        -2      923            937
+</span></span><span class="line"><span class="cl">##  9  2013     1     1      559            600        -1      941            910
+</span></span><span class="line"><span class="cl">## 10  2013     1     1      559            600        -1      854            902
+</span></span><span class="line"><span class="cl">## # ℹ 139,494 more rows
+</span></span><span class="line"><span class="cl">## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
+</span></span><span class="line"><span class="cl">## #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+</span></span><span class="line"><span class="cl">## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Departed in summer (July, August, and September)</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">month</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">7</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">9</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 86,326 × 19
+</span></span><span class="line"><span class="cl">##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+</span></span><span class="line"><span class="cl">##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+</span></span><span class="line"><span class="cl">##  1  2013     7     1        1           2029       212      236           2359
+</span></span><span class="line"><span class="cl">##  2  2013     7     1        2           2359         3      344            344
+</span></span><span class="line"><span class="cl">##  3  2013     7     1       29           2245       104      151              1
+</span></span><span class="line"><span class="cl">##  4  2013     7     1       43           2130       193      322             14
+</span></span><span class="line"><span class="cl">##  5  2013     7     1       44           2150       174      300            100
+</span></span><span class="line"><span class="cl">##  6  2013     7     1       46           2051       235      304           2358
+</span></span><span class="line"><span class="cl">##  7  2013     7     1       48           2001       287      308           2305
+</span></span><span class="line"><span class="cl">##  8  2013     7     1       58           2155       183      335             43
+</span></span><span class="line"><span class="cl">##  9  2013     7     1      100           2146       194      327             30
+</span></span><span class="line"><span class="cl">## 10  2013     7     1      100           2245       135      337            135
+</span></span><span class="line"><span class="cl">## # ℹ 86,316 more rows
+</span></span><span class="line"><span class="cl">## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
+</span></span><span class="line"><span class="cl">## #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+</span></span><span class="line"><span class="cl">## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Arrived more than two hours late, but didn&#39;t leave late</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">arr_delay</span> <span class="o">&gt;</span> <span class="m">120</span><span class="p">,</span> <span class="n">dep_delay</span> <span class="o">&lt;=</span> <span class="m">0</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 29 × 19
+</span></span><span class="line"><span class="cl">##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+</span></span><span class="line"><span class="cl">##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+</span></span><span class="line"><span class="cl">##  1  2013     1    27     1419           1420        -1     1754           1550
+</span></span><span class="line"><span class="cl">##  2  2013    10     7     1350           1350         0     1736           1526
+</span></span><span class="line"><span class="cl">##  3  2013    10     7     1357           1359        -2     1858           1654
+</span></span><span class="line"><span class="cl">##  4  2013    10    16      657            700        -3     1258           1056
+</span></span><span class="line"><span class="cl">##  5  2013    11     1      658            700        -2     1329           1015
+</span></span><span class="line"><span class="cl">##  6  2013     3    18     1844           1847        -3       39           2219
+</span></span><span class="line"><span class="cl">##  7  2013     4    17     1635           1640        -5     2049           1845
+</span></span><span class="line"><span class="cl">##  8  2013     4    18      558            600        -2     1149            850
+</span></span><span class="line"><span class="cl">##  9  2013     4    18      655            700        -5     1213            950
+</span></span><span class="line"><span class="cl">## 10  2013     5    22     1827           1830        -3     2217           2010
+</span></span><span class="line"><span class="cl">## # ℹ 19 more rows
+</span></span><span class="line"><span class="cl">## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
+</span></span><span class="line"><span class="cl">## #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+</span></span><span class="line"><span class="cl">## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Were delayed by at least an hour, but made up over 30 minutes in flight</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">dep_delay</span> <span class="o">&gt;=</span> <span class="m">60</span><span class="p">,</span> <span class="n">dep_delay</span> <span class="o">-</span> <span class="n">arr_delay</span> <span class="o">&gt;</span> <span class="m">30</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 1,844 × 19
+</span></span><span class="line"><span class="cl">##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+</span></span><span class="line"><span class="cl">##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+</span></span><span class="line"><span class="cl">##  1  2013     1     1     2205           1720       285       46           2040
+</span></span><span class="line"><span class="cl">##  2  2013     1     1     2326           2130       116      131             18
+</span></span><span class="line"><span class="cl">##  3  2013     1     3     1503           1221       162     1803           1555
+</span></span><span class="line"><span class="cl">##  4  2013     1     3     1839           1700        99     2056           1950
+</span></span><span class="line"><span class="cl">##  5  2013     1     3     1850           1745        65     2148           2120
+</span></span><span class="line"><span class="cl">##  6  2013     1     3     1941           1759       102     2246           2139
+</span></span><span class="line"><span class="cl">##  7  2013     1     3     1950           1845        65     2228           2227
+</span></span><span class="line"><span class="cl">##  8  2013     1     3     2015           1915        60     2135           2111
+</span></span><span class="line"><span class="cl">##  9  2013     1     3     2257           2000       177       45           2224
+</span></span><span class="line"><span class="cl">## 10  2013     1     4     1917           1700       137     2135           1950
+</span></span><span class="line"><span class="cl">## # ℹ 1,834 more rows
+</span></span><span class="line"><span class="cl">## # ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
+</span></span><span class="line"><span class="cl">## #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+</span></span><span class="line"><span class="cl">## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
+</span></span></code></pre></div><h2 id="problem-2-what-months-had-the-highest-and-lowest-proportion-of-cancelled-flights-interpret-any-seasonal-patterns-to-determine-if-a-flight-was-cancelled-use-the-following-code">Problem 2: What months had the highest and lowest proportion of cancelled flights? Interpret any seasonal patterns. To determine if a flight was cancelled use the following code</h2>
+<!-- -->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">flights %&gt;% 
+</span></span><span class="line"><span class="cl">  filter(is.na(dep_time)) 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // What months had the highest and lowest % of cancelled flights?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Assign to new table</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights_month_prop_cancelled</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">flights</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Group by month</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">month</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># calculate the sum of non-na flights divided by count of flights</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarize</span><span class="p">(</span><span class="s">&#34;prop_cancelled&#34;</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dep_time</span><span class="p">))</span> <span class="o">/</span> <span class="nf">n</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Print results sorted by prop_cancelled</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights_month_prop_cancelled</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="c1"># sort by prop_cancelled to get low to high</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">arrange</span><span class="p">(</span><span class="n">prop_cancelled</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 12 × 2
+</span></span><span class="line"><span class="cl">##    month prop_cancelled
+</span></span><span class="line"><span class="cl">##    &lt;int&gt;          &lt;dbl&gt;
+</span></span><span class="line"><span class="cl">##  1    10        0.00817
+</span></span><span class="line"><span class="cl">##  2    11        0.00854
+</span></span><span class="line"><span class="cl">##  3     9        0.0164 
+</span></span><span class="line"><span class="cl">##  4     8        0.0166 
+</span></span><span class="line"><span class="cl">##  5     1        0.0193 
+</span></span><span class="line"><span class="cl">##  6     5        0.0196 
+</span></span><span class="line"><span class="cl">##  7     4        0.0236 
+</span></span><span class="line"><span class="cl">##  8     3        0.0299 
+</span></span><span class="line"><span class="cl">##  9     7        0.0319 
+</span></span><span class="line"><span class="cl">## 10     6        0.0357 
+</span></span><span class="line"><span class="cl">## 11    12        0.0364 
+</span></span><span class="line"><span class="cl">## 12     2        0.0505
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Plot line graph</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># use dataset from above</span>
+</span></span><span class="line"><span class="cl">  <span class="n">flights_month_prop_cancelled</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># set x and y axes, use factor(to make month discreet)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">month</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="nf">percent</span><span class="p">(</span><span class="n">prop_cancelled</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">group</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add line to graph</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_col</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fill</span> <span class="o">=</span> <span class="s">&#34;blue&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add value labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_text</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">label</span> <span class="o">=</span> <span class="nf">percent</span><span class="p">(</span><span class="n">prop_cancelled</span><span class="p">,</span> <span class="m">0.01</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="s">&#34;white&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">hjust</span> <span class="o">=</span> <span class="m">0.5</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">vjust</span> <span class="o">=</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">size</span> <span class="o">=</span> <span class="m">2.5</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add Axis labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">title</span> <span class="o">=</span> <span class="s">&#34;The lowest proportion of cancelled flights is in October \nand the highest is in February&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="s">&#34;Month&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s">&#34;Proportion of flights cancelled&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Apply theme</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-2-1.png" width="672" />
+<p>The lowest proportion of cancelled flights is in October and the highest is in February.</p>
+<h2 id="problem-3-what-plane-specified-by-the-tailnum-variable-traveled-the-most-times-from-new-york-city-airports-in-2013-please-left_join-the-resulting-table-with-the-table-planes-also-included-in-the-nycflights13-package">Problem 3: What plane (specified by the <code>tailnum</code> variable) traveled the most times from New York City airports in 2013? Please <code>left_join()</code> the resulting table with the table <code>planes</code> (also included in the <code>nycflights13</code> package).</h2>
+<p>For the plane with the greatest number of flights and that had more than 50 seats, please create a table where it flew to during 2013.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># store to new table</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights_planes_50p</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Left join flights to planes to get the number of seats</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">left_join</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">flights</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">planes</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="s">&#34;tailnum&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1"># Filter to only planes with &gt; 50 seats / flights which have a dep_time</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">filter</span><span class="p">(</span><span class="n">seats</span> <span class="o">&gt;</span> <span class="m">50</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dep_time</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># store to new table</span>
+</span></span><span class="line"><span class="cl"><span class="n">planes_50p_flight_count_top1</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># use top_n to return only the top row </span>
+</span></span><span class="line"><span class="cl">  <span class="nf">top_n</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">flights_planes_50p</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="c1"># Group by plane and count flights</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">group_by</span><span class="p">(</span><span class="n">tailnum</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="c1"># Sort descending</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">summarise</span><span class="p">(</span><span class="n">flight_count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">flight_count</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Selecting by flight_count
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Display results</span>
+</span></span><span class="line"><span class="cl"><span class="n">planes_50p_flight_count_top1</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 1 × 2
+</span></span><span class="line"><span class="cl">##   tailnum flight_count
+</span></span><span class="line"><span class="cl">##   &lt;chr&gt;          &lt;int&gt;
+</span></span><span class="line"><span class="cl">## 1 N328AA           389
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># store to new table</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights_planes_50p_flight_count_top1</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># join the flights of planes with 50+ seats to table with top 1 by flight count </span>
+</span></span><span class="line"><span class="cl">  <span class="nf">right_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">flights_planes_50p</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">planes_50p_flight_count_top1</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="s">&#34;tailnum&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Group by destination</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    <span class="c1">#summarise to get count of flights (with dep_time)</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span><span class="n">dest_flight_count</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dep_time</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="c1"># print table</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights_planes_50p_flight_count_top1</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 6 × 2
+</span></span><span class="line"><span class="cl">##   dest  dest_flight_count
+</span></span><span class="line"><span class="cl">##   &lt;chr&gt;             &lt;int&gt;
+</span></span><span class="line"><span class="cl">## 1 BOS                   1
+</span></span><span class="line"><span class="cl">## 2 LAX                 310
+</span></span><span class="line"><span class="cl">## 3 MCO                   1
+</span></span><span class="line"><span class="cl">## 4 MIA                  25
+</span></span><span class="line"><span class="cl">## 5 SFO                  51
+</span></span><span class="line"><span class="cl">## 6 SJU                   1
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Create ggplot</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># call previous table</span>
+</span></span><span class="line"><span class="cl">  <span class="n">flights_planes_50p_flight_count_top1</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># define plot aesthetics</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">dest</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">dest_flight_count</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">fill</span> <span class="o">=</span> <span class="n">dest</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add bar to chart</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span> <span class="o">=</span> <span class="s">&#34;identity&#34;</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add value labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_text</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="n">dest_flight_count</span><span class="p">),</span> <span class="n">vjust</span> <span class="o">=</span> <span class="m">-0.2</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add title and axis labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="s">&#34;Destination Airport Code&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s">&#34;Flights to Destination&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;The plane (50+ seats) which flew most times from NYC in 2013 \nmostly flew to LAX&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Apply theme</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-3-1.png" width="672" />
+<p>The plane (which has 50 or more seats) which flew the most times from NYC is tailnum N328AA.</p>
+<p>The breakdown of where this plane flew to is included in table and bar chart form. There were many flights to LAX and some to SFO and MIA. There was only 1 flight to each of BOS, MCO and SJU.</p>
+<h2 id="problem-4-the-nycflights13-package-includes-a-table-weather-that-describes-the-weather-during-2013-use-that-table-to-answer-the-following-questions">Problem 4: The <code>nycflights13</code> package includes a table (<code>weather</code>) that describes the weather during 2013. Use that table to answer the following questions:</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="o">-</span><span class="w">   </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">distribution</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nf">temperature</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">temp</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">July</span><span class="w"> </span><span class="mi">2013</span><span class="o">?</span><span class="w"> </span><span class="n">Identify</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">important</span><span class="w"> </span><span class="n">outliers</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">terms</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">wind_speed</span><span class="o">`</span><span class="w"> </span><span class="n">variable</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="w">   </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">relationship</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="o">`</span><span class="n">dewp</span><span class="o">`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="o">`</span><span class="n">humid</span><span class="o">`?</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">-</span><span class="w">   </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">relationship</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="o">`</span><span class="n">precip</span><span class="o">`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="o">`</span><span class="n">visib</span><span class="o">`?</span><span class="w">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // What is the distribution of temperature (`temp`) in July 2013? Identify any important outliers in terms of the `wind_speed` variable.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># define function to find outliers</span>
+</span></span><span class="line"><span class="cl"><span class="n">findoutlier</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">return</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="m">.25</span><span class="p">)</span> <span class="o">-</span> <span class="m">1.5</span><span class="o">*</span><span class="nf">IQR</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">|</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="m">.75</span><span class="p">)</span> <span class="o">+</span> <span class="m">1.5</span><span class="o">*</span><span class="nf">IQR</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># store to new table</span>
+</span></span><span class="line"><span class="cl"><span class="n">weather_july</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># filter weather to july</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">weather</span><span class="p">,</span> <span class="n">month</span> <span class="o">==</span> <span class="m">7</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># histogram of temperature</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">weather_july</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">temp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_histogram</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="c1">## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+</span></span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-4-1.png" width="672" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># store to table</span>
+</span></span><span class="line"><span class="cl"><span class="n">weather_july_windspeed</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># filter out na values of windspeed</span>
+</span></span><span class="line"><span class="cl">  <span class="n">weather_july</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">wind_speed</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Create new col which identifies wind_speed outliers</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">       <span class="n">wind_speed_outlier</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">         <span class="nf">ifelse</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">           <span class="nf">findoutlier</span><span class="p">(</span><span class="n">wind_speed</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">           <span class="p">,</span><span class="s">&#34;Outlier (wind_speed)&#34;</span>
+</span></span><span class="line"><span class="cl">           <span class="p">,</span><span class="s">&#34;Not Outlier (wind_speed)&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)</span>
+</span></span><span class="line"><span class="cl">       <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create plot of wind speed through time with color identifying outliers</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">weather_july_windspeed</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">time_hour</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">wind_speed</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">wind_speed_outlier</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add scatter</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add labels and theme</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="s">&#34;Time&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s">&#34;Windspeed&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;July 2013 Windpseed had a few outliers&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">colour</span> <span class="o">=</span> <span class="s">&#34;Windspeed Outlier&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-4-2.png" width="672" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // What is the relationship between `dewp` and `humid`?</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="c1"># Create plot of dewp vs humid</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">weather</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">dewp</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">humid</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># make scatter plot</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Use stat_smooth to add a regression line</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">stat_smooth</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;lm&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">formula</span> <span class="o">=</span> <span class="n">y</span> <span class="o">~</span> <span class="n">x</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">geom</span> <span class="o">=</span> <span class="s">&#34;smooth&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add labels and theme</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="s">&#34;Dewpoint Temperature&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s">&#34;Humidity&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Dewpoint Temperature and Humidity are positively correlated&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Warning: Removed 1 rows containing non-finite values (`stat_smooth()`).
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Warning: Removed 1 rows containing missing values (`geom_point()`).
+</span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-4-3.png" width="672" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // What is the relationship between `precip` and `visib`?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Scatter plot of precip vs visib</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use stat_smooth to add a regression line</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Convert x axis to log scale to make easier to read</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create plot of precip vs visib</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">weather</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">precip</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">visib</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add scatter</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add regression line</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">stat_smooth</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;lm&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">formula</span> <span class="o">=</span> <span class="n">y</span> <span class="o">~</span> <span class="n">x</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">geom</span> <span class="o">=</span> <span class="s">&#34;smooth&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># put x on a log scale to aid leibility</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_x_log10</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add labels and theme</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="s">&#34;Precipitation&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s">&#34;Visibility&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Precipitation and Visibility are negatively correlated&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Warning: Transformation introduced infinite values in continuous x-axis
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Warning: Transformation introduced infinite values in continuous x-axis
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Warning: Removed 24366 rows containing non-finite values (`stat_smooth()`).
+</span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-4-4.png" width="672" />
+<h2 id="problem-5-use-the-flights-and-planes-tables-to-answer-the-following-questions">Problem 5: Use the <code>flights</code> and <code>planes</code> tables to answer the following questions:</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-   How many planes have a missing date of manufacture?
+</span></span><span class="line"><span class="cl">-   What are the five most common manufacturers?
+</span></span><span class="line"><span class="cl">-   Has the distribution of manufacturer changed over time as reflected by the airplanes flying from NYC in 2013? (Hint: you may need to use case_when() to recode the manufacturer name and collapse rare vendors into a category called Other.)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // How many planes have a missing date of manufacture?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">planes</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># filter to planes which do not have a manufacture year</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">year</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># return count</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="n">planecount</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 1 × 1
+</span></span><span class="line"><span class="cl">##   planecount
+</span></span><span class="line"><span class="cl">##        &lt;int&gt;
+</span></span><span class="line"><span class="cl">## 1         70
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // What are the five most common manufacturers?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># store to new table</span>
+</span></span><span class="line"><span class="cl"><span class="n">manuf_flightcount_planecount</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># join flights which have dep_time to planes by tailnum</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">inner_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="nf">filter</span><span class="p">(</span><span class="n">flights</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dep_time</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">planes</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="s">&#34;tailnum&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1"># group by manufacturer</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">manufacturer</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># use summarise to get plane_count and flight count</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span><span class="n">plane_count</span> <span class="o">=</span> <span class="nf">n_distinct</span><span class="p">(</span><span class="n">tailnum</span><span class="p">),</span> <span class="n">flight_count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># store results top 5 by plane_count and flight_count</span>
+</span></span><span class="line"><span class="cl"><span class="n">manuf_planecount_top5</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">top_n</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">manuf_flightcount_planecount</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">        <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">plane_count</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Selecting by flight_count
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># store results top 5 by plane_count and flight_count</span>
+</span></span><span class="line"><span class="cl"><span class="n">manuf_flightcount_top5</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">top_n</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">manuf_flightcount_planecount</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">        <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">flight_count</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Selecting by flight_count
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">#display results</span>
+</span></span><span class="line"><span class="cl"><span class="n">manuf_planecount_top5</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 5 × 3
+</span></span><span class="line"><span class="cl">##   manufacturer     plane_count flight_count
+</span></span><span class="line"><span class="cl">##   &lt;chr&gt;                  &lt;int&gt;        &lt;int&gt;
+</span></span><span class="line"><span class="cl">## 1 BOEING                  1627        82524
+</span></span><span class="line"><span class="cl">## 2 AIRBUS INDUSTRIE         400        40753
+</span></span><span class="line"><span class="cl">## 3 BOMBARDIER INC           366        27588
+</span></span><span class="line"><span class="cl">## 4 AIRBUS                   336        47009
+</span></span><span class="line"><span class="cl">## 5 EMBRAER                  299        63783
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">manuf_flightcount_top5</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 5 × 3
+</span></span><span class="line"><span class="cl">##   manufacturer     plane_count flight_count
+</span></span><span class="line"><span class="cl">##   &lt;chr&gt;                  &lt;int&gt;        &lt;int&gt;
+</span></span><span class="line"><span class="cl">## 1 BOEING                  1627        82524
+</span></span><span class="line"><span class="cl">## 2 EMBRAER                  299        63783
+</span></span><span class="line"><span class="cl">## 3 AIRBUS                   336        47009
+</span></span><span class="line"><span class="cl">## 4 AIRBUS INDUSTRIE         400        40753
+</span></span><span class="line"><span class="cl">## 5 BOMBARDIER INC           366        27588
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // Has the distribution of manufacturer changed over time as reflected by the airplanes flying from NYC in 2013? (Hint: you may need to use case_when() to recode the manufacturer name and collapse rare vendors into a category called Other.)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Left join flights (with dep_time) to planes on tailnumber to get manufacturer</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Left join to manuf_planecount_top5 to identify top 5 (use keep = TRUE)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Mutate NAs to &#34;OTHER&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Group by Manufacturer and month and count flights</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># store to new table</span>
+</span></span><span class="line"><span class="cl"><span class="n">flights_manuf_month</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Join the flights with manufacturer to the top 5 manufacturers by flight count</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">left_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="c1"># join  flights which have dep_time to planes by tailnum to get manufacturer</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">left_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="nf">filter</span><span class="p">(</span><span class="n">flights</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dep_time</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">planes</span>
+</span></span><span class="line"><span class="cl">        <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="s">&#34;tailnum&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">manuf_flightcount_top5</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="s">&#34;manufacturer&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">keep</span> <span class="o">=</span> <span class="kc">TRUE</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Replace the manufacturer col from the top5 table with &#34;OTHER&#34; where there is no match</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mutate</span><span class="p">(</span><span class="n">manufacturer</span> <span class="o">=</span> <span class="nf">replace_na</span><span class="p">(</span><span class="n">manufacturer.y</span><span class="p">,</span> <span class="s">&#34;OTHER&#34;</span><span class="p">))</span>  <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># group by manufacturer (and other) and month</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">manufacturer</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># get flight counts</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span><span class="n">flight_count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## `summarise()` has grouped output by &#39;manufacturer&#39;. You can override using the
+</span></span><span class="line"><span class="cl">## `.groups` argument.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Create plot of flight count by month with manufacturers in fill</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">flights_manuf_month</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">month</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">flight_count</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">manufacturer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add stacked bars</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">position</span> <span class="o">=</span> <span class="s">&#34;stack&#34;</span><span class="p">,</span> <span class="n">stat</span> <span class="o">=</span> <span class="s">&#34;identity&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add labels and theme</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="s">&#34;Month&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s">&#34;Flight Count&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">fill</span> <span class="o">=</span> <span class="s">&#34;Manufacturer&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Flights by Manufacturer by Month&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-5-1.png" width="672" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Create plot of flight count by month with manufacturers in fill</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">flights_manuf_month</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">month</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">flight_count</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">manufacturer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add pct of total bars</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">position</span> <span class="o">=</span> <span class="s">&#34;fill&#34;</span><span class="p">,</span> <span class="n">stat</span> <span class="o">=</span> <span class="s">&#34;identity&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add labels and theme</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="s">&#34;Month&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s">&#34;Pct of Flights&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">fill</span> <span class="o">=</span> <span class="s">&#34;Manufacturer&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Pct of Flights by Manufacturer by Month&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-5-2.png" width="672" />
+<h2 id="problem-6-use-the-flights-and-planes-tables-to-answer-the-following-questions">Problem 6: Use the <code>flights</code> and <code>planes</code> tables to answer the following questions:</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-   What is the oldest plane (specified by the tailnum variable) that flew from New York City airports in 2013?
+</span></span><span class="line"><span class="cl">-   How many airplanes that flew from New York City are included in the planes table?
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // What is the oldest plane (specified by the tailnum variable) that flew from New York City airports in 2013?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># join tailnums with dep_time to planes to get manufacture year</span>
+</span></span><span class="line"><span class="cl"><span class="nf">left_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># lsit of tailnums with dep_time</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">flights</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dep_time</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">tailnum</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">planes</span>
+</span></span><span class="line"><span class="cl"> <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="s">&#34;tailnum&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># sort by year ascending</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">arrange</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 4,037 × 9
+</span></span><span class="line"><span class="cl">##    tailnum  year type              manufacturer model engines seats speed engine
+</span></span><span class="line"><span class="cl">##    &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;             &lt;chr&gt;        &lt;chr&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; 
+</span></span><span class="line"><span class="cl">##  1 N381AA   1956 Fixed wing multi… DOUGLAS      DC-7…       4   102   232 Recip…
+</span></span><span class="line"><span class="cl">##  2 N201AA   1959 Fixed wing singl… CESSNA       150         1     2    90 Recip…
+</span></span><span class="line"><span class="cl">##  3 N567AA   1959 Fixed wing singl… DEHAVILLAND  OTTE…       1    16    95 Recip…
+</span></span><span class="line"><span class="cl">##  4 N378AA   1963 Fixed wing singl… CESSNA       172E        1     4   105 Recip…
+</span></span><span class="line"><span class="cl">##  5 N575AA   1963 Fixed wing singl… CESSNA       210-…       1     6    NA Recip…
+</span></span><span class="line"><span class="cl">##  6 N14629   1965 Fixed wing multi… BOEING       737-…       2   149    NA Turbo…
+</span></span><span class="line"><span class="cl">##  7 N615AA   1967 Fixed wing multi… BEECH        65-A…       2     9   202 Turbo…
+</span></span><span class="line"><span class="cl">##  8 N425AA   1968 Fixed wing singl… PIPER        PA-2…       1     4   107 Recip…
+</span></span><span class="line"><span class="cl">##  9 N383AA   1972 Fixed wing multi… BEECH        E-90        2    10    NA Turbo…
+</span></span><span class="line"><span class="cl">## 10 N364AA   1973 Fixed wing multi… CESSNA       310Q        2     6   167 Recip…
+</span></span><span class="line"><span class="cl">## # ℹ 4,027 more rows
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // How many airplanes that flew from New York City are included in the planes table?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Inner join flights to planes to get matches</span>
+</span></span><span class="line"><span class="cl"><span class="nf">inner_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">flights</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="c1"># filter to flights with a dep_time</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dep_time</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">planes</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="s">&#34;tailnum&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># get count of distinct tailnumbers</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="nf">n_distinct</span><span class="p">(</span><span class="n">tailnum</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 1 × 1
+</span></span><span class="line"><span class="cl">##   `n_distinct(tailnum)`
+</span></span><span class="line"><span class="cl">##                   &lt;int&gt;
+</span></span><span class="line"><span class="cl">## 1                  3316
+</span></span></code></pre></div><h2 id="problem-7-use-the-nycflights13-to-answer-the-following-questions">Problem 7: Use the <code>nycflights13</code> to answer the following questions:</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-   What is the median arrival delay on a month-by-month basis in each airport?
+</span></span><span class="line"><span class="cl">-   For each airline, plot the median arrival delay for each month and origin airport.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># //What is the median arrival delay on a month-by-month basis in each airport?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># filter on flights with dep_time</span>
+</span></span><span class="line"><span class="cl"><span class="nf">filter</span><span class="p">(</span><span class="n">flights</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dep_time</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by origin and month</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">origin</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># calculate median_arr_delay ignoring na using summarise</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="n">median_arr_delay</span> <span class="o">=</span> <span class="nf">median</span><span class="p">(</span><span class="n">arr_delay</span><span class="p">,</span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## `summarise()` has grouped output by &#39;origin&#39;. You can override using the
+</span></span><span class="line"><span class="cl">## `.groups` argument.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 36 × 3
+</span></span><span class="line"><span class="cl">## # Groups:   origin [3]
+</span></span><span class="line"><span class="cl">##    origin month median_arr_delay
+</span></span><span class="line"><span class="cl">##    &lt;chr&gt;  &lt;int&gt;            &lt;dbl&gt;
+</span></span><span class="line"><span class="cl">##  1 EWR        1                0
+</span></span><span class="line"><span class="cl">##  2 EWR        2               -2
+</span></span><span class="line"><span class="cl">##  3 EWR        3               -4
+</span></span><span class="line"><span class="cl">##  4 EWR        4               -1
+</span></span><span class="line"><span class="cl">##  5 EWR        5               -6
+</span></span><span class="line"><span class="cl">##  6 EWR        6               -1
+</span></span><span class="line"><span class="cl">##  7 EWR        7               -2
+</span></span><span class="line"><span class="cl">##  8 EWR        8               -5
+</span></span><span class="line"><span class="cl">##  9 EWR        9              -13
+</span></span><span class="line"><span class="cl">## 10 EWR       10               -6
+</span></span><span class="line"><span class="cl">## # ℹ 26 more rows
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // For each airline, plot the median arrival delay for each month and origin airport.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># create plot of median_arr_delay by month with origin as color</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># filter on flights with dep_time</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">flights</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dep_time</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># group by carrier, origin and month</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">carrier</span><span class="p">,</span> <span class="n">origin</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># calculate median_arr_delay ignoring na using summarise</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span><span class="n">median_arr_delay</span> <span class="o">=</span> <span class="nf">median</span><span class="p">(</span><span class="n">arr_delay</span><span class="p">,</span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">month</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">median_arr_delay</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">origin</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add scatter</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_point</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Facet wrap to dispay each carrier separately</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">carrier</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add labels and theme</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="s">&#34;Month&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="s">&#34;Median Arrival Delay&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="s">&#34;Origin Airport&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Median Arrival Delay by Month by Origin Airport for each Carrier&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## `summarise()` has grouped output by &#39;carrier&#39;, &#39;origin&#39;. You can override using
+</span></span><span class="line"><span class="cl">## the `.groups` argument.
+</span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-7-1.png" width="672" />
+<h2 id="problem-8-lets-take-a-closer-look-at-what-carriers-service-the-route-to-san-francisco-international-sfo-join-the-flights-and-airlines-tables-and-count-which-airlines-flew-the-most-to-sfo-produce-a-new-dataframe-fly_into_sfo-that-contains-three-variables-the-name-of-the-airline-eg-united-air-lines-inc-not-ua-the-count-number-of-times-it-flew-to-sfo-and-the-percent-of-the-trips-that-that-particular-airline-flew-to-sfo">Problem 8: Let&rsquo;s take a closer look at what carriers service the route to San Francisco International (SFO). Join the <code>flights</code> and <code>airlines</code> tables and count which airlines flew the most to SFO. Produce a new dataframe, <code>fly_into_sfo</code> that contains three variables: the <code>name</code> of the airline, e.g., <code>United Air Lines Inc.</code> not <code>UA</code>, the count (number) of times it flew to SFO, and the <code>percent</code> of the trips that that particular airline flew to SFO.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># store to new table</span>
+</span></span><span class="line"><span class="cl"><span class="n">fly_into_sfo</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># join flights with dep_time to airlines to get full name</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">left_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span><span class="nf">filter</span><span class="p">(</span><span class="n">flights</span><span class="p">,</span> <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dep_time</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">airlines</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="s">&#34;carrier&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1"># group by full name</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># get SFO count and PCT (divide by total count)</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">count</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">dest</span> <span class="o">==</span> <span class="s">&#34;SFO&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">percent</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">dest</span> <span class="o">==</span> <span class="s">&#34;SFO&#34;</span><span class="p">)</span> <span class="o">/</span> <span class="nf">n</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      <span class="c1"># filter to only include those which fly to SFO</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">filter</span><span class="p">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># display results</span>
+</span></span><span class="line"><span class="cl"><span class="n">fly_into_sfo</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 5 × 3
+</span></span><span class="line"><span class="cl">##   name                   count percent
+</span></span><span class="line"><span class="cl">##   &lt;chr&gt;                  &lt;int&gt;   &lt;dbl&gt;
+</span></span><span class="line"><span class="cl">## 1 American Airlines Inc.  1402  0.0437
+</span></span><span class="line"><span class="cl">## 2 Delta Air Lines Inc.    1850  0.0387
+</span></span><span class="line"><span class="cl">## 3 JetBlue Airways         1029  0.0190
+</span></span><span class="line"><span class="cl">## 4 United Air Lines Inc.   6762  0.117 
+</span></span><span class="line"><span class="cl">## 5 Virgin America          2187  0.426
+</span></span></code></pre></div><p>And here is some bonus ggplot code to plot your dataframe</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">fly_into_sfo</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># sort &#39;name&#39; of airline by the numbers it times to flew to SFO</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="nf">fct_reorder</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">count</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">y</span> <span class="o">=</span> <span class="n">name</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># a simple bar/column plot</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_col</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add labels, so each bar shows the % of total flights </span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_text</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="n">percent</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">             <span class="n">hjust</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">             <span class="n">colour</span> <span class="o">=</span> <span class="s">&#34;white&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">             <span class="n">size</span> <span class="o">=</span> <span class="m">5</span><span class="p">)</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add labels to help our audience  </span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&#34;Which airline dominates the NYC to SFO route?&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">       <span class="n">subtitle</span> <span class="o">=</span> <span class="s">&#34;as % of total flights in 2013&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="n">x</span><span class="o">=</span> <span class="s">&#34;Number of flights&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="n">y</span><span class="o">=</span> <span class="kc">NULL</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_minimal</span><span class="p">()</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># change the theme-- i just googled those , but you can use the ggThemeAssist add-in</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># https://cran.r-project.org/web/packages/ggThemeAssist/index.html</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">theme</span><span class="p">(</span><span class="c1">#</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># so title is left-aligned</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plot.title.position</span> <span class="o">=</span> <span class="s">&#34;plot&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># text in axes appears larger        </span>
+</span></span><span class="line"><span class="cl">    <span class="n">axis.text</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">12</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># title text is bigger</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">18</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># add one final layer of NULL, so if you comment out any lines</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># you never end up with a hanging `+` that awaits another ggplot layer</span>
+</span></span><span class="line"><span class="cl">  <span class="kc">NULL</span>
+</span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/ggplot-flights-toSFO-1.png" width="672" />
+<h2 id="problem-9-lets-take-a-look-at-cancellations-of-flights-to-sfo-we-create-a-new-dataframe-cancellations-as-follows">Problem 9: Let&rsquo;s take a look at cancellations of flights to SFO. We create a new dataframe <code>cancellations</code> as follows</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">cancellations</span> <span class="o">&lt;-</span> <span class="n">flights</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># just filter for destination == &#39;SFO&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">dest</span> <span class="o">==</span> <span class="s">&#39;SFO&#39;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># a cancelled flight is one with no `dep_time` </span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">dep_time</span><span class="p">))</span>
+</span></span></code></pre></div><p>I want you to think how we would organise our data manipulation to create the following plot. No need to write the code, just explain in words how you would go about it.</p>
+<p><em>To obtain the plot below I would first group the data by month, carrier and origin and summarise the number of cancelled flights.</em></p>
+<p><em>I would then create month_mmm by mutating the month field using month.abb.</em></p>
+<p><em>I would then create a box plot with month_mmm on the x axis and cancelled flights on the y axis.</em></p>
+<p><em>I would then use facet_grid to break the plot out by origin (cols) and carrier (rows).</em></p>
+<h2 id="problem-10-on-your-own----hollywood-age-gap">Problem 10: On your own &ndash; Hollywood Age Gap</h2>
+<p>The website <a href="https://hollywoodagegap.com">https://hollywoodagegap.com</a> is a record of <em>THE AGE DIFFERENCE IN YEARS BETWEEN MOVIE LOVE INTERESTS</em>. This is an informational site showing the age gap between movie love interests and the data follows certain rules:</p>
+<ul>
+<li>The two (or more) actors play actual love interests (not just friends, coworkers, or some other non-romantic type of relationship)</li>
+<li>The youngest of the two actors is at least 17 years old</li>
+<li>No animated characters</li>
+</ul>
+<p>The age gaps dataset includes &ldquo;gender&rdquo; columns, which always contain the values &ldquo;man&rdquo; or &ldquo;woman&rdquo;. These values appear to indicate how the characters in each film identify and some of these values do not match how the actor identifies. We apologize if any characters are misgendered in the data!</p>
+<p>The following is a data dictionary of the variables used</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">variable</th>
+<th style="text-align:left">class</th>
+<th style="text-align:left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">movie_name</td>
+<td style="text-align:left">character</td>
+<td style="text-align:left">Name of the film</td>
+</tr>
+<tr>
+<td style="text-align:left">release_year</td>
+<td style="text-align:left">integer</td>
+<td style="text-align:left">Release year</td>
+</tr>
+<tr>
+<td style="text-align:left">director</td>
+<td style="text-align:left">character</td>
+<td style="text-align:left">Director of the film</td>
+</tr>
+<tr>
+<td style="text-align:left">age_difference</td>
+<td style="text-align:left">integer</td>
+<td style="text-align:left">Age difference between the characters in whole years</td>
+</tr>
+<tr>
+<td style="text-align:left">couple_number</td>
+<td style="text-align:left">integer</td>
+<td style="text-align:left">An identifier for the couple in case multiple couples are listed for this film</td>
+</tr>
+<tr>
+<td style="text-align:left">actor_1_name</td>
+<td style="text-align:left">character</td>
+<td style="text-align:left">The name of the older actor in this couple</td>
+</tr>
+<tr>
+<td style="text-align:left">actor_2_name</td>
+<td style="text-align:left">character</td>
+<td style="text-align:left">The name of the younger actor in this couple</td>
+</tr>
+<tr>
+<td style="text-align:left">character_1_gender</td>
+<td style="text-align:left">character</td>
+<td style="text-align:left">The gender of the older character, as identified by the person who submitted the data for this couple</td>
+</tr>
+<tr>
+<td style="text-align:left">character_2_gender</td>
+<td style="text-align:left">character</td>
+<td style="text-align:left">The gender of the younger character, as identified by the person who submitted the data for this couple</td>
+</tr>
+<tr>
+<td style="text-align:left">actor_1_birthdate</td>
+<td style="text-align:left">date</td>
+<td style="text-align:left">The birthdate of the older member of the couple</td>
+</tr>
+<tr>
+<td style="text-align:left">actor_2_birthdate</td>
+<td style="text-align:left">date</td>
+<td style="text-align:left">The birthdate of the younger member of the couple</td>
+</tr>
+<tr>
+<td style="text-align:left">actor_1_age</td>
+<td style="text-align:left">integer</td>
+<td style="text-align:left">The age of the older actor when the film was released</td>
+</tr>
+<tr>
+<td style="text-align:left">actor_2_age</td>
+<td style="text-align:left">integer</td>
+<td style="text-align:left">The age of the younger actor when the film was released</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">age_gaps</span> <span class="o">&lt;-</span> <span class="n">readr</span><span class="o">::</span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-02-14/age_gaps.csv&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Rows: 1155 Columns: 13
+</span></span><span class="line"><span class="cl">## ── Column specification ────────────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl">## Delimiter: &#34;,&#34;
+</span></span><span class="line"><span class="cl">## chr  (6): movie_name, director, actor_1_name, actor_2_name, character_1_gend...
+</span></span><span class="line"><span class="cl">## dbl  (5): release_year, age_difference, couple_number, actor_1_age, actor_2_age
+</span></span><span class="line"><span class="cl">## date (2): actor_1_birthdate, actor_2_birthdate
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## ℹ Use `spec()` to retrieve the full column specification for this data.
+</span></span><span class="line"><span class="cl">## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // How is age_difference distributed? What&#39;s the &#39;typical&#39; age_difference in movies?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use boxplot to explore age_difference distribution</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">age_gaps</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">age_difference</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_boxplot</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-10-1.png" width="672" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Use histogram to explore age_difference distribution</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">age_gaps</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">age_difference</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_histogram</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="c1">## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+</span></span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-10-2.png" width="672" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // How frequently does this rule apply in this dataset?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">age_gaps</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># create fields for the older and younger actors ages from the two age fields</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">older</span> <span class="o">=</span> <span class="nf">if_else</span><span class="p">(</span><span class="n">actor_1_age</span> <span class="o">&gt;</span> <span class="n">actor_2_age</span><span class="p">,</span> <span class="n">actor_1_age</span><span class="p">,</span> <span class="n">actor_2_age</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">younger</span> <span class="o">=</span> <span class="nf">if_else</span><span class="p">(</span><span class="n">actor_1_age</span> <span class="o">&lt;</span> <span class="n">actor_2_age</span><span class="p">,</span> <span class="n">actor_1_age</span><span class="p">,</span> <span class="n">actor_2_age</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Check if half age plus 7 holds</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span><span class="n">half_age_plus_7</span> <span class="o">=</span> <span class="nf">if_else</span><span class="p">(</span><span class="n">younger</span> <span class="o">&gt;=</span> <span class="p">((</span><span class="n">older</span> <span class="o">/</span> <span class="m">2</span><span class="p">)</span> <span class="o">+</span> <span class="m">7</span><span class="p">),</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by whether the rule holds</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">half_age_plus_7</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># count instances</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="nf">n</span><span class="p">())</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 2 × 2
+</span></span><span class="line"><span class="cl">##   half_age_plus_7 `n()`
+</span></span><span class="line"><span class="cl">##   &lt;lgl&gt;           &lt;int&gt;
+</span></span><span class="line"><span class="cl">## 1 FALSE             326
+</span></span><span class="line"><span class="cl">## 2 TRUE              829
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // Which movie has the greatest number of love interests?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># union the two lists together</span>
+</span></span><span class="line"><span class="cl"><span class="nf">union</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># get lists of actors in each movie</span>
+</span></span><span class="line"><span class="cl">  <span class="n">age_gaps</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">movie_name</span><span class="p">,</span> <span class="n">actor_name</span> <span class="o">=</span> <span class="n">actor_1_name</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="n">age_gaps</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">movie_name</span><span class="p">,</span> <span class="n">actor_name</span> <span class="o">=</span> <span class="n">actor_2_name</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by movie</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">movie_name</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># count distinct actors</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="n">actor_count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># sort descending</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">actor_count</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## `summarise()` has grouped output by &#39;movie_name&#39;. You can override using the
+</span></span><span class="line"><span class="cl">## `.groups` argument.
+</span></span><span class="line"><span class="cl">## `summarise()` has grouped output by &#39;movie_name&#39;. You can override using the
+</span></span><span class="line"><span class="cl">## `.groups` argument.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 830 × 2
+</span></span><span class="line"><span class="cl">##    movie_name                  actor_count
+</span></span><span class="line"><span class="cl">##    &lt;chr&gt;                             &lt;int&gt;
+</span></span><span class="line"><span class="cl">##  1 Love Actually                        13
+</span></span><span class="line"><span class="cl">##  2 The Family Stone                     10
+</span></span><span class="line"><span class="cl">##  3 He&#39;s Just Not That Into You           9
+</span></span><span class="line"><span class="cl">##  4 Mona Lisa Smile                       9
+</span></span><span class="line"><span class="cl">##  5 A Star Is Born                        8
+</span></span><span class="line"><span class="cl">##  6 American Pie                          8
+</span></span><span class="line"><span class="cl">##  7 Sex and the City                      8
+</span></span><span class="line"><span class="cl">##  8 Twilight                              8
+</span></span><span class="line"><span class="cl">##  9 Boogie Nights                         7
+</span></span><span class="line"><span class="cl">## 10 Soul Food                             7
+</span></span><span class="line"><span class="cl">## # ℹ 820 more rows
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // Which actors/ actresses have the greatest number of love interests in this dataset?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># union the lists together to and keep duplicates </span>
+</span></span><span class="line"><span class="cl"><span class="nf">union_all</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># get list of actors </span>
+</span></span><span class="line"><span class="cl">  <span class="nf">select</span><span class="p">(</span><span class="n">age_gaps</span><span class="p">,</span> <span class="n">actor_name</span> <span class="o">=</span> <span class="n">actor_1_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">select</span><span class="p">(</span><span class="n">age_gaps</span><span class="p">,</span> <span class="n">actor_name</span> <span class="o">=</span> <span class="n">actor_2_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by actor</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">actor_name</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># count instances</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="n">love_interests</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># sort descending</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">love_interests</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 1,031 × 2
+</span></span><span class="line"><span class="cl">##    actor_name         love_interests
+</span></span><span class="line"><span class="cl">##    &lt;chr&gt;                       &lt;int&gt;
+</span></span><span class="line"><span class="cl">##  1 Keanu Reeves                   27
+</span></span><span class="line"><span class="cl">##  2 Adam Sandler                   20
+</span></span><span class="line"><span class="cl">##  3 Leonardo DiCaprio              17
+</span></span><span class="line"><span class="cl">##  4 Roger Moore                    17
+</span></span><span class="line"><span class="cl">##  5 Sean Connery                   17
+</span></span><span class="line"><span class="cl">##  6 Keira Knightley                14
+</span></span><span class="line"><span class="cl">##  7 Pierce Brosnan                 14
+</span></span><span class="line"><span class="cl">##  8 Harrison Ford                  13
+</span></span><span class="line"><span class="cl">##  9 Reese Witherspoon              13
+</span></span><span class="line"><span class="cl">## 10 Scarlett Johansson             13
+</span></span><span class="line"><span class="cl">## # ℹ 1,021 more rows
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># //Is the mean/median age difference staying constant over the years (1935 - 2022)?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># create plot</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># create combined table with release_year, metric and value to plot on same chart</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">union</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># get mean age difference by year</span>
+</span></span><span class="line"><span class="cl">    <span class="n">age_gaps</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">group_by</span><span class="p">(</span><span class="n">release_year</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">      <span class="nf">summarize</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">metric</span> <span class="o">=</span> <span class="s">&#34;Mean Age Difference&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">,</span><span class="n">value</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">age_difference</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># get median age difference by year</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">age_gaps</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">      <span class="nf">group_by</span><span class="p">(</span><span class="n">release_year</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">      <span class="nf">summarize</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">metric</span> <span class="o">=</span> <span class="s">&#34;Median Age Difference&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">,</span><span class="n">value</span> <span class="o">=</span> <span class="nf">median</span><span class="p">(</span><span class="n">age_difference</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># plot release year and value with metic as color</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">release_year</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">value</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">metric</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add lines to chart</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_line</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/homework1_seanodoherty_files/figure-html/problem-10-3.png" width="672" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># // How frequently does Hollywood depict same-gender love interests?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">age_gaps</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Create column which returns TRUE when both characters are the same gender</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span><span class="n">same_sex</span> <span class="o">=</span> <span class="nf">if_else</span><span class="p">(</span><span class="n">character_1_gender</span> <span class="o">==</span> <span class="n">character_2_gender</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">))</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by same sex test</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">same_sex</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># get counts</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarize</span><span class="p">(</span><span class="nf">n</span><span class="p">())</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 2 × 2
+</span></span><span class="line"><span class="cl">##   same_sex `n()`
+</span></span><span class="line"><span class="cl">##   &lt;lgl&gt;    &lt;int&gt;
+</span></span><span class="line"><span class="cl">## 1 FALSE     1132
+</span></span><span class="line"><span class="cl">## 2 TRUE        23
+</span></span></code></pre></div><p>How would you explore this data set? Here are some ideas of tables/ graphs to help you with your analysis</p>
+<ul>
+<li>
+<p>How is <code>age_difference</code> distributed? What&rsquo;s the &rsquo;typical&rsquo; <code>age_difference</code> in movies?</p>
+</li>
+<li>
+<p>The <code>half plus seven\</code> rule. Large age disparities in relationships carry certain stigmas. One popular rule of thumb is the <a href="https://en.wikipedia.org/wiki/Age_disparity_in_sexual_relationships#The_.22half-your-age-plus-seven.22_rule">half-your-age-plus-seven</a> rule. This rule states you should never date anyone under half your age plus seven, establishing a minimum boundary on whom one can date. In order for a dating relationship to be acceptable under this rule, your partner&rsquo;s age must be:</p>
+</li>
+</ul>
+<p><code>$$\frac{\text{Your age}}{2} + 7 &lt; \text{Partner Age} &lt; (\text{Your age} - 7) * 2$$</code> How frequently does this rule apply in this dataset?</p>
+<ul>
+<li>Which movie has the greatest number of love interests?</li>
+<li>Which actors/ actresses have the greatest number of love interests in this dataset?</li>
+<li>Is the mean/median age difference staying constant over the years (1935 - 2022)?</li>
+<li>How frequently does Hollywood depict same-gender love interests?</li>
+</ul>
+<h1 id="deliverables">Deliverables</h1>
+<p>There is a lot of explanatory text, comments, etc. You do not need these, so delete them and produce a stand-alone document that you could share with someone. Render the edited and completed Quarto Markdown (qmd) file as a Word document (use the &ldquo;Render&rdquo; button at the top of the script editor window) and upload it to Canvas. You must be commiting and pushing tour changes to your own Github repo as you go along.</p>
+<h1 id="details">Details</h1>
+<ul>
+<li>Who did you collaborate with: <em>na</em></li>
+<li>Approximately how much time did you spend on this problem set: <em>a few hours</em></li>
+<li>What, if anything, gave you the most trouble: <em>researching functions</em></li>
+</ul>
+<p><strong>Please seek out help when you need it,</strong> and remember the <a href="https://mam2022.netlify.app/syllabus/#the-15-minute-rule">15-minute rule</a>{target=&quot;_blank&quot;}. You know enough R (and have enough examples of code from class and your readings) to be able to do this. If you get stuck, ask for help from others, post a question on Slack&ndash; and remember that I am here to help too!</p>
+<blockquote>
+<p>As a true test to yourself, do you understand the code you submitted and are you able to explain it to someone else?</p>
+</blockquote>
+<h1 id="rubric">Rubric</h1>
+<p>13/13: Problem set is 100% completed. Every question was attempted and answered, and most answers are correct. Code is well-documented (both self-documented and with additional comments as necessary). Used tidyverse, instead of base R. Graphs and tables are properly labelled. Analysis is clear and easy to follow, either because graphs are labeled clearly or you&rsquo;ve written additional text to describe how you interpret the output. Multiple Github commits. Work is exceptional. I will not assign these often.</p>
+<p>8/13: Problem set is 60&ndash;80% complete and most answers are correct. This is the expected level of performance. Solid effort. Hits all the elements. No clear mistakes. Easy to follow (both the code and the output). A few Github commits.</p>
+<p>5/13: Problem set is less than 60% complete and/or most answers are incorrect. This indicates that you need to improve next time. I will hopefully not assign these often. Displays minimal effort. Doesn&rsquo;t complete all components. Code is poorly written and not documented. Uses the same type of plot for each graph, or doesn&rsquo;t use plots appropriate for the variables being analyzed. No Github commits.</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Seán O&#39;Doherty
+        2023
+      
+    </li>
+    
+      <li class="footer__item">
+        <a
+          class="link"
+          href="/imprint/"
+          
+          title=""
+        >
+          imprint
+        </a>
+      </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
