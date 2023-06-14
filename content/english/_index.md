@@ -2,6 +2,12 @@
 author: Hugo Authors
 ---
 
+# Welcome to my Portfolio Website
+
+This website is intended to house my work from the Data Science for Business Elective and subsequent coding projects.
+
+![london business school lecture theatre](/images/lbs_lt.jpg)
+
 <!--
 This file is left intentionally empty by default to be backwards compatible with the initial theme setup.
 
