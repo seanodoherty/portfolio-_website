@@ -4,7 +4,7 @@ draft: false
 tags:
 - demo
 - shortcode
-title: The Notice Shortcode
+title: Test Post
 ---
 
 The notice shortcode supports three different types of disclaimers. These are as following:
