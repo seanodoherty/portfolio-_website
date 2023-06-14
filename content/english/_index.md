@@ -6,6 +6,8 @@ author: Hugo Authors
 
 This website is intended to house my work from the Data Science for Business Elective and subsequent coding projects.
 
+Check out my [posts](https://seanodoherty-portfolio-website.netlify.app/post/) about what I've been doing.
+
 ![london business school lecture theatre](/images/lbs_lt.jpg)
 
 <!--
