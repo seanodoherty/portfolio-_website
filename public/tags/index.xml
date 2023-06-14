@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My blog</title>
+    <title>Tags on My Portfolio Website</title>
     <link>https://example.com/tags/</link>
-    <description>Recent content in Tags on My blog</description>
+    <description>Recent content in Tags on My Portfolio Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 18 Mar 2022 21:47:41 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -46,6 +46,39 @@
       <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/tags/redirecturl/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>plot</title>
+      <link>https://example.com/tags/plot/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      
+      <guid>https://example.com/tags/plot/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>R Markdown</title>
+      <link>https://example.com/tags/r-markdown/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      
+      <guid>https://example.com/tags/r-markdown/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>regression</title>
+      <link>https://example.com/tags/regression/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      
+      <guid>https://example.com/tags/regression/</guid>
       
         <description></description>
       
@@ -123,6 +156,17 @@
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/tags/emoji/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>عربي</title>
+      <link>https://example.com/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</guid>
       
         <description></description>
       
