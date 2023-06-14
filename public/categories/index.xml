@@ -6,13 +6,24 @@
     <description>Recent content in Categories on My Portfolio Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://seanodoherty-portfolio-website.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://seanodoherty-portfolio-website.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>R</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/categories/r/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      <title>Case Studies</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/categories/case-studies/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://seanodoherty-portfolio-website.netlify.app/categories/r/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/categories/case-studies/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>E628</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/categories/e628/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://seanodoherty-portfolio-website.netlify.app/categories/e628/</guid>
       
         <description></description>
       

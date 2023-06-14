@@ -6,7 +6,29 @@
     <description>Recent content on My Portfolio Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://seanodoherty-portfolio-website.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://seanodoherty-portfolio-website.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>F628 Final Group Project</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/english/post/group-project/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://seanodoherty-portfolio-website.netlify.app/english/post/group-project/</guid>
+      
+        <description>Post outlining E628 Final Group Project</description>
+      
+    </item>
+    
+    <item>
+      <title>F628 Final Group Project</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/post/group-project/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://seanodoherty-portfolio-website.netlify.app/post/group-project/</guid>
+      
+        <description>Post outlining E628 Final Group Project</description>
+      
+    </item>
+    
     <item>
       <title>Awards</title>
       <link>https://seanodoherty-portfolio-website.netlify.app/awards/</link>
@@ -48,28 +70,6 @@
       <guid>https://seanodoherty-portfolio-website.netlify.app/english/certifications/</guid>
       
         <description>Hugo Certifications</description>
-      
-    </item>
-    
-    <item>
-      <title>Test Post</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/english/post/notice-shortcode/</link>
-      <pubDate>Fri, 18 Mar 2022 21:47:41 +0000</pubDate>
-      
-      <guid>https://seanodoherty-portfolio-website.netlify.app/english/post/notice-shortcode/</guid>
-      
-        <description>The notice shortcode supports three different types of disclaimers. These are as following:</description>
-      
-    </item>
-    
-    <item>
-      <title>Test Post</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/post/notice-shortcode/</link>
-      <pubDate>Fri, 18 Mar 2022 21:47:41 +0000</pubDate>
-      
-      <guid>https://seanodoherty-portfolio-website.netlify.app/post/notice-shortcode/</guid>
-      
-        <description>The notice shortcode supports three different types of disclaimers. These are as following:</description>
       
     </item>
     
@@ -158,28 +158,6 @@
       <guid>https://seanodoherty-portfolio-website.netlify.app/post/figure-shortcode/</guid>
       
         <description>Hugo has figure shortcode built-in, so you can easily add figure captions or hyperlink rel attributes to images.</description>
-      
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/post/2020-12-01-r-rmarkdown/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      
-      <guid>https://seanodoherty-portfolio-website.netlify.app/post/2020-12-01-r-rmarkdown/</guid>
-      
-        <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.</description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/arabic/archives/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://seanodoherty-portfolio-website.netlify.app/arabic/archives/</guid>
-      
-        <description></description>
       
     </item>
     
@@ -316,17 +294,6 @@
     </item>
     
     <item>
-      <title>للتواصل</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/arabic/contact/</link>
-      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://seanodoherty-portfolio-website.netlify.app/arabic/contact/</guid>
-      
-        <description>Contact Page</description>
-      
-    </item>
-    
-    <item>
       <title>Emoji Support</title>
       <link>https://seanodoherty-portfolio-website.netlify.app/english/post/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
@@ -345,17 +312,6 @@
       <guid>https://seanodoherty-portfolio-website.netlify.app/post/emoji-support/</guid>
       
         <description>Guide to emoji usage in Hugo</description>
-      
-    </item>
-    
-    <item>
-      <title>نموذج عربي</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/arabic/post/arabic_example/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://seanodoherty-portfolio-website.netlify.app/arabic/post/arabic_example/</guid>
-      
-        <description>نص عربي سريع</description>
       
     </item>
     
@@ -398,17 +354,6 @@
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://seanodoherty-portfolio-website.netlify.app/english/about/</guid>
-      
-        <description>Hugo, the world&#39;s fastest framework for building websites</description>
-      
-    </item>
-    
-    <item>
-      <title>حول</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/arabic/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://seanodoherty-portfolio-website.netlify.app/arabic/about/</guid>
       
         <description>Hugo, the world&#39;s fastest framework for building websites</description>
       

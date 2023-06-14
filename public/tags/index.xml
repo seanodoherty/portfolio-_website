@@ -6,24 +6,57 @@
     <description>Recent content in Tags on My Portfolio Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 18 Mar 2022 21:47:41 +0000</lastBuildDate><atom:link href="https://seanodoherty-portfolio-website.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://seanodoherty-portfolio-website.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>demo</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/tags/demo/</link>
-      <pubDate>Fri, 18 Mar 2022 21:47:41 +0000</pubDate>
+      <title>DataScience</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/datascience/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/demo/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/datascience/</guid>
       
         <description></description>
       
     </item>
     
     <item>
-      <title>shortcode</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/tags/shortcode/</link>
-      <pubDate>Fri, 18 Mar 2022 21:47:41 +0000</pubDate>
+      <title>MachineLearning</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/machinelearning/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/shortcode/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/machinelearning/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/r/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/r/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>RStudio</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/rstudio/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/rstudio/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Tidyverse</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/tidyverse/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/tidyverse/</guid>
       
         <description></description>
       
@@ -52,33 +85,22 @@
     </item>
     
     <item>
-      <title>plot</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/tags/plot/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      <title>demo</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/demo/</link>
+      <pubDate>Sat, 13 Mar 2021 21:47:41 +0000</pubDate>
       
-      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/plot/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/tags/r-markdown/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      
-      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/r-markdown/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/demo/</guid>
       
         <description></description>
       
     </item>
     
     <item>
-      <title>regression</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/tags/regression/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      <title>shortcode</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/shortcode/</link>
+      <pubDate>Sat, 13 Mar 2021 21:47:41 +0000</pubDate>
       
-      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/regression/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/shortcode/</guid>
       
         <description></description>
       
@@ -156,17 +178,6 @@
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://seanodoherty-portfolio-website.netlify.app/tags/emoji/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>عربي</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</guid>
       
         <description></description>
       
