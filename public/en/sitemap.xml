@@ -2,255 +2,255 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/</loc>
     <lastmod>2022-04-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://example.com/ar/"
+                href="https://seanodoherty-portfolio-website.netlify.app/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/"
+                href="https://seanodoherty-portfolio-website.netlify.app/"
                 />
   </url><url>
-    <loc>https://example.com/english/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/</loc>
     <lastmod>2022-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/awards/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/awards/</loc>
     <lastmod>2022-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/awards/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/awards/</loc>
     <lastmod>2022-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/certifications/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/certifications/</loc>
     <lastmod>2022-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/certifications/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/certifications/</loc>
     <lastmod>2022-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/demo/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/demo/</loc>
     <lastmod>2022-03-18T21:47:41+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/post/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/</loc>
     <lastmod>2022-03-18T21:47:41+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/</loc>
     <lastmod>2022-03-18T21:47:41+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/shortcode/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/shortcode/</loc>
     <lastmod>2022-03-18T21:47:41+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/</loc>
     <lastmod>2022-03-18T21:47:41+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://example.com/ar/tags/"
+                href="https://seanodoherty-portfolio-website.netlify.app/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/tags/"
+                href="https://seanodoherty-portfolio-website.netlify.app/tags/"
                 />
   </url><url>
-    <loc>https://example.com/english/post/notice-shortcode/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/notice-shortcode/</loc>
     <lastmod>2022-03-18T21:47:41+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/notice-shortcode/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/notice-shortcode/</loc>
     <lastmod>2022-03-18T21:47:41+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/series/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/series/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://example.com/ar/series/"
+                href="https://seanodoherty-portfolio-website.netlify.app/ar/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/series/"
+                href="https://seanodoherty-portfolio-website.netlify.app/series/"
                 />
   </url><url>
-    <loc>https://example.com/english/post/series-part-2/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/series-part-2/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/series-part-2/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/series-part-2/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/series/series-setup/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/series/series-setup/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/post/series-part-1/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/series-part-1/</loc>
     <lastmod>2021-08-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/series-part-1/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/series-part-1/</loc>
     <lastmod>2021-08-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/redirect/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/redirect/</loc>
     <lastmod>2021-06-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/post/redirect/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/redirect/</loc>
     <lastmod>2021-06-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/redirect/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/redirect/</loc>
     <lastmod>2021-06-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/redirecturl/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/redirecturl/</loc>
     <lastmod>2021-06-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/post/figure-shortcode/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/figure-shortcode/</loc>
     <lastmod>2021-03-13T21:47:41+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/figure-shortcode/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/figure-shortcode/</loc>
     <lastmod>2021-03-13T21:47:41+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/categories/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://example.com/ar/categories/"
+                href="https://seanodoherty-portfolio-website.netlify.app/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/categories/"
+                href="https://seanodoherty-portfolio-website.netlify.app/categories/"
                 />
   </url><url>
-    <loc>https://example.com/post/2020-12-01-r-rmarkdown/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/2020-12-01-r-rmarkdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/plot/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/plot/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/r/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/categories/r/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/r-markdown/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/regression/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/regression/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://example.com/arabic/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/arabic/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/arabic/archives/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/arabic/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/archives/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/archives/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/css/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/html/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/html/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/markdown/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/post/markdown-syntax/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/markdown-syntax/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/syntax/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/categories/syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/themes/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/categories/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/series/themes-guide/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/series/themes-guide/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/privacy/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/privacy/</loc>
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/post/rich-content/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/rich-content/</loc>
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/rich-content/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/rich-content/</loc>
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/shortcodes/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/shortcodes/</loc>
     <lastmod>2019-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/post/placeholder-text/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/placeholder-text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/placeholder-text/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/placeholder-text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/text/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/text/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/contact/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/contact/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/contact/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/contact/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/post/math-typesetting/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/math-typesetting/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/math-typesetting/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/math-typesetting/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/arabic/contact/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/arabic/contact/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/emoji/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/emoji/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/post/emoji-support/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/emoji-support/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/arabic/post/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/arabic/post/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/arabic/post/arabic_example/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/arabic/post/arabic_example/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/post/image-test/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/post/image-test/</loc>
     <lastmod>2019-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/image-test/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/image-test/</loc>
     <lastmod>2019-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/thumbnail/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/thumbnail/</loc>
     <lastmod>2019-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/about/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/english/about/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/arabic/about/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/arabic/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/imprint/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/imprint/</loc>
   </url><url>
-    <loc>https://example.com/english/imprint/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/imprint/</loc>
   </url><url>
-    <loc>https://example.com/tags/index/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/tags/index/</loc>
   </url><url>
-    <loc>https://example.com/english/portfolio/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/english/portfolio/</loc>
   </url><url>
-    <loc>https://example.com/portfolio/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/portfolio/</loc>
   </url>
 </urlset>

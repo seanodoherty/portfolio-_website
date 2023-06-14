@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/ar/categories/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/ar/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/categories/"
+                href="https://seanodoherty-portfolio-website.netlify.app/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://example.com/ar/categories/"
+                href="https://seanodoherty-portfolio-website.netlify.app/ar/categories/"
                 />
   </url><url>
-    <loc>https://example.com/ar/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/ar/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/"
+                href="https://seanodoherty-portfolio-website.netlify.app/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://example.com/ar/"
+                href="https://seanodoherty-portfolio-website.netlify.app/ar/"
                 />
   </url><url>
-    <loc>https://example.com/ar/series/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/ar/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/series/"
+                href="https://seanodoherty-portfolio-website.netlify.app/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://example.com/ar/series/"
+                href="https://seanodoherty-portfolio-website.netlify.app/ar/series/"
                 />
   </url><url>
-    <loc>https://example.com/ar/tags/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/ar/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/tags/"
+                href="https://seanodoherty-portfolio-website.netlify.app/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://example.com/ar/tags/"
+                href="https://seanodoherty-portfolio-website.netlify.app/ar/tags/"
                 />
   </url>
 </urlset>

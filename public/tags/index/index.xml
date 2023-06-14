@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>index on My Portfolio Website</title>
-    <link>https://example.com/tags/index/</link>
+    <link>https://seanodoherty-portfolio-website.netlify.app/tags/index/</link>
     <description>Recent content in index on My Portfolio Website</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://example.com/tags/index/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://seanodoherty-portfolio-website.netlify.app/tags/index/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Posts</title>
-      <link>https://example.com/arabic/post/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/arabic/post/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/arabic/post/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/arabic/post/</guid>
       
         <description></description>
       
@@ -19,10 +19,10 @@
     
     <item>
       <title>Posts</title>
-      <link>https://example.com/english/post/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/english/post/</link>
       <pubDate>Fri, 18 Mar 2022 21:47:41 +0000</pubDate>
       
-      <guid>https://example.com/english/post/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/english/post/</guid>
       
         <description></description>
       
@@ -30,10 +30,10 @@
     
     <item>
       <title>Posts</title>
-      <link>https://example.com/post/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/post/</link>
       <pubDate>Fri, 18 Mar 2022 21:47:41 +0000</pubDate>
       
-      <guid>https://example.com/post/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/post/</guid>
       
         <description></description>
       

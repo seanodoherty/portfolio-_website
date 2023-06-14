@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My Portfolio Website</title>
-    <link>https://example.com/tags/</link>
+    <link>https://seanodoherty-portfolio-website.netlify.app/tags/</link>
     <description>Recent content in Tags on My Portfolio Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 18 Mar 2022 21:47:41 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Mar 2022 21:47:41 +0000</lastBuildDate><atom:link href="https://seanodoherty-portfolio-website.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>demo</title>
-      <link>https://example.com/tags/demo/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/demo/</link>
       <pubDate>Fri, 18 Mar 2022 21:47:41 +0000</pubDate>
       
-      <guid>https://example.com/tags/demo/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/demo/</guid>
       
         <description></description>
       
@@ -20,10 +20,10 @@
     
     <item>
       <title>shortcode</title>
-      <link>https://example.com/tags/shortcode/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/shortcode/</link>
       <pubDate>Fri, 18 Mar 2022 21:47:41 +0000</pubDate>
       
-      <guid>https://example.com/tags/shortcode/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/shortcode/</guid>
       
         <description></description>
       
@@ -31,10 +31,10 @@
     
     <item>
       <title>redirect</title>
-      <link>https://example.com/tags/redirect/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/redirect/</link>
       <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/redirect/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/redirect/</guid>
       
         <description></description>
       
@@ -42,10 +42,10 @@
     
     <item>
       <title>redirectUrl</title>
-      <link>https://example.com/tags/redirecturl/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/redirecturl/</link>
       <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/redirecturl/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/redirecturl/</guid>
       
         <description></description>
       
@@ -53,10 +53,10 @@
     
     <item>
       <title>plot</title>
-      <link>https://example.com/tags/plot/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/plot/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>https://example.com/tags/plot/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/plot/</guid>
       
         <description></description>
       
@@ -64,10 +64,10 @@
     
     <item>
       <title>R Markdown</title>
-      <link>https://example.com/tags/r-markdown/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/r-markdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>https://example.com/tags/r-markdown/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/r-markdown/</guid>
       
         <description></description>
       
@@ -75,10 +75,10 @@
     
     <item>
       <title>regression</title>
-      <link>https://example.com/tags/regression/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/regression/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>https://example.com/tags/regression/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/regression/</guid>
       
         <description></description>
       
@@ -86,10 +86,10 @@
     
     <item>
       <title>css</title>
-      <link>https://example.com/tags/css/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/css/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/css/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/css/</guid>
       
         <description></description>
       
@@ -97,10 +97,10 @@
     
     <item>
       <title>html</title>
-      <link>https://example.com/tags/html/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/html/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/html/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/html/</guid>
       
         <description></description>
       
@@ -108,10 +108,10 @@
     
     <item>
       <title>markdown</title>
-      <link>https://example.com/tags/markdown/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/markdown/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/markdown/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/markdown/</guid>
       
         <description></description>
       
@@ -119,10 +119,10 @@
     
     <item>
       <title>privacy</title>
-      <link>https://example.com/tags/privacy/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/privacy/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/privacy/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/privacy/</guid>
       
         <description></description>
       
@@ -130,10 +130,10 @@
     
     <item>
       <title>shortcodes</title>
-      <link>https://example.com/tags/shortcodes/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/shortcodes/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/shortcodes/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/shortcodes/</guid>
       
         <description></description>
       
@@ -141,10 +141,10 @@
     
     <item>
       <title>text</title>
-      <link>https://example.com/tags/text/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/text/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/text/</guid>
       
         <description></description>
       
@@ -152,10 +152,10 @@
     
     <item>
       <title>emoji</title>
-      <link>https://example.com/tags/emoji/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/emoji/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/emoji/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/emoji/</guid>
       
         <description></description>
       
@@ -163,10 +163,10 @@
     
     <item>
       <title>عربي</title>
-      <link>https://example.com/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</guid>
       
         <description></description>
       
@@ -174,10 +174,10 @@
     
     <item>
       <title>thumbnail</title>
-      <link>https://example.com/tags/thumbnail/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/thumbnail/</link>
       <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/thumbnail/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/thumbnail/</guid>
       
         <description></description>
       
@@ -185,10 +185,10 @@
     
     <item>
       <title>index</title>
-      <link>https://example.com/tags/index/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/tags/index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/index/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/tags/index/</guid>
       
         <description></description>
       

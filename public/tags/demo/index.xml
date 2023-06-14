@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>demo on My Portfolio Website</title>
-    <link>https://example.com/tags/demo/</link>
+    <link>https://seanodoherty-portfolio-website.netlify.app/tags/demo/</link>
     <description>Recent content in demo on My Portfolio Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 18 Mar 2022 21:47:41 +0000</lastBuildDate><atom:link href="https://example.com/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Mar 2022 21:47:41 +0000</lastBuildDate><atom:link href="https://seanodoherty-portfolio-website.netlify.app/tags/demo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The Notice Shortcode</title>
-      <link>https://example.com/english/post/notice-shortcode/</link>
+      <title>Test Post</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/english/post/notice-shortcode/</link>
       <pubDate>Fri, 18 Mar 2022 21:47:41 +0000</pubDate>
       
-      <guid>https://example.com/english/post/notice-shortcode/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/english/post/notice-shortcode/</guid>
       
         <description>The notice shortcode supports three different types of disclaimers. These are as following:</description>
       
     </item>
     
     <item>
-      <title>The Notice Shortcode</title>
-      <link>https://example.com/post/notice-shortcode/</link>
+      <title>Test Post</title>
+      <link>https://seanodoherty-portfolio-website.netlify.app/post/notice-shortcode/</link>
       <pubDate>Fri, 18 Mar 2022 21:47:41 +0000</pubDate>
       
-      <guid>https://example.com/post/notice-shortcode/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/post/notice-shortcode/</guid>
       
         <description>The notice shortcode supports three different types of disclaimers. These are as following:</description>
       
@@ -31,10 +31,10 @@
     
     <item>
       <title>The Figure Shortcode</title>
-      <link>https://example.com/english/post/figure-shortcode/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/english/post/figure-shortcode/</link>
       <pubDate>Sat, 13 Mar 2021 21:47:41 +0000</pubDate>
       
-      <guid>https://example.com/english/post/figure-shortcode/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/english/post/figure-shortcode/</guid>
       
         <description>Hugo has figure shortcode built-in, so you can easily add figure captions or hyperlink rel attributes to images.</description>
       
@@ -42,10 +42,10 @@
     
     <item>
       <title>The Figure Shortcode</title>
-      <link>https://example.com/post/figure-shortcode/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/post/figure-shortcode/</link>
       <pubDate>Sat, 13 Mar 2021 21:47:41 +0000</pubDate>
       
-      <guid>https://example.com/post/figure-shortcode/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/post/figure-shortcode/</guid>
       
         <description>Hugo has figure shortcode built-in, so you can easily add figure captions or hyperlink rel attributes to images.</description>
       
