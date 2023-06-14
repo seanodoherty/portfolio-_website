@@ -5,7 +5,7 @@ author = "Seán O'Doherty"
 description = """E628 Portfolio Website"""
 profilePicture = "images/Sean O'Doherty.jpg"
 keywords = ""
-favicon = "favicons/favicon.ico"
+favicon = "favicons/"
 # example ["css/custom.css"]
 customCss = []
 # example ["js/custom.js"]
