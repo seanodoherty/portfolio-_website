@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    Seán O&#39;Doherty
+        |
+        Credit card fraud
+      
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.113.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Seán O&#39;Doherty" />
+  <meta
+    name="description"
+    content="Predicting credit card fraud - Final group project"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.1147aa5bacb4bce677a0e264073829caedb82fd18ea07a5f1d80521f539d1c45.css"
+      integrity="sha256-EUeqW6y0vOZ3oOJkBzgpyu24L9GOoHpfHYBSH1OdHEU="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://seanodoherty-portfolio-website.netlify.app/english/post/groupwork/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanodoherty-portfolio-website.netlify.app/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Credit card fraud"/>
+<meta name="twitter:description" content="Predicting credit card fraud - Final group project"/>
+
+
+
+  
+  <meta property="og:title" content="Credit card fraud" />
+<meta property="og:description" content="Predicting credit card fraud - Final group project" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seanodoherty-portfolio-website.netlify.app/english/post/groupwork/" /><meta property="og:image" content="https://seanodoherty-portfolio-website.netlify.app/images/site-feature-image.png"/><meta property="article:section" content="english" />
+<meta property="article:published_time" content="2022-06-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-08T00:00:00+00:00" /><meta property="og:site_name" content="Seán O&#39;Doherty - Portfolio Website" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "english",
+        "name": "Credit card fraud",
+        "headline": "Credit card fraud",
+        "alternativeHeadline": "",
+        "description": "
+      Predicting credit card fraud - Final group project
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seanodoherty-portfolio-website.netlify.app\/english\/post\/groupwork\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-06-08T00:00:00.00Z",
+        "datePublished": "2022-06-08T00:00:00.00Z",
+        "dateModified": "2022-06-08T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Seán O'Doherty",
+            "url": "https://seanodoherty-portfolio-website.netlify.app/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/seanodoherty-portfolio-website.netlify.app\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://seanodoherty-portfolio-website.netlify.app/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/seanodoherty-portfolio-website.netlify.app\/english\/post\/groupwork\/",
+        "wordCount" : "4332",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/Sean%20O%27Doherty.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Seán O&#39;Doherty - Portfolio Website</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>E628 Portfolio Website</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/sean-odoherty/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/seanodoherty"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="sodoherty.mba2024@london.edu"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Seán O&#39;Doherty
+        2023
+      
+    </li>
+    
+      <li class="footer__item">
+        <a
+          class="link"
+          href="/imprint/"
+          
+          title=""
+        >
+          imprint
+        </a>
+      </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+
+          <li class="nav__list-item">
+            <div class="optionswitch">
+              <input class="optionswitch__picker" type="checkbox" id="4" hidden />
+
+              
+              
+                
+
+              
+                
+
+              
+
+
+              <label class="optionswitch__label" for="4"
+                >Accomplishments <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></label>
+
+              <div class="optionswitch__triangle"></div>
+              <ul class="optionswitch__list">
+                
+                  <li class="optionswitch__list-item">
+                    
+                    <a
+                      href="/awards/"
+                      
+                      title=""
+                      >Awards</a
+                    >
+                  </li>
+                
+                  <li class="optionswitch__list-item">
+                    
+                    <a
+                      href="/certifications/"
+                      
+                      title=""
+                      >Certifications</a
+                    >
+                  </li>
+                
+              </ul>
+            </div>
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Credit Card Fraud</h1>
+      <h1 id="the-problem-predicting-credit-card-fraud">The problem: predicting credit card fraud</h1>
+<p>The goal of the project is to predict fraudulent credit card transactions.</p>
+<p>We will be using a dataset with credit card transactions containing legitimate and fraud transactions. Fraud is typically well below 1% of all transactions, so a naive model that predicts that all transactions are legitimate and not fraudulent would have an accuracy of well over 99%&ndash; pretty good, no?</p>
+<p>You can read more on credit card fraud on <a href="https://www.scirp.org/journal/paperinformation.aspx?paperid=105944">Credit Card Fraud Detection Using Weighted Support Vector Machine</a></p>
+<p>The dataset we will use consists of credit card transactions and it includes information about each transaction including customer details, the merchant and category of purchase, and whether or not the transaction was a fraud.</p>
+<h2 id="obtain-the-data">Obtain the data</h2>
+<p>The dataset is too large to be hosted on Canvas or Github, so please download it from dropbox <a href="https://www.dropbox.com/sh/q1yk8mmnbbrzavl/AAAxzRtIhag9Nc_hODafGV2ka?dl=0">https://www.dropbox.com/sh/q1yk8mmnbbrzavl/AAAxzRtIhag9Nc_hODafGV2ka?dl=0</a> and save it in your <code>dsb</code> repo, under the <code>data</code> folder.</p>
+<p>As we will be building a classifier model using tidymodels, there&rsquo;s two things we need to do:</p>
+<ol>
+<li>Define the outcome variable <code>is_fraud</code> as a factor, or categorical, variable, instead of the numerical 0-1 varaibles.</li>
+<li>In tidymodels, the first level is the event of interest. If we leave our data as is, <code>0</code> is the first level, but we want to find out when we actually did (<code>1</code>) have a fraudulent transaction</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Rows: 671,028
+</span></span><span class="line"><span class="cl">## Columns: 14
+</span></span><span class="line"><span class="cl">## $ trans_date_trans_time &lt;dttm&gt; 2019-02-22 07:32:58, 2019-02-16 15:07:20, 2019-…
+</span></span><span class="line"><span class="cl">## $ trans_year            &lt;dbl&gt; 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2020, …
+</span></span><span class="line"><span class="cl">## $ category              &lt;chr&gt; &#34;entertainment&#34;, &#34;kids_pets&#34;, &#34;personal_care&#34;, &#34;…
+</span></span><span class="line"><span class="cl">## $ amt                   &lt;dbl&gt; 7.79, 3.89, 8.43, 40.00, 54.04, 95.61, 64.95, 3.…
+</span></span><span class="line"><span class="cl">## $ city                  &lt;chr&gt; &#34;Veedersburg&#34;, &#34;Holloway&#34;, &#34;Arnold&#34;, &#34;Apison&#34;, &#34;…
+</span></span><span class="line"><span class="cl">## $ state                 &lt;chr&gt; &#34;IN&#34;, &#34;OH&#34;, &#34;MO&#34;, &#34;TN&#34;, &#34;CO&#34;, &#34;GA&#34;, &#34;MN&#34;, &#34;AL&#34;, …
+</span></span><span class="line"><span class="cl">## $ lat                   &lt;dbl&gt; 40.1, 40.0, 38.4, 35.0, 39.5, 32.8, 48.6, 34.6, …
+</span></span><span class="line"><span class="cl">## $ long                  &lt;dbl&gt; -87.3, -81.0, -90.4, -85.0, -106.4, -83.2, -93.3…
+</span></span><span class="line"><span class="cl">## $ city_pop              &lt;dbl&gt; 4049, 128, 35439, 3730, 277, 1841, 136, 190178, …
+</span></span><span class="line"><span class="cl">## $ job                   &lt;chr&gt; &#34;Development worker, community&#34;, &#34;Child psychoth…
+</span></span><span class="line"><span class="cl">## $ dob                   &lt;date&gt; 1959-10-19, 1946-04-03, 1985-03-31, 1991-01-28,…
+</span></span><span class="line"><span class="cl">## $ merch_lat             &lt;dbl&gt; 39.4, 39.7, 37.7, 34.5, 40.0, 32.9, 48.6, 35.1, …
+</span></span><span class="line"><span class="cl">## $ merch_long            &lt;dbl&gt; -87.5, -81.5, -91.4, -84.1, -106.9, -82.2, -94.1…
+</span></span><span class="line"><span class="cl">## $ is_fraud              &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
+</span></span></code></pre></div><p>The data dictionary is as follows</p>
+<table>
+<thead>
+<tr>
+<th>column(variable)</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>trans_date_trans_time</td>
+<td>Transaction DateTime</td>
+</tr>
+<tr>
+<td>trans_year</td>
+<td>Transaction year</td>
+</tr>
+<tr>
+<td>category</td>
+<td>category of merchant</td>
+</tr>
+<tr>
+<td>amt</td>
+<td>amount of transaction</td>
+</tr>
+<tr>
+<td>city</td>
+<td>City of card holder</td>
+</tr>
+<tr>
+<td>state</td>
+<td>State of card holder</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>Latitude location of purchase</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Longitude location of purchase</td>
+</tr>
+<tr>
+<td>city_pop</td>
+<td>card holder&rsquo;s city population</td>
+</tr>
+<tr>
+<td>job</td>
+<td>job of card holder</td>
+</tr>
+<tr>
+<td>dob</td>
+<td>date of birth of card holder</td>
+</tr>
+<tr>
+<td>merch_lat</td>
+<td>Latitude Location of Merchant</td>
+</tr>
+<tr>
+<td>merch_long</td>
+<td>Longitude Location of Merchant</td>
+</tr>
+<tr>
+<td>is_fraud</td>
+<td>Whether Transaction is Fraud (1) or Not (0)</td>
+</tr>
+</tbody>
+</table>
+<p>We also add some of the variables we considered in our EDA for this dataset during homework 2.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">card_fraud</span> <span class="o">&lt;-</span> <span class="n">card_fraud</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span> <span class="n">hour</span> <span class="o">=</span> <span class="nf">hour</span><span class="p">(</span><span class="n">trans_date_trans_time</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="n">wday</span> <span class="o">=</span> <span class="nf">wday</span><span class="p">(</span><span class="n">trans_date_trans_time</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="n">month_name</span> <span class="o">=</span> <span class="nf">month</span><span class="p">(</span><span class="n">trans_date_trans_time</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="n">age</span> <span class="o">=</span> <span class="nf">interval</span><span class="p">(</span><span class="n">dob</span><span class="p">,</span> <span class="n">trans_date_trans_time</span><span class="p">)</span> <span class="o">/</span> <span class="nf">years</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">rename</span><span class="p">(</span><span class="n">year</span> <span class="o">=</span> <span class="n">trans_year</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># convert latitude/longitude to radians</span>
+</span></span><span class="line"><span class="cl">    <span class="n">lat1_radians</span> <span class="o">=</span> <span class="n">lat</span> <span class="o">/</span> <span class="m">57.29577951</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">lat2_radians</span> <span class="o">=</span> <span class="n">merch_lat</span> <span class="o">/</span> <span class="m">57.29577951</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">long1_radians</span> <span class="o">=</span> <span class="n">long</span> <span class="o">/</span> <span class="m">57.29577951</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">long2_radians</span> <span class="o">=</span> <span class="n">merch_long</span> <span class="o">/</span> <span class="m">57.29577951</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># calculate distance in miles</span>
+</span></span><span class="line"><span class="cl">    <span class="n">distance_miles</span> <span class="o">=</span> <span class="m">3963.0</span> <span class="o">*</span> <span class="nf">acos</span><span class="p">((</span><span class="nf">sin</span><span class="p">(</span><span class="n">lat1_radians</span><span class="p">)</span> <span class="o">*</span> <span class="nf">sin</span><span class="p">(</span><span class="n">lat2_radians</span><span class="p">))</span> <span class="o">+</span> <span class="nf">cos</span><span class="p">(</span><span class="n">lat1_radians</span><span class="p">)</span> <span class="o">*</span> <span class="nf">cos</span><span class="p">(</span><span class="n">lat2_radians</span><span class="p">)</span> <span class="o">*</span> <span class="nf">cos</span><span class="p">(</span><span class="n">long2_radians</span> <span class="o">-</span> <span class="n">long1_radians</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># calculate distance in km</span>
+</span></span><span class="line"><span class="cl">    <span class="n">distance_km</span> <span class="o">=</span> <span class="m">6377.830272</span> <span class="o">*</span> <span class="nf">acos</span><span class="p">((</span><span class="nf">sin</span><span class="p">(</span><span class="n">lat1_radians</span><span class="p">)</span> <span class="o">*</span> <span class="nf">sin</span><span class="p">(</span><span class="n">lat2_radians</span><span class="p">))</span> <span class="o">+</span> <span class="nf">cos</span><span class="p">(</span><span class="n">lat1_radians</span><span class="p">)</span> <span class="o">*</span> <span class="nf">cos</span><span class="p">(</span><span class="n">lat2_radians</span><span class="p">)</span> <span class="o">*</span> <span class="nf">cos</span><span class="p">(</span><span class="n">long2_radians</span> <span class="o">-</span> <span class="n">long1_radians</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><h2 id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h2>
+<p>You have done some EDA and you can pool together your group&rsquo;s expertise in which variables to use as features. You can reuse your EDA from earlier, but we expect at least a few visualisations and/or tables to explore the dataset and identify any useful features.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">card_fraud</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># only keep fraudulent transactions</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="n">is_fraud</span><span class="o">==</span><span class="m">1</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># count number of (fraudulent) transactions per category</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">count</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">sort</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># calculate prop as number of fraudulent transactions per catogory divided by total number of fraudulent transactions</span>
+</span></span><span class="line"><span class="cl">    <span class="n">prop</span> <span class="o">=</span> <span class="n">n</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># order categories by number of fraudulent transactionss</span>
+</span></span><span class="line"><span class="cl">    <span class="n">category</span> <span class="o">=</span> <span class="nf">fct_reorder</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># plot col chart</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">prop</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">category</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">geom_col</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">scales</span><span class="o">::</span><span class="n">percent</span><span class="p">)</span>
+</span></span></code></pre></div><img src="/english/post/final_group_project_17_FINAL_files/figure-html/unnamed-chunk-4-1.png" width="648" style="display: block; margin: auto;" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># when is fraud more prevalent?</span>
+</span></span><span class="line"><span class="cl"><span class="n">card_fraud</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># count number of obs per weekday</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">count</span><span class="p">(</span><span class="n">wday</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># calculate prop as number of obs per group / total number obs</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">prop</span> <span class="o">=</span> <span class="n">n</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">wday</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">prop</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">geom_col</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/final_group_project_17_FINAL_files/figure-html/unnamed-chunk-5-1.png" width="648" style="display: block; margin: auto;" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">card_fraud</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># count number of observations per month_name</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">count</span><span class="p">(</span><span class="n">month_name</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># calculate prop as number of obs per group / total number obs</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">prop</span> <span class="o">=</span> <span class="n">n</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># plot column chart</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">month_name</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">prop</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">geom_col</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/final_group_project_17_FINAL_files/figure-html/unnamed-chunk-6-1.png" width="648" style="display: block; margin: auto;" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">card_fraud</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># remove transactions with no hour</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">hour</span><span class="p">)</span><span class="o">==</span><span class="kc">FALSE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># count number of obs per hour value</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">count</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># calculate prop as number of obs per group / total number obs</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">prop</span> <span class="o">=</span> <span class="n">n</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># plot column chart</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">hour</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">prop</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">geom_col</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/final_group_project_17_FINAL_files/figure-html/unnamed-chunk-7-1.png" width="648" style="display: block; margin: auto;" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># are elders more prone to credit card fraud?</span>
+</span></span><span class="line"><span class="cl"><span class="n">card_fraud</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># remove NA values for is_fraud</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">is_fraud</span><span class="p">)</span><span class="o">==</span><span class="m">0</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">   <span class="n">age</span> <span class="o">=</span> <span class="nf">interval</span><span class="p">(</span><span class="n">dob</span><span class="p">,</span> <span class="n">trans_date_trans_time</span><span class="p">)</span> <span class="o">/</span> <span class="nf">years</span><span class="p">(</span><span class="m">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># plot geom historgram wrapped by is_fraud value, free y scale</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">age</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">geom_histogram</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">is_fraud</span><span class="p">,</span> <span class="n">scales</span><span class="o">=</span><span class="s">&#34;free_y&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><img src="/english/post/final_group_project_17_FINAL_files/figure-html/unnamed-chunk-8-1.png" width="648" style="display: block; margin: auto;" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># examine relationship distance_km and probability of fraud</span>
+</span></span><span class="line"><span class="cl"><span class="n">card_fraud</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span><span class="o">=</span><span class="n">distance_km</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">is_fraud</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">fill</span><span class="o">=</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">is_fraud</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">group</span> <span class="o">=</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">is_fraud</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">geom_boxplot</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/final_group_project_17_FINAL_files/figure-html/unnamed-chunk-9-1.png" width="648" style="display: block; margin: auto;" />
+<p>Group all variables by type and examine each variable class by class. The dataset has the following types of variables:</p>
+<ol>
+<li>Strings</li>
+<li>Geospatial Data</li>
+<li>Dates</li>
+<li>Date/Times</li>
+<li>Numerical</li>
+</ol>
+<p>Strings are usually not a useful format for classification problems. The strings should be converted to factors, dropped, or otherwise transformed.</p>
+<p><em><strong>Strings to Factors</strong></em></p>
+<ul>
+<li><code>category</code>, Category of Merchant</li>
+<li><code>job</code>, Job of Credit Card Holder</li>
+</ul>
+<p><em><strong>Strings to Geospatial Data</strong></em></p>
+<p>We have plenty of geospatial data as lat/long pairs, so I want to convert city/state to lat/long so I can compare to the other geospatial variables. This will also make it easier to compute new variables like the distance the transaction is from the home location.</p>
+<ul>
+<li><code>city</code>, City of Credit Card Holder</li>
+<li><code>state</code>, State of Credit Card Holder</li>
+</ul>
+<h2 id="exploring-factors-how-is-the-compactness-of-categories">Exploring factors: how is the compactness of categories?</h2>
+<ul>
+<li>Do we have excessive number of categories? Do we want to combine some?</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">card_fraud</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">count</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span><span class="n">perc</span> <span class="o">=</span> <span class="n">n</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 14 × 3
+</span></span><span class="line"><span class="cl">##    category           n   perc
+</span></span><span class="line"><span class="cl">##    &lt;chr&gt;          &lt;int&gt;  &lt;dbl&gt;
+</span></span><span class="line"><span class="cl">##  1 gas_transport  68046 0.101 
+</span></span><span class="line"><span class="cl">##  2 grocery_pos    63791 0.0951
+</span></span><span class="line"><span class="cl">##  3 home           63597 0.0948
+</span></span><span class="line"><span class="cl">##  4 shopping_pos   60416 0.0900
+</span></span><span class="line"><span class="cl">##  5 kids_pets      58772 0.0876
+</span></span><span class="line"><span class="cl">##  6 shopping_net   50743 0.0756
+</span></span><span class="line"><span class="cl">##  7 entertainment  48521 0.0723
+</span></span><span class="line"><span class="cl">##  8 food_dining    47527 0.0708
+</span></span><span class="line"><span class="cl">##  9 personal_care  46843 0.0698
+</span></span><span class="line"><span class="cl">## 10 health_fitness 44341 0.0661
+</span></span><span class="line"><span class="cl">## 11 misc_pos       41244 0.0615
+</span></span><span class="line"><span class="cl">## 12 misc_net       32829 0.0489
+</span></span><span class="line"><span class="cl">## 13 grocery_net    23485 0.0350
+</span></span><span class="line"><span class="cl">## 14 travel         20873 0.0311
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">card_fraud</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">count</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span><span class="n">perc</span> <span class="o">=</span> <span class="n">n</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 494 × 3
+</span></span><span class="line"><span class="cl">##    job                            n    perc
+</span></span><span class="line"><span class="cl">##    &lt;chr&gt;                      &lt;int&gt;   &lt;dbl&gt;
+</span></span><span class="line"><span class="cl">##  1 Film/video editor           5106 0.00761
+</span></span><span class="line"><span class="cl">##  2 Exhibition designer         4728 0.00705
+</span></span><span class="line"><span class="cl">##  3 Naval architect             4546 0.00677
+</span></span><span class="line"><span class="cl">##  4 Surveyor, land/geomatics    4448 0.00663
+</span></span><span class="line"><span class="cl">##  5 Materials engineer          4292 0.00640
+</span></span><span class="line"><span class="cl">##  6 Designer, ceramics/pottery  4262 0.00635
+</span></span><span class="line"><span class="cl">##  7 IT trainer                  4014 0.00598
+</span></span><span class="line"><span class="cl">##  8 Financial adviser           3959 0.00590
+</span></span><span class="line"><span class="cl">##  9 Systems developer           3948 0.00588
+</span></span><span class="line"><span class="cl">## 10 Environmental consultant    3831 0.00571
+</span></span><span class="line"><span class="cl">## # ℹ 484 more rows
+</span></span></code></pre></div><p>The predictors <code>category</code> and <code>job</code> are transformed into factors.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">card_fraud</span> <span class="o">&lt;-</span> <span class="n">card_fraud</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span><span class="n">category</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">category</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">         <span class="n">job</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">job</span><span class="p">))</span>
+</span></span></code></pre></div><p><code>category</code> has 14 unique values, and <code>job</code> has 494 unique values. The dataset is quite large, with over 670K records, so these variables don&rsquo;t have an excessive number of levels at first glance. However, it is worth seeing if we can compact the levels to a smaller number.</p>
+<h3 id="why-do-we-care-about-the-number-of-categories-and-whether-they-are-excessive">Why do we care about the number of categories and whether they are &ldquo;excessive&rdquo;?</h3>
+<p>Consider the extreme case where a dataset had categories that only contained one record each. There is simply insufficient data to make correct predictions using category as a predictor on new data with that category label. Additionally, if your modeling uses dummy variables, having an extremely large number of categories will lead to the production of a huge number of predictors, which can slow down the fitting. This is fine if all the predictors are useful, but if they aren&rsquo;t useful (as in the case of having only one record for a category), trimming them will improve the speed and quality of the data fitting.</p>
+<p>If I had subject matter expertise, I could manually combine categories. If you don&rsquo;t have subject matter expertise, or if performing this task would be too labor intensive, then you can use cutoffs based on the amount of data in a category. If the majority of the data exists in only a few categories, then it might be reasonable to keep those categories and lump everything else in an &ldquo;other&rdquo; category or perhaps even drop the data points in smaller categories.</p>
+<h2 id="do-all-variables-have-sensible-types">Do all variables have sensible types?</h2>
+<p>Consider each variable and decide whether to keep, transform, or drop it. This is a mixture of Exploratory Data Analysis and Feature Engineering, but it&rsquo;s helpful to do some simple feature engineering as you explore the data. In this project, we have all data to begin with, so any transformations will be performed on the entire dataset. Ideally, do the transformations as a <code>recipe_step()</code> in the tidymodels framework. Then the transformations would be applied to any data the recipe was used on as part of the modeling workflow. There is less chance of data leakage or missing a step when you perform the feature engineering in the recipe.</p>
+<h2 id="which-variables-to-keep-in-your-model">Which variables to keep in your model?</h2>
+<p>You have a number of variables and you have to decide which ones to use in your model. For instance, you have the latitude/lognitude of the customer, that of the merchant, the same data in radians, as well as the <code>distance_km</code> and <code>distance_miles</code>. Do you need them all?</p>
+<h2 id="fit-your-workflows-in-smaller-sample">Fit your workflows in smaller sample</h2>
+<p>You will be running a series of different models, along the lines of the California housing example we have seen in class. However, this dataset has 670K rows and if you try various models and run cross validation on them, your computer may slow down or crash.</p>
+<p>Thus, we will work with a smaller sample of 10% of the values the original dataset to identify the best model, and once we have the best model we can use the full dataset to train- test our best model.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># select a smaller subset</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_card_fraud</span> <span class="o">&lt;-</span> <span class="n">card_fraud</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="c1"># select a smaller subset, 10% of the entire dataframe </span>
+</span></span><span class="line"><span class="cl">  <span class="nf">slice_sample</span><span class="p">(</span><span class="n">prop</span> <span class="o">=</span> <span class="m">0.10</span><span class="p">)</span> 
+</span></span></code></pre></div><h2 id="split-the-data-in-training---testing">Split the data in training - testing</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># **Split the data**</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">rsample</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">data_split</span> <span class="o">&lt;-</span> <span class="nf">initial_split</span><span class="p">(</span><span class="n">my_card_fraud</span><span class="p">,</span> <span class="c1"># updated data</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">prop</span> <span class="o">=</span> <span class="m">0.8</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                           <span class="n">strata</span> <span class="o">=</span> <span class="n">is_fraud</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">card_fraud_train</span> <span class="o">&lt;-</span> <span class="nf">training</span><span class="p">(</span><span class="n">data_split</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="n">card_fraud_test</span> <span class="o">&lt;-</span> <span class="nf">testing</span><span class="p">(</span><span class="n">data_split</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="cross-validation">Cross Validation</h2>
+<p>Start with 3 CV folds to quickly get an estimate for the best model and you can increase the number of folds to 5 or 10 later.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cv_folds</span> <span class="o">&lt;-</span> <span class="nf">vfold_cv</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">card_fraud_train</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                          <span class="n">v</span> <span class="o">=</span> <span class="m">3</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                          <span class="n">strata</span> <span class="o">=</span> <span class="n">is_fraud</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cv_folds</span> 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## #  3-fold cross-validation using stratification 
+</span></span><span class="line"><span class="cl">## # A tibble: 3 × 2
+</span></span><span class="line"><span class="cl">##   splits                id   
+</span></span><span class="line"><span class="cl">##   &lt;list&gt;                &lt;chr&gt;
+</span></span><span class="line"><span class="cl">## 1 &lt;split [35787/17894]&gt; Fold1
+</span></span><span class="line"><span class="cl">## 2 &lt;split [35787/17894]&gt; Fold2
+</span></span><span class="line"><span class="cl">## 3 &lt;split [35788/17893]&gt; Fold3
+</span></span></code></pre></div><h2 id="define-a-tidymodels-recipe">Define a tidymodels <code>recipe</code></h2>
+<p>What steps are you going to add to your recipe? Do you need to do any log transformations?</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tidymodels</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">GGally</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">leaflet</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">janitor</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">rpart.plot</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">gt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">DataExplorer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fraud_rec</span> <span class="o">&lt;-</span> <span class="nf">recipe</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># define outcome variable</span>
+</span></span><span class="line"><span class="cl">    <span class="n">is_fraud</span> <span class="o">~</span> 
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    <span class="c1"># define predictor variables</span>
+</span></span><span class="line"><span class="cl">    <span class="n">distance_km</span> <span class="o">+</span> <span class="n">age</span> <span class="o">+</span> <span class="n">hour</span> <span class="o">+</span> <span class="n">wday</span> <span class="o">+</span> <span class="n">month_name</span> <span class="o">+</span> <span class="n">category</span> <span class="o">+</span> <span class="n">amt</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># define dataset</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">card_fraud_train</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1">#update_role(long, lat, </span>
+</span></span><span class="line"><span class="cl">  <span class="c1">#            new_role = &#34;ID&#34;) %&gt;% </span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># log transform variables which are highly skewed</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">step_log</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">amt</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">distance_km</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># apply tidying steps to the recipe</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">step_naomit</span><span class="p">(</span><span class="nf">everything</span><span class="p">(),</span> <span class="n">skip</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">step_novel</span><span class="p">(</span><span class="nf">all_nominal</span><span class="p">(),</span> <span class="o">-</span><span class="nf">all_outcomes</span><span class="p">())</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">step_normalize</span><span class="p">(</span><span class="nf">all_numeric</span><span class="p">(),</span> <span class="o">-</span><span class="nf">all_outcomes</span><span class="p">())</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">step_dummy</span><span class="p">(</span><span class="nf">all_nominal</span><span class="p">(),</span> <span class="o">-</span><span class="nf">all_outcomes</span><span class="p">())</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">step_zv</span><span class="p">(</span><span class="nf">all_numeric</span><span class="p">(),</span> <span class="o">-</span><span class="nf">all_outcomes</span><span class="p">())</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">step_corr</span><span class="p">(</span><span class="nf">all_predictors</span><span class="p">(),</span> <span class="n">threshold</span> <span class="o">=</span> <span class="m">0.7</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s">&#34;spearman&#34;</span><span class="p">)</span> 
+</span></span></code></pre></div><p>Once you have your recipe, you can check the pre-processed dataframe</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">prepped_data</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">fraud_rec</span> <span class="o">%&gt;%</span> <span class="c1"># use the recipe object</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">prep</span><span class="p">()</span> <span class="o">%&gt;%</span> <span class="c1"># perform the recipe on training data</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">juice</span><span class="p">()</span> <span class="c1"># extract only the preprocessed dataframe </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">glimpse</span><span class="p">(</span><span class="n">prepped_data</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Rows: 53,681
+</span></span><span class="line"><span class="cl">## Columns: 37
+</span></span><span class="line"><span class="cl">## $ distance_km             &lt;dbl&gt; 0.2374, -0.4717, 0.5405, 0.3116, 0.2742, 0.796…
+</span></span><span class="line"><span class="cl">## $ age                     &lt;dbl&gt; -0.6899, -1.3355, -0.6883, -0.4364, 1.3390, 0.…
+</span></span><span class="line"><span class="cl">## $ hour                    &lt;dbl&gt; 1.3549, 0.7676, 0.7676, -1.5815, 1.5017, -1.43…
+</span></span><span class="line"><span class="cl">## $ amt                     &lt;dbl&gt; -0.958, -1.006, -1.078, 0.926, 0.328, -1.523, …
+</span></span><span class="line"><span class="cl">## $ is_fraud                &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+</span></span><span class="line"><span class="cl">## $ wday_1                  &lt;dbl&gt; 0.3858, -0.5401, 0.0772, -0.2315, -0.3858, -0.…
+</span></span><span class="line"><span class="cl">## $ wday_2                  &lt;dbl&gt; 0.0772, 0.5401, -0.3858, -0.2315, 0.0772, 0.54…
+</span></span><span class="line"><span class="cl">## $ wday_3                  &lt;dbl&gt; -0.308, -0.431, -0.185, 0.431, 0.308, -0.431, …
+</span></span><span class="line"><span class="cl">## $ wday_4                  &lt;dbl&gt; -0.524, 0.282, 0.363, -0.121, -0.524, 0.282, -…
+</span></span><span class="line"><span class="cl">## $ wday_5                  &lt;dbl&gt; -0.492, -0.150, 0.321, -0.364, 0.492, -0.150, …
+</span></span><span class="line"><span class="cl">## $ wday_6                  &lt;dbl&gt; -0.3077, 0.0615, -0.3077, 0.5539, -0.3077, 0.0…
+</span></span><span class="line"><span class="cl">## $ wday_7                  &lt;dbl&gt; -0.1195, -0.0171, -0.5974, -0.3585, 0.1195, -0…
+</span></span><span class="line"><span class="cl">## $ month_name_01           &lt;dbl&gt; -1.65e-17, 3.71e-01, 1.48e-01, -1.48e-01, 3.71…
+</span></span><span class="line"><span class="cl">## $ month_name_02           &lt;dbl&gt; -0.3129, 0.2458, -0.2235, -0.2235, 0.2458, -0.…
+</span></span><span class="line"><span class="cl">## $ month_name_03           &lt;dbl&gt; -2.48e-17, 1.49e-16, -2.93e-01, 2.93e-01, 1.49…
+</span></span><span class="line"><span class="cl">## $ month_name_04           &lt;dbl&gt; 0.3220, -0.2530, 0.0422, 0.0422, -0.2530, -0.2…
+</span></span><span class="line"><span class="cl">## $ month_name_05           &lt;dbl&gt; -6.22e-16, -4.20e-01, 3.31e-01, -3.31e-01, -4.…
+</span></span><span class="line"><span class="cl">## $ month_name_06           &lt;dbl&gt; -0.3355, -0.4614, 0.1845, 0.1845, -0.4614, 0.3…
+</span></span><span class="line"><span class="cl">## $ month_name_07           &lt;dbl&gt; 4.51e-17, -3.98e-01, -2.14e-01, 2.14e-01, -3.9…
+</span></span><span class="line"><span class="cl">## $ month_name_08           &lt;dbl&gt; 0.3589, -0.2820, -0.3640, -0.3640, -0.2820, -0…
+</span></span><span class="line"><span class="cl">## $ month_name_09           &lt;dbl&gt; -2.07e-15, -1.65e-01, -7.63e-02, 7.63e-02, -1.…
+</span></span><span class="line"><span class="cl">## $ month_name_10           &lt;dbl&gt; -0.40545, -0.07884, 0.33787, 0.33787, -0.07884…
+</span></span><span class="line"><span class="cl">## $ month_name_11           &lt;dbl&gt; 2.61e-14, -2.92e-02, 4.81e-01, -4.81e-01, -2.9…
+</span></span><span class="line"><span class="cl">## $ month_name_12           &lt;dbl&gt; 0.561896, -0.007297, 0.301016, 0.301016, -0.00…
+</span></span><span class="line"><span class="cl">## $ category_food_dining    &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0…
+</span></span><span class="line"><span class="cl">## $ category_gas_transport  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0…
+</span></span><span class="line"><span class="cl">## $ category_grocery_net    &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+</span></span><span class="line"><span class="cl">## $ category_grocery_pos    &lt;dbl&gt; 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0…
+</span></span><span class="line"><span class="cl">## $ category_health_fitness &lt;dbl&gt; 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0…
+</span></span><span class="line"><span class="cl">## $ category_home           &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+</span></span><span class="line"><span class="cl">## $ category_kids_pets      &lt;dbl&gt; 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+</span></span><span class="line"><span class="cl">## $ category_misc_net       &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0…
+</span></span><span class="line"><span class="cl">## $ category_misc_pos       &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+</span></span><span class="line"><span class="cl">## $ category_personal_care  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1…
+</span></span><span class="line"><span class="cl">## $ category_shopping_net   &lt;dbl&gt; 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+</span></span><span class="line"><span class="cl">## $ category_shopping_pos   &lt;dbl&gt; 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0…
+</span></span><span class="line"><span class="cl">## $ category_travel         &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+</span></span></code></pre></div><h2 id="define-various-models">Define various models</h2>
+<p>You should define the following classification models:</p>
+<ol>
+<li>Logistic regression, using the <code>glm</code> engine</li>
+<li>Decision tree, using the <code>C5.0</code> engine</li>
+<li>Random Forest, using the <code>ranger</code> engine and setting <code>importance = &quot;impurity&quot;</code>)</li>
+<li>A boosted tree using Extreme Gradient Boosting, and the <code>xgboost</code> engine</li>
+<li>A k-nearest neighbours, using 4 nearest_neighbors and the <code>kknn</code> engine</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Model Building </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 1. Pick a `model type`</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. set the `engine`</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. Set the `mode`:  classification</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># brackets aroud the assignment assigns and prints</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Logistic regression</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">log_spec</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">logistic_reg</span><span class="p">()</span> <span class="o">%&gt;%</span>  <span class="c1"># model type</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">set_engine</span><span class="p">(</span><span class="n">engine</span> <span class="o">=</span> <span class="s">&#34;glm&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>  <span class="c1"># model engine</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">set_mode</span><span class="p">(</span><span class="s">&#34;classification&#34;</span><span class="p">)</span> <span class="c1"># model mode</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Logistic Regression Model Specification (classification)
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Computational engine: glm
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Decision Tree</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">tree_spec</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">decision_tree</span><span class="p">()</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">set_engine</span><span class="p">(</span><span class="n">engine</span> <span class="o">=</span> <span class="s">&#34;C5.0&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">set_mode</span><span class="p">(</span><span class="s">&#34;classification&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Decision Tree Model Specification (classification)
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Computational engine: C5.0
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Random Forest</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ranger</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">rf_spec</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">rand_forest</span><span class="p">()</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">set_engine</span><span class="p">(</span><span class="s">&#34;ranger&#34;</span><span class="p">,</span> <span class="n">importance</span> <span class="o">=</span> <span class="s">&#34;impurity&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">set_mode</span><span class="p">(</span><span class="s">&#34;classification&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Random Forest Model Specification (classification)
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Engine-Specific Arguments:
+</span></span><span class="line"><span class="cl">##   importance = impurity
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Computational engine: ranger
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Boosted tree (XGBoost)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">xgboost</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">xgb_spec</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">boost_tree</span><span class="p">()</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">set_engine</span><span class="p">(</span><span class="s">&#34;xgboost&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">set_mode</span><span class="p">(</span><span class="s">&#34;classification&#34;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Boosted Tree Model Specification (classification)
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Computational engine: xgboost
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># K-nearest neighbour (k-NN)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">knn_spec</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">nearest_neighbor</span><span class="p">(</span><span class="n">neighbors</span> <span class="o">=</span> <span class="m">4</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="c1"># we can adjust the number of neighbors </span>
+</span></span><span class="line"><span class="cl">    <span class="nf">set_engine</span><span class="p">(</span><span class="s">&#34;kknn&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">set_mode</span><span class="p">(</span><span class="s">&#34;classification&#34;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## K-Nearest Neighbor Model Specification (classification)
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Main Arguments:
+</span></span><span class="line"><span class="cl">##   neighbors = 4
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Computational engine: kknn
+</span></span></code></pre></div><h2 id="bundle-recipe-and-model-with-workflows">Bundle recipe and model with <code>workflows</code></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Bundle recipe and model with `workflows`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="n">log_wflow</span> <span class="o">&lt;-</span> <span class="c1"># log workflow object</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">workflow</span><span class="p">()</span> <span class="o">%&gt;%</span> <span class="c1"># use workflow function</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">add_recipe</span><span class="p">(</span><span class="n">fraud_rec</span><span class="p">)</span> <span class="o">%&gt;%</span>   <span class="c1"># use the new recipe</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">add_model</span><span class="p">(</span><span class="n">log_spec</span><span class="p">)</span> <span class="c1"># add model spec</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## ══ Workflow ════════════════════════════════════════════════════════════════════
+</span></span><span class="line"><span class="cl">## Preprocessor: Recipe
+</span></span><span class="line"><span class="cl">## Model: logistic_reg()
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## ── Preprocessor ────────────────────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl">## 7 Recipe Steps
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## • step_log()
+</span></span><span class="line"><span class="cl">## • step_naomit()
+</span></span><span class="line"><span class="cl">## • step_novel()
+</span></span><span class="line"><span class="cl">## • step_normalize()
+</span></span><span class="line"><span class="cl">## • step_dummy()
+</span></span><span class="line"><span class="cl">## • step_zv()
+</span></span><span class="line"><span class="cl">## • step_corr()
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## ── Model ───────────────────────────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl">## Logistic Regression Model Specification (classification)
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Computational engine: glm
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="n">tree_wflow</span> <span class="o">&lt;-</span> <span class="c1"># log workflow object</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">workflow</span><span class="p">()</span> <span class="o">%&gt;%</span> <span class="c1"># use workflow function</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">add_recipe</span><span class="p">(</span><span class="n">fraud_rec</span><span class="p">)</span> <span class="o">%&gt;%</span>   <span class="c1"># use the new recipe</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">add_model</span><span class="p">(</span><span class="n">tree_spec</span><span class="p">)</span> <span class="c1"># add model spec</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## ══ Workflow ════════════════════════════════════════════════════════════════════
+</span></span><span class="line"><span class="cl">## Preprocessor: Recipe
+</span></span><span class="line"><span class="cl">## Model: decision_tree()
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## ── Preprocessor ────────────────────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl">## 7 Recipe Steps
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## • step_log()
+</span></span><span class="line"><span class="cl">## • step_naomit()
+</span></span><span class="line"><span class="cl">## • step_novel()
+</span></span><span class="line"><span class="cl">## • step_normalize()
+</span></span><span class="line"><span class="cl">## • step_dummy()
+</span></span><span class="line"><span class="cl">## • step_zv()
+</span></span><span class="line"><span class="cl">## • step_corr()
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## ── Model ───────────────────────────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl">## Decision Tree Model Specification (classification)
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Computational engine: C5.0
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="n">rf_wflow</span> <span class="o">&lt;-</span> <span class="c1"># log workflow object</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">workflow</span><span class="p">()</span> <span class="o">%&gt;%</span> <span class="c1"># use workflow function</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">add_recipe</span><span class="p">(</span><span class="n">fraud_rec</span><span class="p">)</span> <span class="o">%&gt;%</span>   <span class="c1"># use the new recipe</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">add_model</span><span class="p">(</span><span class="n">rf_spec</span><span class="p">)</span> <span class="c1"># add model spec</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## ══ Workflow ════════════════════════════════════════════════════════════════════
+</span></span><span class="line"><span class="cl">## Preprocessor: Recipe
+</span></span><span class="line"><span class="cl">## Model: rand_forest()
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## ── Preprocessor ────────────────────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl">## 7 Recipe Steps
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## • step_log()
+</span></span><span class="line"><span class="cl">## • step_naomit()
+</span></span><span class="line"><span class="cl">## • step_novel()
+</span></span><span class="line"><span class="cl">## • step_normalize()
+</span></span><span class="line"><span class="cl">## • step_dummy()
+</span></span><span class="line"><span class="cl">## • step_zv()
+</span></span><span class="line"><span class="cl">## • step_corr()
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## ── Model ───────────────────────────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl">## Random Forest Model Specification (classification)
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Engine-Specific Arguments:
+</span></span><span class="line"><span class="cl">##   importance = impurity
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Computational engine: ranger
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="n">xgb_wflow</span> <span class="o">&lt;-</span> <span class="c1"># log workflow object</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">workflow</span><span class="p">()</span> <span class="o">%&gt;%</span> <span class="c1"># use workflow function</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">add_recipe</span><span class="p">(</span><span class="n">fraud_rec</span><span class="p">)</span> <span class="o">%&gt;%</span>   <span class="c1"># use the new recipe</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">add_model</span><span class="p">(</span><span class="n">xgb_spec</span><span class="p">)</span> <span class="c1"># add model spec</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## ══ Workflow ════════════════════════════════════════════════════════════════════
+</span></span><span class="line"><span class="cl">## Preprocessor: Recipe
+</span></span><span class="line"><span class="cl">## Model: boost_tree()
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## ── Preprocessor ────────────────────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl">## 7 Recipe Steps
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## • step_log()
+</span></span><span class="line"><span class="cl">## • step_naomit()
+</span></span><span class="line"><span class="cl">## • step_novel()
+</span></span><span class="line"><span class="cl">## • step_normalize()
+</span></span><span class="line"><span class="cl">## • step_dummy()
+</span></span><span class="line"><span class="cl">## • step_zv()
+</span></span><span class="line"><span class="cl">## • step_corr()
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## ── Model ───────────────────────────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl">## Boosted Tree Model Specification (classification)
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Computational engine: xgboost
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="n">knn_wflow</span> <span class="o">&lt;-</span> <span class="c1"># log workflow object</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">workflow</span><span class="p">()</span> <span class="o">%&gt;%</span> <span class="c1"># use workflow function</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">add_recipe</span><span class="p">(</span><span class="n">fraud_rec</span><span class="p">)</span> <span class="o">%&gt;%</span>   <span class="c1"># use the new recipe</span>
+</span></span><span class="line"><span class="cl"> <span class="nf">add_model</span><span class="p">(</span><span class="n">knn_spec</span><span class="p">)</span> <span class="c1"># add model spec</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## ══ Workflow ════════════════════════════════════════════════════════════════════
+</span></span><span class="line"><span class="cl">## Preprocessor: Recipe
+</span></span><span class="line"><span class="cl">## Model: nearest_neighbor()
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## ── Preprocessor ────────────────────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl">## 7 Recipe Steps
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## • step_log()
+</span></span><span class="line"><span class="cl">## • step_naomit()
+</span></span><span class="line"><span class="cl">## • step_novel()
+</span></span><span class="line"><span class="cl">## • step_normalize()
+</span></span><span class="line"><span class="cl">## • step_dummy()
+</span></span><span class="line"><span class="cl">## • step_zv()
+</span></span><span class="line"><span class="cl">## • step_corr()
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## ── Model ───────────────────────────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl">## K-Nearest Neighbor Model Specification (classification)
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Main Arguments:
+</span></span><span class="line"><span class="cl">##   neighbors = 4
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Computational engine: kknn
+</span></span></code></pre></div><h2 id="fit-models">Fit models</h2>
+<p>You may want to compare the time it takes to fit each model. <code>tic()</code> starts a simple timer and <code>toc()</code> stops it</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">tictoc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">tic</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">log_res</span> <span class="o">&lt;-</span> <span class="n">log_wflow</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">fit_resamples</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">resamples</span> <span class="o">=</span> <span class="n">cv_folds</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">metrics</span> <span class="o">=</span> <span class="nf">metric_set</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">recall</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">f_meas</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">kap</span><span class="p">,</span> <span class="n">roc_auc</span><span class="p">,</span> <span class="n">sens</span><span class="p">,</span> <span class="n">spec</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">control</span> <span class="o">=</span> <span class="nf">control_resamples</span><span class="p">(</span><span class="n">save_pred</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> 
+</span></span><span class="line"><span class="cl"><span class="n">time</span> <span class="o">&lt;-</span> <span class="nf">toc</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 33.76 sec elapsed
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">log_time</span> <span class="o">&lt;-</span> <span class="n">time[[4]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">tic</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">tree_res</span> <span class="o">&lt;-</span> <span class="n">tree_wflow</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">fit_resamples</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">resamples</span> <span class="o">=</span> <span class="n">cv_folds</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">metrics</span> <span class="o">=</span> <span class="nf">metric_set</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">recall</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">f_meas</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">kap</span><span class="p">,</span> <span class="n">roc_auc</span><span class="p">,</span> <span class="n">sens</span><span class="p">,</span> <span class="n">spec</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">control</span> <span class="o">=</span> <span class="nf">control_resamples</span><span class="p">(</span><span class="n">save_pred</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> 
+</span></span><span class="line"><span class="cl"><span class="n">time</span> <span class="o">&lt;-</span> <span class="nf">toc</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 58.03 sec elapsed
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">tree_time</span> <span class="o">&lt;-</span> <span class="n">time[[4]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">tic</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">rf_res</span> <span class="o">&lt;-</span> <span class="n">rf_wflow</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">fit_resamples</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">resamples</span> <span class="o">=</span> <span class="n">cv_folds</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">metrics</span> <span class="o">=</span> <span class="nf">metric_set</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">recall</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">f_meas</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">kap</span><span class="p">,</span> <span class="n">roc_auc</span><span class="p">,</span> <span class="n">sens</span><span class="p">,</span> <span class="n">spec</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">control</span> <span class="o">=</span> <span class="nf">control_resamples</span><span class="p">(</span><span class="n">save_pred</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">time</span> <span class="o">&lt;-</span> <span class="nf">toc</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 97.69 sec elapsed
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">rf_time</span> <span class="o">&lt;-</span> <span class="n">time[[4]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">tic</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">xgb_res</span> <span class="o">&lt;-</span> <span class="n">xgb_wflow</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">fit_resamples</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">resamples</span> <span class="o">=</span> <span class="n">cv_folds</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">metrics</span> <span class="o">=</span> <span class="nf">metric_set</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">recall</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">f_meas</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">kap</span><span class="p">,</span> <span class="n">roc_auc</span><span class="p">,</span> <span class="n">sens</span><span class="p">,</span> <span class="n">spec</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">control</span> <span class="o">=</span> <span class="nf">control_resamples</span><span class="p">(</span><span class="n">save_pred</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">time</span> <span class="o">&lt;-</span> <span class="nf">toc</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 38.65 sec elapsed
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">xgb_time</span> <span class="o">&lt;-</span> <span class="n">time[[4]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">tic</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">knn_res</span> <span class="o">&lt;-</span> <span class="n">knn_wflow</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">fit_resamples</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">resamples</span> <span class="o">=</span> <span class="n">cv_folds</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">metrics</span> <span class="o">=</span> <span class="nf">metric_set</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">recall</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">f_meas</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">kap</span><span class="p">,</span> <span class="n">roc_auc</span><span class="p">,</span> <span class="n">sens</span><span class="p">,</span> <span class="n">spec</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">control</span> <span class="o">=</span> <span class="nf">control_resamples</span><span class="p">(</span><span class="n">save_pred</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">time</span> <span class="o">&lt;-</span> <span class="nf">toc</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 260.63 sec elapsed
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">knn_time</span> <span class="o">&lt;-</span> <span class="n">time[[4]]</span>
+</span></span></code></pre></div><h2 id="compare-models">Compare models</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Model Comparison</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">log_metrics</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">log_res</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">collect_metrics</span><span class="p">(</span><span class="n">summarise</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># add the name of the model to every row</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">model</span> <span class="o">=</span> <span class="s">&#34;Logistic Regression&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">time</span> <span class="o">=</span> <span class="n">log_time</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># add mode models here</span>
+</span></span><span class="line"><span class="cl"><span class="n">tree_metrics</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">tree_res</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">collect_metrics</span><span class="p">(</span><span class="n">summarise</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">model</span> <span class="o">=</span> <span class="s">&#34;Decision tree&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">time</span> <span class="o">=</span> <span class="n">tree_time</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">rf_metrics</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">rf_res</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">collect_metrics</span><span class="p">(</span><span class="n">summarise</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">model</span> <span class="o">=</span> <span class="s">&#34;Random Forest&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">time</span> <span class="o">=</span> <span class="n">rf_time</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">xgb_metrics</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">xgb_res</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">collect_metrics</span><span class="p">(</span><span class="n">summarise</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">model</span> <span class="o">=</span> <span class="s">&#34;Extreme Gradient Boosting&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">time</span> <span class="o">=</span> <span class="n">xgb_time</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">knn_metrics</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">knn_res</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">collect_metrics</span><span class="p">(</span><span class="n">summarise</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">model</span> <span class="o">=</span> <span class="s">&#34;K-nearest neighbour&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">time</span> <span class="o">=</span> <span class="n">knn_time</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># create dataframe with all models</span>
+</span></span><span class="line"><span class="cl"><span class="n">model_compare</span> <span class="o">&lt;-</span> <span class="nf">bind_rows</span><span class="p">(</span><span class="n">log_metrics</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">tree_metrics</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">rf_metrics</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">xgb_metrics</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">knn_metrics</span>
+</span></span><span class="line"><span class="cl">                      <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="c1"># get rid of &#39;sec elapsed&#39; and turn it into a number</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">time</span> <span class="o">=</span> <span class="nf">as.double</span><span class="p">(</span> <span class="nf">str_sub</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="m">-13</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><h2 id="which-metric-to-use">Which metric to use</h2>
+<p>This is a highly imbalanced data set, as roughly 99.5% of all transactions are ok, and it&rsquo;s only 0.5% of transactions that are fraudulent. A <code>naive</code> model, which classifies everything as ok and not-fraud, would have an accuracy of 99.5%, but what about the sensitivity, specificity, the AUC, etc?</p>
+<h2 id="last_fit"><code>last_fit()</code></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">#Pivot wider to create barplot</span>
+</span></span><span class="line"><span class="cl">  <span class="n">model_comp</span> <span class="o">&lt;-</span> <span class="n">model_compare</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">select</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">.metric</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">std_err</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span> <span class="o">=</span> <span class="n">.metric</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">std_err</span><span class="p">))</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># show mean are under the curve (ROC-AUC) for every model</span>
+</span></span><span class="line"><span class="cl"><span class="n">model_comp</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">arrange</span><span class="p">(</span><span class="n">mean_roc_auc</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span><span class="n">model</span> <span class="o">=</span> <span class="nf">fct_reorder</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">mean_roc_auc</span><span class="p">))</span> <span class="o">%&gt;%</span> <span class="c1"># order results</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">mean_roc_auc</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">model</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_col</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">coord_flip</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_fill_brewer</span><span class="p">(</span><span class="n">palette</span> <span class="o">=</span> <span class="s">&#34;Blues&#34;</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">geom_text</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">     <span class="n">size</span> <span class="o">=</span> <span class="m">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nf">aes</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="n">mean_roc_auc</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">         <span class="n">y</span> <span class="o">=</span> <span class="n">mean_roc_auc</span> <span class="o">+</span> <span class="m">0.08</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">     <span class="n">vjust</span> <span class="o">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span> <span class="o">=</span> <span class="s">&#34;none&#34;</span><span class="p">)</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">)</span>
+</span></span></code></pre></div><img src="/english/post/final_group_project_17_FINAL_files/figure-html/unnamed-chunk-16-1.png" width="648" style="display: block; margin: auto;" />
+<h2 id="best-model">Best Model</h2>
+<p>We conclude that the Random Forest model and the Extreme Gradient Boosting model work best! We will use the Random Forest model to fit on our test set.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Use`last_fit() to fit a model to the whole training data and evaluate it on the test set</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">last_fit_rf</span> <span class="o">&lt;-</span> <span class="nf">last_fit</span><span class="p">(</span><span class="n">rf_wflow</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                        <span class="n">split</span> <span class="o">=</span> <span class="n">data_split</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">metrics</span> <span class="o">=</span> <span class="nf">metric_set</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">accuracy</span><span class="p">,</span> <span class="n">f_meas</span><span class="p">,</span> <span class="n">kap</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">recall</span><span class="p">,</span> <span class="n">roc_auc</span><span class="p">,</span> <span class="n">sens</span><span class="p">,</span> <span class="n">spec</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">last_fit_rf</span> <span class="o">%&gt;%</span> <span class="nf">collect_metrics</span><span class="p">(</span><span class="n">summarize</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 8 × 4
+</span></span><span class="line"><span class="cl">##   .metric   .estimator .estimate .config             
+</span></span><span class="line"><span class="cl">##   &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;               
+</span></span><span class="line"><span class="cl">## 1 accuracy  binary         0.997 Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 2 f_meas    binary         0.667 Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 3 kap       binary         0.665 Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 4 precision binary         1     Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 5 recall    binary         0.5   Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 6 sens      binary         0.5   Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 7 spec      binary         1     Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 8 roc_auc   binary         0.993 Preprocessor1_Model1
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">#Compare to training</span>
+</span></span><span class="line"><span class="cl"><span class="n">rf_res</span> <span class="o">%&gt;%</span> <span class="nf">collect_metrics</span><span class="p">(</span><span class="n">summarize</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 8 × 6
+</span></span><span class="line"><span class="cl">##   .metric   .estimator  mean     n   std_err .config             
+</span></span><span class="line"><span class="cl">##   &lt;chr&gt;     &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;               
+</span></span><span class="line"><span class="cl">## 1 accuracy  binary     0.996     3 0.000269  Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 2 f_meas    binary     0.554     3 0.0361    Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 3 kap       binary     0.553     3 0.0362    Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 4 precision binary     0.977     3 0.0145    Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 5 recall    binary     0.389     3 0.0353    Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 6 roc_auc   binary     0.965     3 0.00741   Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 7 sens      binary     0.389     3 0.0353    Preprocessor1_Model1
+</span></span><span class="line"><span class="cl">## 8 spec      binary     1.00      3 0.0000325 Preprocessor1_Model1
+</span></span></code></pre></div><h2 id="get-variable-importance-using-vip-package">Get variable importance using <code>vip</code> package</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">vip</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">last_fit_rf</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">pluck</span><span class="p">(</span><span class="s">&#34;.workflow&#34;</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span> <span class="o">%&gt;%</span>   
+</span></span><span class="line"><span class="cl">  <span class="nf">pull_workflow_fit</span><span class="p">()</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">vip</span><span class="p">(</span><span class="n">num_features</span> <span class="o">=</span> <span class="m">10</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/final_group_project_17_FINAL_files/figure-html/unnamed-chunk-18-1.png" width="648" style="display: block; margin: auto;" />
+<h2 id="plot-final-confusion-matrix-and-roc-curve">Plot Final Confusion matrix and ROC curve</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Final Confusion Matrix</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">last_fit_rf</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">collect_predictions</span><span class="p">()</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">conf_mat</span><span class="p">(</span><span class="n">is_fraud</span><span class="p">,</span> <span class="n">.pred_class</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">autoplot</span><span class="p">(</span><span class="n">type</span> <span class="o">=</span> <span class="s">&#34;heatmap&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><img src="/english/post/final_group_project_17_FINAL_files/figure-html/unnamed-chunk-19-1.png" width="648" style="display: block; margin: auto;" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Final ROC curve</span>
+</span></span><span class="line"><span class="cl"><span class="n">last_fit_rf</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">collect_predictions</span><span class="p">()</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">roc_curve</span><span class="p">(</span><span class="n">is_fraud</span><span class="p">,</span> <span class="n">.pred_1</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">autoplot</span><span class="p">()</span>
+</span></span></code></pre></div><img src="/english/post/final_group_project_17_FINAL_files/figure-html/unnamed-chunk-19-2.png" width="648" style="display: block; margin: auto;" />
+<h2 id="calculating-the-cost-of-fraud-to-the-company">Calculating the cost of fraud to the company</h2>
+<ul>
+<li>How much money (in US$ terms) are fraudulent transactions costing the company? Generate a table that summarizes the total amount of legitimate and fraudulent transactions per year and calculate the % of fraudulent transactions, in US$ terms. Compare your model vs the naive classification that we do not have any fraudulent transactions.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">best_model_wflow</span> <span class="o">&lt;-</span> <span class="n">rf_wflow</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">best_model_preds</span> <span class="o">&lt;-</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">best_model_wflow</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">fit</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">card_fraud_train</span><span class="p">)</span> <span class="o">%&gt;%</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1">## Use `augment()` to get predictions for entire data set</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">augment</span><span class="p">(</span><span class="n">new_data</span> <span class="o">=</span> <span class="n">card_fraud</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">best_model_preds</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">conf_mat</span><span class="p">(</span><span class="n">truth</span> <span class="o">=</span> <span class="n">is_fraud</span><span class="p">,</span> <span class="n">estimate</span> <span class="o">=</span> <span class="n">.pred_class</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##           Truth
+</span></span><span class="line"><span class="cl">## Prediction      1      0
+</span></span><span class="line"><span class="cl">##          1   1942     80
+</span></span><span class="line"><span class="cl">##          0   1994 667012
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">cost</span> <span class="o">&lt;-</span> <span class="n">best_model_preds</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">select</span><span class="p">(</span><span class="n">is_fraud</span><span class="p">,</span> <span class="n">amt</span><span class="p">,</span> <span class="n">pred</span> <span class="o">=</span> <span class="n">.pred_class</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cost</span> <span class="o">&lt;-</span> <span class="n">cost</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># naive false-- we think every single transaction is ok and not fraud</span>
+</span></span><span class="line"><span class="cl">  <span class="n">false_naives</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">is_fraud</span><span class="o">==</span><span class="m">1</span><span class="p">,</span><span class="n">amt</span><span class="p">,</span><span class="m">0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># false negatives-- we thought they were not fraud, but they were</span>
+</span></span><span class="line"><span class="cl">  <span class="n">false_negatives</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">pred</span><span class="o">==</span><span class="m">0</span><span class="o">&amp;</span><span class="n">is_fraud</span><span class="o">==</span><span class="m">1</span><span class="p">,</span><span class="n">amt</span><span class="p">,</span><span class="m">0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># false positives-- we thought they were fraud, but they were not</span>
+</span></span><span class="line"><span class="cl">  <span class="n">false_positives</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">pred</span><span class="o">==</span><span class="m">1</span><span class="o">&amp;</span><span class="n">is_fraud</span><span class="o">==</span><span class="m">0</span><span class="p">,</span><span class="n">amt</span><span class="p">,</span><span class="m">0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># true positives-- we thought they were fraud, and they were </span>
+</span></span><span class="line"><span class="cl">  <span class="n">true_positives</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">pred</span><span class="o">==</span><span class="m">1</span><span class="o">&amp;</span><span class="n">is_fraud</span><span class="o">==</span><span class="m">1</span><span class="p">,</span><span class="n">amt</span><span class="p">,</span><span class="m">0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># true negatives-- we thought they were ok, and they were</span>
+</span></span><span class="line"><span class="cl">  <span class="n">true_negatives</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">pred</span><span class="o">==</span><span class="m">0</span><span class="o">&amp;</span><span class="n">is_fraud</span><span class="o">==</span><span class="m">0</span><span class="p">,</span><span class="n">amt</span><span class="p">,</span><span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="c1"># Summarising</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cost_summary</span> <span class="o">&lt;-</span> <span class="n">cost</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="nf">across</span><span class="p">(</span><span class="nf">starts_with</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;false&#34;</span><span class="p">,</span><span class="s">&#34;true&#34;</span><span class="p">,</span> <span class="s">&#34;amt&#34;</span><span class="p">)),</span> 
+</span></span><span class="line"><span class="cl">            <span class="o">~</span> <span class="nf">sum</span><span class="p">(</span><span class="n">.x</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cost_summary</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 1 × 6
+</span></span><span class="line"><span class="cl">##   false_naives false_negatives false_positives true_positives true_negatives
+</span></span><span class="line"><span class="cl">##          &lt;dbl&gt;           &lt;dbl&gt;           &lt;dbl&gt;          &lt;dbl&gt;          &lt;dbl&gt;
+</span></span><span class="line"><span class="cl">## 1     2075089.         778356.          84061.       1296733.      45024754.
+</span></span><span class="line"><span class="cl">## # ℹ 1 more variable: amt &lt;dbl&gt;
+</span></span></code></pre></div><ul>
+<li>
+<p>If we use a naive classifier thinking that all transactions are legitimate and not fraudulent, the cost to the company is $2,075,089.</p>
+</li>
+<li>
+<p>With our best model, the total cost of false negatives, namely transactions our classifier thinks are legitimate but which turned out to be fraud, is $778,356.</p>
+</li>
+<li>
+<p>Our classifier also has some false positives, $84,060.76, namely flagging transactions as fraudulent, but which were legitimate. Assuming the card company makes around 2% for each transaction (source: <a href="https://startups.co.uk/payment-processing/credit-card-processing-fees/">https://startups.co.uk/payment-processing/credit-card-processing-fees/</a>), the amount of money lost due to these false positives is $1,681.22</p>
+</li>
+<li>
+<p>The $ improvement over the naive policy is $1,295,052.</p>
+</li>
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Seán O&#39;Doherty
+        2023
+      
+    </li>
+    
+      <li class="footer__item">
+        <a
+          class="link"
+          href="/imprint/"
+          
+          title=""
+        >
+          imprint
+        </a>
+      </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
