@@ -1,12 +1,8 @@
 ---
-title: 'Homework 4: Machine Learning'
-author: "Your name goes here"
-date: "`r Sys.Date()`"
+title: 'Homework 4'
+author: "YSeán O'Doherty"
+date: "2023-06-07"
 output:
-  word_document:
-    toc: yes
-  pdf_document:
-    toc: yes
   html_document:
     theme: flatly
     highlight: zenburn
@@ -14,6 +10,10 @@ output:
     toc: yes
     toc_float: yes
     code_folding: show
+  pdf_document:
+    toc: yes
+  word_document:
+    toc: yes
 ---
 
 ```{r}
