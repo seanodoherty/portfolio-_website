@@ -1,6 +1,6 @@
 ---
 title: "Credit card fraud"
-date: "2022-06-08"
+date: "2023-06-08"
 description: "Predicting credit card fraud - Final group project"
 draft: no
 image: lbs_lt.jpeg
