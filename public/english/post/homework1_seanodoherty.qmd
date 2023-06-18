@@ -730,7 +730,7 @@ I want you to think how we would organise our data manipulation to create the fo
 
 ## Problem 10: On your own -- Hollywood Age Gap
 
-The website https://hollywoodagegap.com is a record of *THE AGE DIFFERENCE IN YEARS BETWEEN MOVIE LOVE INTERESTS*. This is an informational site showing the age gap between movie love interests and the data follows certain rules:
+The website <https://hollywoodagegap.com> is a record of *THE AGE DIFFERENCE IN YEARS BETWEEN MOVIE LOVE INTERESTS*. This is an informational site showing the age gap between movie love interests and the data follows certain rules:
 
 -   The two (or more) actors play actual love interests (not just friends, coworkers, or some other non-romantic type of relationship)
 -   The youngest of the two actors is at least 17 years old
@@ -741,7 +741,7 @@ The age gaps dataset includes "gender" columns, which always contain the values 
 The following is a data dictionary of the variables used
 
 | variable            | class     | description                                                                                             |
-|:-----------|:-----------|:----------------------------------------------|
+|:--------------------|:----------|:--------------------------------------------------------------------------------------------------------|
 | movie_name          | character | Name of the film                                                                                        |
 | release_year        | integer   | Release year                                                                                            |
 | director            | character | Director of the film                                                                                    |
@@ -900,7 +900,8 @@ How would you explore this data set? Here are some ideas of tables/ graphs to he
 
 -   The `half plus seven\` rule. Large age disparities in relationships carry certain stigmas. One popular rule of thumb is the [half-your-age-plus-seven](https://en.wikipedia.org/wiki/Age_disparity_in_sexual_relationships#The_.22half-your-age-plus-seven.22_rule) rule. This rule states you should never date anyone under half your age plus seven, establishing a minimum boundary on whom one can date. In order for a dating relationship to be acceptable under this rule, your partner's age must be:
 
-$$\frac{\text{Your age}}{2} + 7 < \text{Partner Age} < (\text{Your age} - 7) * 2$$ How frequently does this rule apply in this dataset?
+$$\frac{\text{Your age}}{2} + 7 \< \text{Partner Age} \< (\text{Your age} - 7) \* 2$$
+How frequently does this rule apply in this dataset?
 
 -   Which movie has the greatest number of love interests?
 -   Which actors/ actresses have the greatest number of love interests in this dataset?
@@ -917,7 +918,7 @@ There is a lot of explanatory text, comments, etc. You do not need these, so del
 -   Approximately how much time did you spend on this problem set: *a few hours*
 -   What, if anything, gave you the most trouble: *researching functions*
 
-**Please seek out help when you need it,** and remember the [15-minute rule](https://mam2022.netlify.app/syllabus/#the-15-minute-rule){target="_blank"}. You know enough R (and have enough examples of code from class and your readings) to be able to do this. If you get stuck, ask for help from others, post a question on Slack-- and remember that I am here to help too!
+**Please seek out help when you need it,** and remember the [15-minute rule](https://mam2022.netlify.app/syllabus/#the-15-minute-rule){target="\_blank"}. You know enough R (and have enough examples of code from class and your readings) to be able to do this. If you get stuck, ask for help from others, post a question on Slack-- and remember that I am here to help too!
 
 > As a true test to yourself, do you understand the code you submitted and are you able to explain it to someone else?
 
