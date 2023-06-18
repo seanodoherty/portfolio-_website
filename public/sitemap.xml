@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://seanodoherty-portfolio-website.netlify.app/post/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/</loc>
     <lastmod>2023-06-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seanodoherty-portfolio-website.netlify.app/post/sod_homework3/</loc>
     <lastmod>2023-06-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://seanodoherty-portfolio-website.netlify.app/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/post/</loc>
     <lastmod>2023-06-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seanodoherty-portfolio-website.netlify.app/post/groupwork/</loc>
@@ -20,13 +20,13 @@
     <loc>https://seanodoherty-portfolio-website.netlify.app/post/homework1_seanodoherty/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://seanodoherty-portfolio-website.netlify.app/post/archives/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://seanodoherty-portfolio-website.netlify.app/post/contact/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/contact/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://seanodoherty-portfolio-website.netlify.app/post/about/</loc>
+    <loc>https://seanodoherty-portfolio-website.netlify.app/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://seanodoherty-portfolio-website.netlify.app/categories/</loc>

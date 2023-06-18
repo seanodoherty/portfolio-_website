@@ -53,10 +53,10 @@
     
     <item>
       <title></title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/post/archives/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/archives/</link>
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://seanodoherty-portfolio-website.netlify.app/post/archives/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/archives/</guid>
       
         <description></description>
       
@@ -64,10 +64,10 @@
     
     <item>
       <title>Contact</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/post/contact/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/contact/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://seanodoherty-portfolio-website.netlify.app/post/contact/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/contact/</guid>
       
         <description>Contact Page</description>
       
@@ -75,10 +75,10 @@
     
     <item>
       <title>About</title>
-      <link>https://seanodoherty-portfolio-website.netlify.app/post/about/</link>
+      <link>https://seanodoherty-portfolio-website.netlify.app/about/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://seanodoherty-portfolio-website.netlify.app/post/about/</guid>
+      <guid>https://seanodoherty-portfolio-website.netlify.app/about/</guid>
       
         <description>Hugo, the world&#39;s fastest framework for building websites</description>
       
