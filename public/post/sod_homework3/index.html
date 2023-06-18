@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    Seán O&#39;Doherty
+        |
+        Homework 3: Databases, web scraping, and a basic Shiny app
+      
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.113.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Seán O&#39;Doherty" />
+  <meta
+    name="description"
+    content="E628 Portfolio Website"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.1147aa5bacb4bce677a0e264073829caedb82fd18ea07a5f1d80521f539d1c45.css"
+      integrity="sha256-EUeqW6y0vOZ3oOJkBzgpyu24L9GOoHpfHYBSH1OdHEU="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://seanodoherty-portfolio-website.netlify.app/post/sod_homework3/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanodoherty-portfolio-website.netlify.app/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Homework 3: Databases, web scraping, and a basic Shiny app"/>
+<meta name="twitter:description" content="Money in UK politics The Westminster Accounts, a recent collaboration between Sky News and Tortoise Media, examines the flow of money through UK politics."/>
+
+
+
+  
+  <meta property="og:title" content="Homework 3: Databases, web scraping, and a basic Shiny app" />
+<meta property="og:description" content="Money in UK politics The Westminster Accounts, a recent collaboration between Sky News and Tortoise Media, examines the flow of money through UK politics." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://seanodoherty-portfolio-website.netlify.app/post/sod_homework3/" /><meta property="og:image" content="https://seanodoherty-portfolio-website.netlify.app/images/site-feature-image.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-06-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-06-18T00:00:00+00:00" /><meta property="og:site_name" content="Seán O&#39;Doherty - Portfolio Website" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Homework 3: Databases, web scraping, and a basic Shiny app",
+        "headline": "Homework 3: Databases, web scraping, and a basic Shiny app",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Money in UK politics The Westminster Accounts, a recent collaboration between Sky News and Tortoise Media, examines the flow of money through UK politics.
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/seanodoherty-portfolio-website.netlify.app\/post\/sod_homework3\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Seán O\u0027Doherty"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-06-18T00:00:00.00Z",
+        "datePublished": "2023-06-18T00:00:00.00Z",
+        "dateModified": "2023-06-18T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Seán O'Doherty",
+            "url": "https://seanodoherty-portfolio-website.netlify.app/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/seanodoherty-portfolio-website.netlify.app\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://seanodoherty-portfolio-website.netlify.app/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/seanodoherty-portfolio-website.netlify.app\/post\/sod_homework3\/",
+        "wordCount" : "4424",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/Sean%20O%27Doherty.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Seán O&#39;Doherty - Portfolio Website</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>E628 Portfolio Website</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/sean-odoherty/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/seanodoherty"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="sodoherty.mba2024@london.edu"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Seán O&#39;Doherty
+        2023
+      
+    </li>
+    
+      <li class="footer__item">
+        <a
+          class="link"
+          href="/imprint/"
+          
+          title=""
+        >
+          imprint
+        </a>
+      </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Homework 3: Databases, Web Scraping, and a Basic Shiny App</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  2023-06-18
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">21-minute read</span>
+          </li>
+        </ul>
+      <h1 id="money-in-uk-politics">Money in UK politics</h1>
+<p><a href="https://news.sky.com/story/the-westminster-accounts-12786091">The Westminster Accounts</a>, a recent collaboration between Sky News and Tortoise Media, examines the flow of money through UK politics. It does so by combining data from three key sources:</p>
+<ol>
+<li><a href="https://www.parliament.uk/mps-lords-and-offices/standards-and-financial-interests/parliamentary-commissioner-for-standards/registers-of-interests/register-of-members-financial-interests/">Register of Members&rsquo; Financial Interests</a>,</li>
+<li><a href="http://search.electoralcommission.org.uk/English/Search/Donations">Electoral Commission records of donations to parties</a>, and</li>
+<li><a href="https://www.parliament.uk/mps-lords-and-offices/standards-and-financial-interests/parliamentary-commissioner-for-standards/registers-of-interests/register-of-all-party-party-parliamentary-groups/">Register of All-Party Parliamentary Groups</a>.</li>
+</ol>
+<p>You can <a href="https://news.sky.com/story/westminster-accounts-search-for-your-mp-or-enter-your-full-postcode-12771627">search and explore the results</a> through the collaboration&rsquo;s interactive database. Simon Willison <a href="https://til.simonwillison.net/shot-scraper/scraping-flourish">has extracted a database</a> and this is what we will be working with. If you want to read more about <a href="https://www.tortoisemedia.com/2023/01/08/the-westminster-accounts-methodology/">the project&rsquo;s methodology</a>.</p>
+<h2 id="open-a-connection-to-the-database">Open a connection to the database</h2>
+<p>The database made available by Simon Willison is an <code>SQLite</code> database</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">sky_westminster</span> <span class="o">&lt;-</span> <span class="n">DBI</span><span class="o">::</span><span class="nf">dbConnect</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">drv</span> <span class="o">=</span> <span class="n">RSQLite</span><span class="o">::</span><span class="nf">SQLite</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dbname</span> <span class="o">=</span> <span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&#34;data&#34;</span><span class="p">,</span> <span class="s">&#34;sky-westminster-files.db&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>How many tables does the database have? <em>The database has 7 tables</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">DBI</span><span class="o">::</span><span class="nf">dbListTables</span><span class="p">(</span><span class="n">sky_westminster</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] &#34;appg_donations&#34;  &#34;appgs&#34;           &#34;member_appgs&#34;    &#34;members&#34;        
+</span></span><span class="line"><span class="cl">## [5] &#34;parties&#34;         &#34;party_donations&#34; &#34;payments&#34;
+</span></span></code></pre></div><h2 id="which-mp-has-received-the-most-amount-of-money">Which MP has received the most amount of money?</h2>
+<p>You need to work with the <code>payments</code> and <code>members</code> tables and for now we just want the total among all years. To insert a new, blank chunk of code where you can write your beautiful code (and comments!), please use the following shortcut: <code>Ctrl + Alt + I</code> (Windows) or <code>cmd + option + I</code> (mac)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># get tables as tibbles</span>
+</span></span><span class="line"><span class="cl"><span class="n">payments</span> <span class="o">&lt;-</span> <span class="n">dplyr</span><span class="o">::</span><span class="nf">tbl</span><span class="p">(</span><span class="n">sky_westminster</span><span class="p">,</span> <span class="s">&#34;payments&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">members</span> <span class="o">&lt;-</span> <span class="n">dplyr</span><span class="o">::</span><span class="nf">tbl</span><span class="p">(</span><span class="n">sky_westminster</span><span class="p">,</span> <span class="s">&#34;members&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># get payment count by member_id</span>
+</span></span><span class="line"><span class="cl"><span class="n">payment_count_value_member</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">payments</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">member_id</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">payment_count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">value</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># join to members to get memebr name</span>
+</span></span><span class="line"><span class="cl"><span class="nf">left_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">payment_count_value_member</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="nf">select</span><span class="p">(</span><span class="n">members</span><span class="p">,</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;member_id&#34;</span> <span class="o">=</span> <span class="s">&#34;id&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Warning: Missing values are always removed in SQL aggregation functions.
+</span></span><span class="line"><span class="cl">## Use `na.rm = TRUE` to silence this warning
+</span></span><span class="line"><span class="cl">## This warning is displayed once every 8 hours.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # Source:     SQL [?? x 4]
+</span></span><span class="line"><span class="cl">## # Database:   sqlite 3.41.2 [C:\Users\sodoh\Documents\LBS\2023 Summer\E628 Data Science\portfolio_website\data\sky-westminster-files.db]
+</span></span><span class="line"><span class="cl">## # Ordered by: desc(value)
+</span></span><span class="line"><span class="cl">##    member_id payment_count    value name            
+</span></span><span class="line"><span class="cl">##    &lt;chr&gt;             &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;           
+</span></span><span class="line"><span class="cl">##  1 m8                   78 2809765. Theresa May     
+</span></span><span class="line"><span class="cl">##  2 m1508                50 2191387. Sir Geoffrey Cox
+</span></span><span class="line"><span class="cl">##  3 m1423                56 1282402  Boris Johnson   
+</span></span><span class="line"><span class="cl">##  4 m4514               104  799936. Keir Starmer    
+</span></span><span class="line"><span class="cl">##  5 m1211                66  769373. Andrew Mitchell 
+</span></span><span class="line"><span class="cl">##  6 m3958                32  712321. Fiona Bruce     
+</span></span><span class="line"><span class="cl">##  7 m14                  49  692438. John Redwood    
+</span></span><span class="line"><span class="cl">##  8 m4483                37  546043  Rishi Sunak     
+</span></span><span class="line"><span class="cl">##  9 m4097                30  538678. Liz Truss       
+</span></span><span class="line"><span class="cl">## 10 m188                 88  441681. Ed Davey        
+</span></span><span class="line"><span class="cl">## # ℹ more rows
+</span></span></code></pre></div><h2 id="any-entity-that-accounts-for-more-than-5-of-all-donations">Any <code>entity</code> that accounts for more than 5% of all donations?</h2>
+<p>Is there any <code>entity</code> whose donations account for more than 5% of the total payments given to MPs over the 2020-2022 interval? Who are they and who did they give money to?</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># assign to table to use later</span>
+</span></span><span class="line"><span class="cl"><span class="n">entity_greater_than_5pct</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">payments</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">#group by entity</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">entity</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># get sum of entity value</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">value</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    <span class="c1"># calculate pct of total value</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mutate</span><span class="p">(</span><span class="n">value_pct</span> <span class="o">=</span> <span class="m">100</span> <span class="o">*</span> <span class="n">value</span> <span class="o">/</span> <span class="nf">sum</span><span class="p">(</span><span class="n">value</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1"># filter for percent of total value greater than 5</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">filter</span><span class="p">(</span><span class="n">value_pct</span> <span class="o">&gt;=</span> <span class="m">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">entity_greater_than_5pct</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # Source:   SQL [1 x 3]
+</span></span><span class="line"><span class="cl">## # Database: sqlite 3.41.2 [C:\Users\sodoh\Documents\LBS\2023 Summer\E628 Data Science\portfolio_website\data\sky-westminster-files.db]
+</span></span><span class="line"><span class="cl">##   entity         value value_pct
+</span></span><span class="line"><span class="cl">##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;
+</span></span><span class="line"><span class="cl">## 1 Withers LLP 1812732.      5.25
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># left join to members to get member name</span>
+</span></span><span class="line"><span class="cl"><span class="nf">left_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> 
+</span></span><span class="line"><span class="cl">  <span class="c1"># use semi join to keep payments which are in the entity_greater_than_5pct table</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">semi_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">payments</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">entity_greater_than_5pct</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="s">&#34;entity&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">members</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;member_id&#34;</span> <span class="o">=</span> <span class="s">&#34;id&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by entity and name</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># summarise to get sum of value</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # Source:   SQL [1 x 3]
+</span></span><span class="line"><span class="cl">## # Database: sqlite 3.41.2 [C:\Users\sodoh\Documents\LBS\2023 Summer\E628 Data Science\portfolio_website\data\sky-westminster-files.db]
+</span></span><span class="line"><span class="cl">## # Groups:   entity
+</span></span><span class="line"><span class="cl">##   entity      name                value
+</span></span><span class="line"><span class="cl">##   &lt;chr&gt;       &lt;chr&gt;               &lt;dbl&gt;
+</span></span><span class="line"><span class="cl">## 1 Withers LLP Sir Geoffrey Cox 1812732.
+</span></span></code></pre></div><h2 id="do-entity-donors-give-to-a-single-party-or-not">Do <code>entity</code> donors give to a single party or not?</h2>
+<ul>
+<li>How many distinct entities who paid money to MPS are there?</li>
+<li>How many (as a number and %) donated to MPs belonging to a single party only?</li>
+</ul>
+<p>payments</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># use summarise and count to get the distinct count of entities</span>
+</span></span><span class="line"><span class="cl"><span class="n">payments</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="nf">count</span><span class="p">(</span><span class="n">entity</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # Source:   SQL [1 x 1]
+</span></span><span class="line"><span class="cl">## # Database: sqlite 3.41.2 [C:\Users\sodoh\Documents\LBS\2023 Summer\E628 Data Science\portfolio_website\data\sky-westminster-files.db]
+</span></span><span class="line"><span class="cl">##   `count(entity)`
+</span></span><span class="line"><span class="cl">##             &lt;int&gt;
+</span></span><span class="line"><span class="cl">## 1           10539
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># left join to get party_id</span>
+</span></span><span class="line"><span class="cl"><span class="nf">left_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">payments</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">members</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;member_id&#34;</span> <span class="o">=</span> <span class="s">&#34;id&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by entity</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">entity</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># count distinct party_id</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="n">party_count</span> <span class="o">=</span> <span class="nf">count</span><span class="p">(</span><span class="n">party_id</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># create field identifying entities donating to multiple parties</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span><span class="n">single_party</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">party_count</span> <span class="o">==</span>  <span class="m">1</span><span class="p">,</span> <span class="s">&#34;Single party&#34;</span><span class="p">,</span> <span class="s">&#34;Multi party&#34;</span><span class="p">))</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by single / multi party entities</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">single_party</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># count entities</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span><span class="n">entity_count</span> <span class="o">=</span> <span class="nf">count</span><span class="p">(</span><span class="n">entity</span><span class="p">))</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># get percentage</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span><span class="n">entity_count_pct</span> <span class="o">=</span> <span class="m">100</span> <span class="o">*</span> <span class="nf">as.numeric</span><span class="p">(</span><span class="n">entity_count</span><span class="p">)</span> <span class="o">/</span> <span class="nf">sum</span><span class="p">(</span><span class="n">entity_count</span><span class="p">))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # Source:   SQL [2 x 3]
+</span></span><span class="line"><span class="cl">## # Database: sqlite 3.41.2 [C:\Users\sodoh\Documents\LBS\2023 Summer\E628 Data Science\portfolio_website\data\sky-westminster-files.db]
+</span></span><span class="line"><span class="cl">##   single_party entity_count entity_count_pct
+</span></span><span class="line"><span class="cl">##   &lt;chr&gt;               &lt;int&gt;            &lt;dbl&gt;
+</span></span><span class="line"><span class="cl">## 1 Multi party           852             38.5
+</span></span><span class="line"><span class="cl">## 2 Single party         1361             61.5
+</span></span></code></pre></div><h2 id="which-party-has-raised-the-greatest-amount-of-money-in-each-of-the-years-2020-2022">Which party has raised the greatest amount of money in each of the years 2020-2022?</h2>
+<p>I would like you to write code that generates the following table.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">knitr</span><span class="o">::</span><span class="nf">include_graphics</span><span class="p">(</span><span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&#34;images&#34;</span><span class="p">,</span> <span class="s">&#34;total_donations_table.png&#34;</span><span class="p">),</span> <span class="n">error</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="../../../images/total_donations_table.png" alt=""><!-- --></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">parties</span> <span class="o">&lt;-</span> <span class="n">dplyr</span><span class="o">::</span><span class="nf">tbl</span><span class="p">(</span><span class="n">sky_westminster</span><span class="p">,</span> <span class="s">&#34;parties&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># year / party name / donations / prop of year</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># count(payments, category_name)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># store base data to table</span>
+</span></span><span class="line"><span class="cl"><span class="n">year_party_donations</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># join donations from payments table to member / party</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">left_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">payments</span> <span class="c1"># filter(payments, category_name == &#34;Cash donations&#34;)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> 
+</span></span><span class="line"><span class="cl">      <span class="nf">left_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="n">members</span>
+</span></span><span class="line"><span class="cl">        <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">parties</span>
+</span></span><span class="line"><span class="cl">        <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;party_id&#34;</span> <span class="o">=</span> <span class="s">&#34;id&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;member_id&#34;</span> <span class="o">=</span> <span class="s">&#34;id&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># rename name fields for clarity</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">rename</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">member_name</span> <span class="o">=</span> <span class="n">name.x</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">party_name</span> <span class="o">=</span> <span class="n">name.y</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Extract year from date field</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mutate</span><span class="p">(</span><span class="n">year</span> <span class="o">=</span> <span class="nf">str_sub</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="m">-4</span><span class="p">,</span> <span class="m">-1</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1"># filter to 2020-2022</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">filter</span><span class="p">(</span><span class="n">year</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;2020&#34;</span><span class="p">,</span> <span class="s">&#34;2021&#34;</span><span class="p">,</span> <span class="s">&#34;2022&#34;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Group by year and party_name and sum value</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">party_name</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span><span class="n">donations</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># store subotals to table</span>
+</span></span><span class="line"><span class="cl"><span class="n">year_total_donations</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># get yearly sub-totals</span>
+</span></span><span class="line"><span class="cl">  <span class="n">year_party_donations</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span><span class="n">year_total_donations</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">donations</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># store output to table</span>
+</span></span><span class="line"><span class="cl"><span class="n">year_party_value_prop</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># left join base data to yearly totals  </span>
+</span></span><span class="line"><span class="cl">  <span class="nf">left_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">year_party_donations</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">year_total_donations</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="s">&#34;year&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1"># calculate prop</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">mutate</span><span class="p">(</span><span class="n">prop</span> <span class="o">=</span> <span class="n">donations</span> <span class="o">/</span> <span class="n">year_total_donations</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># use select to format output</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">select</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">year</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">name</span> <span class="o">=</span> <span class="n">party_name</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">total_year_donations</span> <span class="o">=</span> <span class="n">donations</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">prop</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># display output</span>
+</span></span><span class="line"><span class="cl"><span class="n">year_party_value_prop</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # Source:   SQL [?? x 4]
+</span></span><span class="line"><span class="cl">## # Database: sqlite 3.41.2 [C:\Users\sodoh\Documents\LBS\2023 Summer\E628 Data Science\portfolio_website\data\sky-westminster-files.db]
+</span></span><span class="line"><span class="cl">## # Groups:   year
+</span></span><span class="line"><span class="cl">##    year  name                      total_year_donations     prop
+</span></span><span class="line"><span class="cl">##    &lt;chr&gt; &lt;chr&gt;                                    &lt;dbl&gt;    &lt;dbl&gt;
+</span></span><span class="line"><span class="cl">##  1 2020  Alba Party                               1320  0.000125
+</span></span><span class="line"><span class="cl">##  2 2020  Conservative                          6035344. 0.571   
+</span></span><span class="line"><span class="cl">##  3 2020  Democratic Unionist Party                5715. 0.000540
+</span></span><span class="line"><span class="cl">##  4 2020  Green Party                              9500  0.000898
+</span></span><span class="line"><span class="cl">##  5 2020  Independent                            230103. 0.0218  
+</span></span><span class="line"><span class="cl">##  6 2020  Labour                                3615844. 0.342   
+</span></span><span class="line"><span class="cl">##  7 2020  Liberal Democrats                      537694  0.0508  
+</span></span><span class="line"><span class="cl">##  8 2020  Plaid Cymru                             23072  0.00218 
+</span></span><span class="line"><span class="cl">##  9 2020  Scottish National Party                108599. 0.0103  
+</span></span><span class="line"><span class="cl">## 10 2020  Sinn Féin                                1911  0.000181
+</span></span><span class="line"><span class="cl">## # ℹ more rows
+</span></span></code></pre></div><p>&hellip; and then, based on this data, plot the following graph.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">knitr</span><span class="o">::</span><span class="nf">include_graphics</span><span class="p">(</span><span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&#34;images&#34;</span><span class="p">,</span> <span class="s">&#34;total_donations_graph.png&#34;</span><span class="p">),</span> <span class="n">error</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="../../../images/total_donations_graph.png" alt=""><!-- --></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">options</span><span class="p">(</span><span class="n">dplyr.summarise.inform</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># create table of top 10 parties by donation</span>
+</span></span><span class="line"><span class="cl"><span class="n">party_value_top10</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="n">year_party_value_prop</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1"># filter out independent</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">filter</span><span class="p">(</span><span class="n">name</span> <span class="o">!=</span> <span class="s">&#34;Independent&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># group by party</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># sum up donations</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span><span class="n">total_donations</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">total_year_donations</span><span class="p">))</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># keep only top 10</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">slice_max</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">total_donations</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># semi join to top10</span>
+</span></span><span class="line"><span class="cl"><span class="nf">semi_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">year_party_value_prop</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">party_value_top10</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="s">&#34;name&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># add plot</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># set aesthetics</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">total_year_donations</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># set fil order using fct_reorder and fct_rev</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">fill</span> <span class="o">=</span> <span class="nf">fct_rev</span><span class="p">(</span><span class="nf">fct_reorder</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">total_year_donations</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add bar chart</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_col</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># make bars clustered instead of stacked</span>
+</span></span><span class="line"><span class="cl">    <span class="n">position</span> <span class="o">=</span> <span class="s">&#34;dodge&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># apply there and set text size</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">base_size</span> <span class="o">=</span> <span class="m">8</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># set labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="kc">NULL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="kc">NULL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Conservatives have captured the majority of political donations&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">subtitle</span> <span class="o">=</span> <span class="s">&#34;Donations to political parties, 2020-2022&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">fill</span> <span class="o">=</span> <span class="s">&#34;Party&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># format numbers on y axis</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_y_continuous</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">labels</span> <span class="o">=</span> <span class="n">comma</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><img src="/english/post/sod_homework3_files/figure-html/unnamed-chunk-8-2.png" width="672" />
+<p>This uses the default ggplot colour pallete, as I dont want you to worry about using the <a href="https://en.wikipedia.org/wiki/Wikipedia:Index_of_United_Kingdom_political_parties_meta_attributes">official colours for each party</a>. However, I would like you to ensure the parties are sorted according to total donations and not alphabetically. You may even want to remove some of the smaller parties that hardly register on the graph. Would facetting help you?</p>
+<p>Finally, when you are done working with the databse, make sure you close the connection, or disconnect from the database.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">dbDisconnect</span><span class="p">(</span><span class="n">sky_westminster</span><span class="p">)</span>
+</span></span></code></pre></div><h1 id="anonymised-covid-patient-data-from-the-cdc">Anonymised Covid patient data from the CDC</h1>
+<p>We will be using a dataset with <a href="https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-with-Ge/n8mc-b4w4">anonymous Covid-19 patient data that the CDC publishes every month</a>. The file we will use was released on April 11, 2023, and has data on 98 million of patients, with 19 features. This file cannot be loaded in memory, but luckily we have the data in <code>parquet</code> format and we will use the <code>{arrow}</code> package.</p>
+<h2 id="obtain-the-data">Obtain the data</h2>
+<p>The dataset <code>cdc-covid-geography</code> in in <code>parquet</code> format that {arrow}can handle. It is &gt; 600Mb and too large to be hosted on Canvas or Github, so please download it from dropbox <a href="https://www.dropbox.com/sh/q1yk8mmnbbrzavl/AAAxzRtIhag9Nc_hODafGV2ka?dl=0">https://www.dropbox.com/sh/q1yk8mmnbbrzavl/AAAxzRtIhag9Nc_hODafGV2ka?dl=0</a> and save it in your <code>dsb</code> repo, under the <code>data</code> folder</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 0.03 sec elapsed
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## FileSystemDataset with 1 Parquet file
+</span></span><span class="line"><span class="cl">## 97,799,772 rows x 19 columns
+</span></span><span class="line"><span class="cl">## $ case_month                     &lt;string&gt; &#34;2021-09&#34;, &#34;2022-09&#34;, &#34;2022-01&#34;, &#34;2020…
+</span></span><span class="line"><span class="cl">## $ res_state                      &lt;string&gt; &#34;TX&#34;, &#34;TX&#34;, &#34;TX&#34;, &#34;CA&#34;, &#34;IL&#34;, &#34;CA&#34;, &#34;N…
+</span></span><span class="line"><span class="cl">## $ state_fips_code                 &lt;int32&gt; 48, 48, 48, 6, 17, 6, 36, 36, 36, 53, …
+</span></span><span class="line"><span class="cl">## $ res_county                     &lt;string&gt; &#34;TARRANT&#34;, NA, &#34;HARRIS&#34;, &#34;SAN BERNARDI…
+</span></span><span class="line"><span class="cl">## $ county_fips_code                &lt;int32&gt; 48439, NA, 48201, 6071, 17031, 6085, 3…
+</span></span><span class="line"><span class="cl">## $ age_group                      &lt;string&gt; &#34;18 to 49 years&#34;, &#34;18 to 49 years&#34;, &#34;1…
+</span></span><span class="line"><span class="cl">## $ sex                            &lt;string&gt; &#34;Male&#34;, &#34;Male&#34;, &#34;Female&#34;, &#34;Female&#34;, &#34;F…
+</span></span><span class="line"><span class="cl">## $ race                           &lt;string&gt; &#34;White&#34;, &#34;White&#34;, &#34;Unknown&#34;, &#34;Asian&#34;, …
+</span></span><span class="line"><span class="cl">## $ ethnicity                      &lt;string&gt; &#34;Non-Hispanic/Latino&#34;, &#34;Non-Hispanic/L…
+</span></span><span class="line"><span class="cl">## $ case_positive_specimen_interval &lt;int32&gt; NA, NA, NA, NA, 0, NA, 0, 0, 0, 0, 0, …
+</span></span><span class="line"><span class="cl">## $ case_onset_interval             &lt;int32&gt; NA, NA, -1, NA, 0, NA, NA, NA, NA, 0, …
+</span></span><span class="line"><span class="cl">## $ process                        &lt;string&gt; &#34;Missing&#34;, &#34;Missing&#34;, &#34;Missing&#34;, &#34;Miss…
+</span></span><span class="line"><span class="cl">## $ exposure_yn                    &lt;string&gt; &#34;Missing&#34;, &#34;Missing&#34;, &#34;Missing&#34;, &#34;Miss…
+</span></span><span class="line"><span class="cl">## $ current_status                 &lt;string&gt; &#34;Laboratory-confirmed case&#34;, &#34;Probable…
+</span></span><span class="line"><span class="cl">## $ symptom_status                 &lt;string&gt; &#34;Missing&#34;, &#34;Missing&#34;, &#34;Symptomatic&#34;, &#34;…
+</span></span><span class="line"><span class="cl">## $ hosp_yn                        &lt;string&gt; &#34;Missing&#34;, &#34;Missing&#34;, &#34;No&#34;, &#34;No&#34;, &#34;No&#34;…
+</span></span><span class="line"><span class="cl">## $ icu_yn                         &lt;string&gt; &#34;Missing&#34;, &#34;Missing&#34;, &#34;Missing&#34;, &#34;Miss…
+</span></span><span class="line"><span class="cl">## $ death_yn                       &lt;string&gt; &#34;Missing&#34;, &#34;Missing&#34;, &#34;Missing&#34;, &#34;Miss…
+</span></span><span class="line"><span class="cl">## $ underlying_conditions_yn       &lt;string&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…
+</span></span></code></pre></div><p>Can you query the database and replicate the following plot?</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">knitr</span><span class="o">::</span><span class="nf">include_graphics</span><span class="p">(</span><span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&#34;images&#34;</span><span class="p">,</span> <span class="s">&#34;covid-CFR-ICU.png&#34;</span><span class="p">),</span> <span class="n">error</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="../../../images/covid-CFR-ICU.png" alt=""><!-- --></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># store results to local tibble</span>
+</span></span><span class="line"><span class="cl"><span class="n">cdc_basedata_001</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">cdc_data</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># identify and group by relevant cols</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">age_group</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">sex</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">icu_yn</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">death_yn</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># get count</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">case_count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">  <span class="c1"># collect data from connection</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">collect</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cdc_basedata_001</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1">#clean data for chart</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">!</span><span class="n">age_group</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;Missing&#34;</span><span class="p">,</span> <span class="kc">NA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">sex</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;Female&#34;</span><span class="p">,</span> <span class="s">&#34;Male&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">icu_yn</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;No&#34;</span><span class="p">,</span> <span class="s">&#34;Yes&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by non death factors and calculate cfs</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">age_group</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">sex</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">icu_yn</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>  <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">death_count</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">case_count[death_yn</span> <span class="o">==</span> <span class="s">&#34;Yes&#34;</span><span class="n">]</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">case_count</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">case_count</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">cfr_pct</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="m">100</span> <span class="o">*</span> <span class="n">death_count</span> <span class="o">/</span> <span class="n">case_count</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Change yn</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">icu_yn</span> <span class="o">=</span> <span class="nf">case_when</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">icu_yn</span> <span class="o">==</span> <span class="s">&#34;Yes&#34;</span> <span class="o">~</span> <span class="s">&#34;ICU Admission&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">icu_yn</span> <span class="o">==</span> <span class="s">&#34;No&#34;</span> <span class="o">~</span> <span class="s">&#34;No ICU Admission&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># add plot</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add aesthetics</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="n">cfr_pct</span> <span class="o">/</span> <span class="m">100</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="n">age_group</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">fill</span> <span class="o">=</span> <span class="s">&#34;orange&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add bar</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_col</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">show.legend</span> <span class="o">=</span><span class="kc">FALSE</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># flip axes</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">coord_flip</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># apply theme and adjust font size</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">base_size</span> <span class="o">=</span> <span class="m">6</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># set labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="kc">NULL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="kc">NULL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Covid CFR % by age group, sex and ICU Admission&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_text</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">label</span> <span class="o">=</span> <span class="n">cfr_pct</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">hjust</span> <span class="o">=</span> <span class="m">1.2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># apply facet grid</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">facet_grid</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rows</span> <span class="o">=</span> <span class="nf">vars</span><span class="p">(</span><span class="n">icu_yn</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">cols</span> <span class="o">=</span> <span class="nf">vars</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># alter axis labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_y_continuous</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">labels</span> <span class="o">=</span> <span class="n">scales</span><span class="o">::</span><span class="nf">percent_format</span><span class="p">(</span><span class="n">accuracy</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><img src="/english/post/sod_homework3_files/figure-html/unnamed-chunk-11-2.png" width="672" />
+<p>The previous plot is an aggregate plot for all three years of data. What if we wanted to plot Case Fatality Ratio (CFR) over time? Write code that collects the relevant data from the database and plots the following</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">knitr</span><span class="o">::</span><span class="nf">include_graphics</span><span class="p">(</span><span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&#34;images&#34;</span><span class="p">,</span> <span class="s">&#34;cfr-icu-overtime.png&#34;</span><span class="p">),</span> <span class="n">error</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="../../../images/cfr-icu-overtime.png" alt=""><!-- --></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># store results to local tibble</span>
+</span></span><span class="line"><span class="cl"><span class="n">cdc_basedata_002</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">cdc_data</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># identify and group by relevant cols</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">case_month</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">age_group</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">sex</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">icu_yn</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">death_yn</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># get counts</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">case_count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">  <span class="c1"># collect data from connection</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">collect</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cdc_basedata_002</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1">#clean data for chart</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">filter</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">!</span><span class="n">age_group</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;Missing&#34;</span><span class="p">,</span> <span class="kc">NA</span><span class="p">,</span> <span class="s">&#34;0 - 17 years&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">sex</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;Female&#34;</span><span class="p">,</span> <span class="s">&#34;Male&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">icu_yn</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;No&#34;</span><span class="p">,</span> <span class="s">&#34;Yes&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by non death factors and calculate cfs</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">case_month</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">age_group</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">sex</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">icu_yn</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">death_count</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">case_count[death_yn</span> <span class="o">==</span> <span class="s">&#34;Yes&#34;</span><span class="n">]</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">case_count</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">case_count</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">cfr_pct</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="m">100</span> <span class="o">*</span> <span class="n">death_count</span> <span class="o">/</span> <span class="n">case_count</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Change yn</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">icu_yn</span> <span class="o">=</span> <span class="nf">case_when</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">icu_yn</span> <span class="o">==</span> <span class="s">&#34;Yes&#34;</span> <span class="o">~</span> <span class="s">&#34;ICU Admission&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">icu_yn</span> <span class="o">==</span> <span class="s">&#34;No&#34;</span> <span class="o">~</span> <span class="s">&#34;No ICU Admission&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add plot</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add aesthetics</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="n">cfr_pct</span> <span class="o">/</span> <span class="m">100</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="n">case_month</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">age_group</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">group</span> <span class="o">=</span> <span class="n">age_group</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># add line</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_line</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># apply theme and adjust font size</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">base_size</span> <span class="o">=</span> <span class="m">6</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">plot.background</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">panel.grid.major</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">panel.grid.minor</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">panel.border</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># set labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="kc">NULL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="kc">NULL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Covid CFR % by age group, sex and ICU Admission&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_text</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">. </span><span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">cfr_pct</span> <span class="o">!=</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">label</span> <span class="o">=</span> <span class="n">cfr_pct</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">hjust</span> <span class="o">=</span> <span class="m">-0.4</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">size</span> <span class="o">=</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># apply facet grid</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">facet_grid</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rows</span> <span class="o">=</span> <span class="nf">vars</span><span class="p">(</span><span class="n">icu_yn</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">cols</span> <span class="o">=</span> <span class="nf">vars</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># alter axis labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_y_continuous</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">labels</span> <span class="o">=</span> <span class="n">scales</span><span class="o">::</span><span class="nf">percent_format</span><span class="p">(</span><span class="n">accuracy</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><img src="/english/post/sod_homework3_files/figure-html/unnamed-chunk-12-2.png" width="672" />
+<p>For each patient, the dataframe also lists the patient&rsquo;s states and county <a href="https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code">FIPS code</a>. The CDC also has information on the <a href="https://www.cdc.gov/nchs/data_access/urban_rural.htm">NCHS Urban-Rural classification scheme for counties</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">urban_rural</span> <span class="o">&lt;-</span> <span class="nf">read_xlsx</span><span class="p">(</span><span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&#34;data&#34;</span><span class="p">,</span> <span class="s">&#34;NCHSURCodes2013.xlsx&#34;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">janitor</span><span class="o">::</span><span class="nf">clean_names</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">glimpse</span><span class="p">(</span><span class="n">urban_rural</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Rows: 3,149
+</span></span><span class="line"><span class="cl">## Columns: 9
+</span></span><span class="line"><span class="cl">## $ fips_code        &lt;dbl&gt; 1001, 1003, 1005, 1007, 1009, 1011, 1013, 1015, 1017,…
+</span></span><span class="line"><span class="cl">## $ state_abr        &lt;chr&gt; &#34;AL&#34;, &#34;AL&#34;, &#34;AL&#34;, &#34;AL&#34;, &#34;AL&#34;, &#34;AL&#34;, &#34;AL&#34;, &#34;AL&#34;, &#34;AL&#34;,…
+</span></span><span class="line"><span class="cl">## $ county_name      &lt;chr&gt; &#34;Autauga County&#34;, &#34;Baldwin County&#34;, &#34;Barbour County&#34;,…
+</span></span><span class="line"><span class="cl">## $ cbsa_title       &lt;chr&gt; &#34;Montgomery, AL&#34;, &#34;Daphne-Fairhope-Foley, AL&#34;, NA, &#34;B…
+</span></span><span class="line"><span class="cl">## $ cbsa_2012_pop    &lt;chr&gt; &#34;377149&#34;, &#34;190790&#34;, &#34;.&#34;, &#34;1136650&#34;, &#34;1136650&#34;, &#34;.&#34;, &#34;…
+</span></span><span class="line"><span class="cl">## $ county_2012_pop  &lt;chr&gt; &#34;55514&#34;, &#34;190790&#34;, &#34;27201&#34;, &#34;22597&#34;, &#34;57826&#34;, &#34;10474&#34;…
+</span></span><span class="line"><span class="cl">## $ x2013_code       &lt;dbl&gt; 3, 4, 6, 2, 2, 6, 6, 4, 5, 6, 2, 6, 6, 6, 6, 5, 4, 6,…
+</span></span><span class="line"><span class="cl">## $ x2006_code       &lt;dbl&gt; 3, 5, 5, 2, 2, 6, 6, 4, 5, 6, 2, 6, 6, 6, 6, 5, 4, 6,…
+</span></span><span class="line"><span class="cl">## $ x1990_based_code &lt;chr&gt; &#34;3&#34;, &#34;3&#34;, &#34;5&#34;, &#34;6&#34;, &#34;3&#34;, &#34;6&#34;, &#34;6&#34;, &#34;4&#34;, &#34;6&#34;, &#34;6&#34;, &#34;6&#34;…
+</span></span></code></pre></div><p>Each county belongs in seix diffent categoreis, with categories 1-4 being urban areas and categories 5-6 being rural, according to the following criteria captured in <code>x2013_code</code></p>
+<p>Category name</p>
+<ol>
+<li>Large central metro - 1 million or more population and contains the entire population of the largest principal city</li>
+<li>large fringe metro - 1 million or more poulation, but does not qualify as 1</li>
+<li>Medium metro - 250K - 1 million population</li>
+<li>Small metropolitan population &lt; 250K</li>
+<li>Micropolitan</li>
+<li>Noncore</li>
+</ol>
+<p>Can you query the database, extract the relevant information, and reproduce the following two graphs that look at the Case Fatality ratio (CFR) in different counties, according to their population?</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">knitr</span><span class="o">::</span><span class="nf">include_graphics</span><span class="p">(</span><span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&#34;images&#34;</span><span class="p">,</span> <span class="s">&#34;cfr-county-population.png&#34;</span><span class="p">),</span> <span class="n">error</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="../../../images/cfr-county-population.png" alt=""><!-- --></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># store results to local tibble</span>
+</span></span><span class="line"><span class="cl"><span class="n">cdc_basedata_003</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">cdc_data</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># identify and group by relevant cols</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">case_month</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">county_fips_code</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">death_yn</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># get case count</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">case_count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">  <span class="c1"># collect data from connection</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">collect</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># overwrite</span>
+</span></span><span class="line"><span class="cl"> <span class="n">cdc_basedata_003</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># join to urban_rural</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">inner_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">cdc_basedata_003</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="nf">select</span><span class="p">(</span><span class="n">urban_rural</span><span class="p">,</span> <span class="n">fips_code</span><span class="p">,</span> <span class="n">x2013_code</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;county_fips_code&#34;</span> <span class="o">=</span> <span class="s">&#34;fips_code&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cdc_basedata_003</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Categorise</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">category</span> <span class="o">=</span> <span class="nf">case_when</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">x2013_code</span> <span class="o">==</span> <span class="m">1</span> <span class="o">~</span> <span class="s">&#34;1. Large central metro&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">x2013_code</span> <span class="o">==</span> <span class="m">2</span> <span class="o">~</span> <span class="s">&#34;2. large fringe metro&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">x2013_code</span> <span class="o">==</span> <span class="m">3</span> <span class="o">~</span> <span class="s">&#34;3. Medium metro&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">x2013_code</span> <span class="o">==</span> <span class="m">4</span> <span class="o">~</span> <span class="s">&#34;4. Small metropolitan&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">x2013_code</span> <span class="o">==</span> <span class="m">5</span> <span class="o">~</span> <span class="s">&#34;5. Micropolitan&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">x2013_code</span> <span class="o">==</span> <span class="m">6</span> <span class="o">~</span> <span class="s">&#34;6. Noncore&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by non death factors and calculate cfs</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">case_month</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">category</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">death_count</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">case_count[death_yn</span> <span class="o">==</span> <span class="s">&#34;Yes&#34;</span><span class="n">]</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">case_count</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">case_count</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">cfr_pct</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="m">100</span> <span class="o">*</span> <span class="n">death_count</span> <span class="o">/</span> <span class="n">case_count</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># add plot</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># add aesthetics</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="n">cfr_pct</span> <span class="o">/</span> <span class="m">100</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="n">case_month</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">category</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">group</span> <span class="o">=</span> <span class="n">category</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># add line</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_line</span><span class="p">(</span><span class="n">linewidth</span> <span class="o">=</span> <span class="m">0.2</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># apply theme and adjust font size</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">base_size</span> <span class="o">=</span> <span class="m">6</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">plot.background</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">panel.grid.major</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">panel.grid.minor</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">panel.border</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># set labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="kc">NULL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="kc">NULL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Covid CFR % by county population&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_text</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">. </span><span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">cfr_pct</span> <span class="o">!=</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">label</span> <span class="o">=</span> <span class="n">cfr_pct</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">hjust</span> <span class="o">=</span> <span class="m">-0.4</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">vjust</span> <span class="o">=</span> <span class="m">-0.2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">size</span> <span class="o">=</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">guides</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="kc">FALSE</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># apply facet wrap</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">facet_wrap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">~</span> <span class="n">category</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">nrow</span> <span class="o">=</span> <span class="m">3</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">scales</span> <span class="o">=</span> <span class="s">&#34;free&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># alter axis labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_y_continuous</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">labels</span> <span class="o">=</span> <span class="n">scales</span><span class="o">::</span><span class="nf">percent_format</span><span class="p">(</span><span class="n">accuracy</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="c1">## Warning: The `&lt;scale&gt;` argument of `guides()` cannot be `FALSE`. Use &#34;none&#34; instead as
+</span></span></span><span class="line"><span class="cl"><span class="c1">## of ggplot2 3.3.4.
+</span></span></span><span class="line"><span class="cl"><span class="c1">## This warning is displayed once every 8 hours.
+</span></span></span><span class="line"><span class="cl"><span class="c1">## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+</span></span></span><span class="line"><span class="cl"><span class="c1">## generated.
+</span></span></span></code></pre></div><img src="/english/post/sod_homework3_files/figure-html/unnamed-chunk-14-2.png" width="672" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">knitr</span><span class="o">::</span><span class="nf">include_graphics</span><span class="p">(</span><span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&#34;images&#34;</span><span class="p">,</span> <span class="s">&#34;cfr-rural-urban.png&#34;</span><span class="p">),</span> <span class="n">error</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="../../../images/cfr-rural-urban.png" alt=""><!-- --></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># store results to local tibble</span>
+</span></span><span class="line"><span class="cl"><span class="n">cdc_basedata_004</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">cdc_data</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># filter out 2020-01</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">filter</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">case_month</span> <span class="o">!=</span> <span class="s">&#34;2020-01&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># identify and group by relevant cols</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">group_by</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">case_month</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">county_fips_code</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">death_yn</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># get case count</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">summarise</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">case_count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">  <span class="c1"># collect data from connection</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">collect</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># overwrite</span>
+</span></span><span class="line"><span class="cl"> <span class="n">cdc_basedata_004</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># join to urban_rural</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">inner_join</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">cdc_basedata_004</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="nf">select</span><span class="p">(</span><span class="n">urban_rural</span><span class="p">,</span> <span class="n">fips_code</span><span class="p">,</span> <span class="n">x2013_code</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;county_fips_code&#34;</span> <span class="o">=</span> <span class="s">&#34;fips_code&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cdc_basedata_004</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Categorise</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">category</span> <span class="o">=</span> <span class="nf">case_when</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">x2013_code</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Urban&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">x2013_code</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">6</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Rural&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># group by non death factors and calculate cfs</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">case_month</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">category</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">summarise</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">death_count</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">case_count[death_yn</span> <span class="o">==</span> <span class="s">&#34;Yes&#34;</span><span class="n">]</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">case_count</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">case_count</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">cfr_pct</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="m">100</span> <span class="o">*</span> <span class="n">death_count</span> <span class="o">/</span> <span class="n">case_count</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># add plot</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># add aesthetics</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="n">cfr_pct</span> <span class="o">/</span> <span class="m">100</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="n">case_month</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="n">category</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">group</span> <span class="o">=</span> <span class="n">category</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># add line</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_line</span><span class="p">(</span><span class="n">linewidth</span> <span class="o">=</span> <span class="m">0.2</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># apply theme and adjust font size</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_light</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">base_size</span> <span class="o">=</span> <span class="m">6</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">plot.background</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">panel.grid.major</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">panel.grid.minor</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">panel.border</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># set labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="kc">NULL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="kc">NULL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">title</span> <span class="o">=</span> <span class="s">&#34;Covid CFR % by Urban vs Rural&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="s">&#34;Counties&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_text</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">. </span><span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">cfr_pct</span> <span class="o">!=</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="nf">aes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">label</span> <span class="o">=</span> <span class="n">cfr_pct</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">hjust</span> <span class="o">=</span> <span class="m">-0.4</span>
+</span></span><span class="line"><span class="cl">      <span class="p">,</span><span class="n">vjust</span> <span class="o">=</span> <span class="m">-0.2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">size</span> <span class="o">=</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="s">&#34;black&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># alter axis labels</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_y_continuous</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">labels</span> <span class="o">=</span> <span class="n">scales</span><span class="o">::</span><span class="nf">percent_format</span><span class="p">(</span><span class="n">accuracy</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><img src="/english/post/sod_homework3_files/figure-html/unnamed-chunk-15-2.png" width="672" />
+<h1 id="money-in-us-politics">Money in US politics</h1>
+<p>In the United States, <a href="https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs"><em>&ldquo;only American citizens (and immigrants with green cards) can contribute to federal politics, but the American divisions of foreign companies can form political action committees (PACs) and collect contributions from their American employees.&rdquo;</em></a></p>
+<p>We will scrape and work with data foreign connected PACs that donate to US political campaigns. The data for foreign connected PAC contributions in the 2022 election cycle can be found at <a href="https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs/2022">https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs/2022</a>. Then, we will use a similar approach to get data such contributions from previous years so that we can examine trends over time.</p>
+<p>All data come from <a href="https://www.opensecrets.org">OpenSecrets.org</a>, a <em>&ldquo;website tracking the influence of money on U.S. politics, and how that money affects policy and citizens&rsquo; lives&rdquo;</em>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">robotstxt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">paths_allowed</span><span class="p">(</span><span class="s">&#34;https://www.opensecrets.org&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] TRUE
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">base_url</span> <span class="o">&lt;-</span> <span class="s">&#34;https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs/2022&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">contributions_tables</span> <span class="o">&lt;-</span> <span class="n">base_url</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">read_html</span><span class="p">()</span>
+</span></span></code></pre></div><ul>
+<li>
+<p>First, make sure you can scrape the data for 2022. Use janitor::clean_names() to rename variables scraped using <code>snake_case</code> naming.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">janitor</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## Attaching package: &#39;janitor&#39;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## The following objects are masked from &#39;package:stats&#39;:
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">##     chisq.test, fisher.test
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># create funtion to use later</span>
+</span></span><span class="line"><span class="cl"><span class="n">scrape_contributions_table</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">html</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># store tables</span>
+</span></span><span class="line"><span class="cl">  <span class="n">tables</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="n">html</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">      <span class="nf">html_nodes</span><span class="p">(</span><span class="n">css</span> <span class="o">=</span> <span class="s">&#34;table&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">      <span class="nf">html_table</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># save table 1 to df</span>
+</span></span><span class="line"><span class="cl">  <span class="n">table</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tables[[1]]</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">clean_names</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># return df</span>
+</span></span><span class="line"><span class="cl">  <span class="n">table</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># use base_url to check if it works</span>
+</span></span><span class="line"><span class="cl"><span class="n">contributions</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scrape_contributions_table</span><span class="p">(</span><span class="n">contributions_tables</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">contributions</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 215 × 5
+</span></span><span class="line"><span class="cl">##    pac_name_affiliate                  country_of_origin_pa…¹ total dems  repubs
+</span></span><span class="line"><span class="cl">##    &lt;chr&gt;                               &lt;chr&gt;                  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; 
+</span></span><span class="line"><span class="cl">##  1 Accenture (Accenture)               Ireland/Accenture plc  $3,0… $0    $3,000
+</span></span><span class="line"><span class="cl">##  2 Acreage Holdings                    Canada/Acreage Holdin… $0    $0    $0    
+</span></span><span class="line"><span class="cl">##  3 Air Liquide America                 France/L&#39;Air Liquide … $17,… $14,… $2,500
+</span></span><span class="line"><span class="cl">##  4 Airbus Group                        Netherlands/Airbus Gr… $193… $82,… $111,…
+</span></span><span class="line"><span class="cl">##  5 Alexion Pharmaceuticals (AstraZene… UK/AstraZeneca PLC     $186… $104… $82,2…
+</span></span><span class="line"><span class="cl">##  6 Alkermes Inc                        Ireland/Alkermes Plc   $84,… $34,… $50,0…
+</span></span><span class="line"><span class="cl">##  7 Allianz of America (Allianz)        Germany/Allianz AG Ho… $31,… $20,… $11,0…
+</span></span><span class="line"><span class="cl">##  8 AMG Vanadium                        Netherlands/AMG Advan… $2,5… $0    $2,525
+</span></span><span class="line"><span class="cl">##  9 Anheuser-Busch (Anheuser-Busch InB… Belgium/Anheuser-Busc… $457… $218… $239,…
+</span></span><span class="line"><span class="cl">## 10 AON Corp (AON plc)                  UK/AON PLC             $98,… $52,… $46,5…
+</span></span><span class="line"><span class="cl">## # ℹ 205 more rows
+</span></span><span class="line"><span class="cl">## # ℹ abbreviated name: ¹​country_of_origin_parent_company
+</span></span></code></pre></div></li>
+</ul>
+<p>Clean the data:</p>
+<ul>
+<li>Write a function that converts contribution amounts in <code>total</code>, <code>dems</code>, and <code>repubs</code> from character strings to numeric values.</li>
+<li>Separate the <code>country_of_origin_parent_company</code> into two such that country and parent company appear in different columns for country-level analysis.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># write a function to parse_currency</span>
+</span></span><span class="line"><span class="cl"><span class="n">parse_currency</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># remove dollar signs</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">str_remove</span><span class="p">(</span><span class="s">&#34;\\$&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># remove all occurrences of commas</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">str_remove_all</span><span class="p">(</span><span class="s">&#34;,&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># convert to numeric</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">as.numeric</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># clean country/parent co and contributions </span>
+</span></span><span class="line"><span class="cl"><span class="n">contributions</span> <span class="o">&lt;-</span> <span class="n">contributions</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">separate</span><span class="p">(</span><span class="n">country_of_origin_parent_company</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">           <span class="n">into</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;country&#34;</span><span class="p">,</span> <span class="s">&#34;parent&#34;</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">           <span class="n">sep</span> <span class="o">=</span> <span class="s">&#34;/&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">           <span class="n">extra</span> <span class="o">=</span> <span class="s">&#34;merge&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">total</span> <span class="o">=</span> <span class="nf">parse_currency</span><span class="p">(</span><span class="n">total</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dems</span> <span class="o">=</span> <span class="nf">parse_currency</span><span class="p">(</span><span class="n">dems</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repubs</span> <span class="o">=</span> <span class="nf">parse_currency</span><span class="p">(</span><span class="n">repubs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li>
+<p>Write a function called <code>scrape_pac()</code> that scrapes information from the Open Secrets webpage for foreign-connected PAC contributions in a given year. This function should</p>
+<ul>
+<li>have one input: the URL of the webpage and should return a data frame.</li>
+<li>add a new column to the data frame for <code>year</code>. We will want this information when we ultimately have data from all years, so this is a good time to keep track of it. Our function doesn&rsquo;t take a year argument, but the year is embedded in the URL, so we can extract it out of there, and add it as a new column. Use the <code>str_sub()</code> function to extract the last 4 characters from the URL. You will probably want to look at the help for this function to figure out how to specify &ldquo;last 4 characters&rdquo;.</li>
+</ul>
+</li>
+<li>
+<p>Define the URLs for 2022, 2020, and 2000 contributions. Then, test your function using these URLs as inputs. Does the function seem to do what you expected it to do?</p>
+</li>
+<li>
+<p>Construct a vector called <code>urls</code> that contains the URLs for each webpage that contains information on foreign-connected PAC contributions for a given year.</p>
+</li>
+<li>
+<p>Map the <code>scrape_pac()</code> function over <code>urls</code> in a way that will result in a data frame called <code>contributions_all</code>.</p>
+</li>
+<li>
+<p>Write the data frame to a csv file called <code>contributions-all.csv</code> in the <code>data</code> folder.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">scrape_pac</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">url</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">contributions_tables</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="n">url</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">read_html</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">contributions</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">scrape_contributions_table</span><span class="p">(</span><span class="n">contributions_tables</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">contributions</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="n">contributions</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">separate</span><span class="p">(</span><span class="n">country_of_origin_parent_company</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">               <span class="n">into</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;country&#34;</span><span class="p">,</span> <span class="s">&#34;parent&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">               <span class="n">sep</span> <span class="o">=</span> <span class="s">&#34;/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">               <span class="n">extra</span> <span class="o">=</span> <span class="s">&#34;merge&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">mutate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">total</span> <span class="o">=</span> <span class="nf">parse_currency</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">,</span><span class="n">dems</span> <span class="o">=</span> <span class="nf">parse_currency</span><span class="p">(</span><span class="n">dems</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">,</span><span class="n">repubs</span> <span class="o">=</span> <span class="nf">parse_currency</span><span class="p">(</span><span class="n">repubs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">,</span><span class="n">year</span> <span class="o">=</span> <span class="nf">str_sub</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="m">-4</span><span class="p">,</span> <span class="m">-1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">contributions</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">urls</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs/2022&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="s">&#34;https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs/2021&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="s">&#34;https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs/2020&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span><span class="s">&#34;https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs/2019&#34;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">contributions_all</span> <span class="o">&lt;-</span> <span class="nf">map_df</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="n">scrape_pac</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">write.csv</span><span class="p">(</span><span class="n">contributions_all</span><span class="p">,</span> <span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&#34;data&#34;</span><span class="p">,</span> <span class="s">&#34;contributions_all.csv&#34;</span><span class="p">),</span> <span class="n">row.names</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><h1 id="scraping-consulting-jobs">Scraping consulting jobs</h1>
+<p>The website <a href="https://www.consultancy.uk/jobs">https://www.consultancy.uk/jobs/</a> lists job openings for consulting jobs.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">robotstxt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">paths_allowed</span><span class="p">(</span><span class="s">&#34;https://www.consultancy.uk&#34;</span><span class="p">)</span> <span class="c1">#is it ok to scrape?</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl"> www.consultancy.uk
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] TRUE
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">base_url</span> <span class="o">&lt;-</span> <span class="s">&#34;https://www.consultancy.uk/jobs/page/1&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># store as function to use again</span>
+</span></span><span class="line"><span class="cl"><span class="n">scrape_listings_table</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">base_url</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">listings_html</span> <span class="o">&lt;-</span> <span class="n">base_url</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">read_html</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># store tables</span>
+</span></span><span class="line"><span class="cl">  <span class="n">tables</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="n">listings_html</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">      <span class="nf">html_nodes</span><span class="p">(</span><span class="n">css</span> <span class="o">=</span> <span class="s">&#34;table&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">      <span class="nf">html_table</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># save table 1 to df</span>
+</span></span><span class="line"><span class="cl">  <span class="n">table</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tables[[1]]</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">clean_names</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># definte output</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">return</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># return df</span>
+</span></span><span class="line"><span class="cl"><span class="nf">scrape_listings_table</span><span class="p">(</span><span class="n">base_url</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## # A tibble: 45 × 4
+</span></span><span class="line"><span class="cl">##    job                                               firm  functional_area type 
+</span></span><span class="line"><span class="cl">##    &lt;chr&gt;                                             &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;
+</span></span><span class="line"><span class="cl">##  1 &#34;Consultant Treasury Technology\nZanders&#34;         Zand… &#34;Corporate Fin… Job  
+</span></span><span class="line"><span class="cl">##  2 &#34;Director - Supply Chain Strategy &amp; Transformati… Capg… &#34;Strategy\n+1\… Job  
+</span></span><span class="line"><span class="cl">##  3 &#34;Senior Consultant | Energy &amp; Natural Resources … FTI … &#34;Unknown&#34;       Job  
+</span></span><span class="line"><span class="cl">##  4 &#34;Business Analyst\nHumatica&#34;                      Huma… &#34;Data Science&#34;  Job  
+</span></span><span class="line"><span class="cl">##  5 &#34;Data Scientist\nDigital Power&#34;                   Digi… &#34;Data Science&#34;  Job  
+</span></span><span class="line"><span class="cl">##  6 &#34;Senior Analyst\nCIL Management Consultants&#34;      CIL … &#34;Strategy\n+1\… Job  
+</span></span><span class="line"><span class="cl">##  7 &#34;Consultant Roles (at all levels) – IT Advisory\… Maso… &#34;Digital\n+4\n… Job  
+</span></span><span class="line"><span class="cl">##  8 &#34;Healthcare consultant\nDevelop Consulting&#34;       Deve… &#34;Lean &amp; SixSig… Job  
+</span></span><span class="line"><span class="cl">##  9 &#34;Senior Strategist\nThe Upside&#34;                   The … &#34;Strategy\n+2\… Job  
+</span></span><span class="line"><span class="cl">## 10 &#34;Intermediate Quantity Surveyor\nPanoptic Consul… Pano… &#34;Project Manag… Job  
+</span></span><span class="line"><span class="cl">## # ℹ 35 more rows
+</span></span></code></pre></div><p>Identify the CSS selectors in order to extract the relevant information from this page, namely</p>
+<ol>
+<li>job</li>
+<li>firm</li>
+<li>functional area</li>
+<li>type</li>
+</ol>
+<p>Can you get all pages of ads, and not just the first one, <code>https://www.consultancy.uk/jobs/page/1</code> into a dataframe?</p>
+<ul>
+<li>
+<p>Write a function called <code>scrape_jobs()</code> that scrapes information from the webpage for consulting positions. This function should</p>
+<ul>
+<li>
+<p>have one input: the URL of the webpage and should return a data frame with four columns (variables): job, firm, functional area, and type</p>
+</li>
+<li>
+<p>Test your function works with other pages too, e.g., <a href="https://www.consultancy.uk/jobs/page/2">https://www.consultancy.uk/jobs/page/2</a>. Does the function seem to do what you expected it to do?</p>
+</li>
+<li>
+<p>Given that you have to scrape <code>...jobs/page/1</code>, <code>...jobs/page/2</code>, etc., define your URL so you can join multiple stings into one string, using <code>str_c()</code>. For instnace, if <code>page</code> is 5, what do you expect the following code to produce? <em>you need to remove the 1 from the base url and then append the page number. This could would look at page 15!!</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">base_url &lt;- &#34;https://www.consultancy.uk/jobs/page/1&#34;
+</span></span><span class="line"><span class="cl">url &lt;- str_c(base_url, page)
+</span></span></code></pre></div><ul>
+<li>
+<p>Construct a vector called <code>pages</code> that contains the numbers for each page available</p>
+</li>
+<li>
+<p>Map the <code>scrape_jobs()</code> function over <code>pages</code> in a way that will result in a data frame called <code>all_consulting_jobs</code>.</p>
+</li>
+<li>
+<p>Write the data frame to a csv file called <code>all_consulting_jobs.csv</code> in the <code>data</code> folder.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># store as function to use again</span>
+</span></span><span class="line"><span class="cl"><span class="n">scrape_jobs</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">url</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="n">listings_html</span> <span class="o">&lt;-</span> <span class="n">url</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">read_html</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># store tables</span>
+</span></span><span class="line"><span class="cl">  <span class="n">tables</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="n">listings_html</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">      <span class="nf">html_nodes</span><span class="p">(</span><span class="n">css</span> <span class="o">=</span> <span class="s">&#34;table&#34;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">      <span class="nf">html_table</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># save table 1 to df</span>
+</span></span><span class="line"><span class="cl">  <span class="n">table</span> <span class="o">&lt;-</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tables[[1]]</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">clean_names</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># definte output</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">return</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># make vector for all available pages</span>
+</span></span><span class="line"><span class="cl"><span class="n">pages</span> <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># create urls from pages</span>
+</span></span><span class="line"><span class="cl"><span class="n">base_url</span> <span class="o">=</span> <span class="s">&#34;https://www.consultancy.uk/jobs/page/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">urls</span> <span class="o">&lt;-</span> <span class="nf">str_c</span><span class="p">(</span><span class="n">base_url</span><span class="p">,</span> <span class="n">pages</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># map urls with scrape_jobs output</span>
+</span></span><span class="line"><span class="cl"><span class="n">listings_all</span> <span class="o">&lt;-</span> <span class="nf">map_df</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="n">scrape_jobs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># write to csv</span>
+</span></span><span class="line"><span class="cl"><span class="nf">write.csv</span><span class="p">(</span><span class="n">listings_all</span><span class="p">,</span> <span class="n">here</span><span class="o">::</span><span class="nf">here</span><span class="p">(</span><span class="s">&#34;data&#34;</span><span class="p">,</span> <span class="s">&#34;all_consulting_jobs.csv&#34;</span><span class="p">),</span> <span class="n">row.names</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+</span></span></code></pre></div><h1 id="details">Details</h1>
+<ul>
+<li>Who did you collaborate with: n/a</li>
+<li>Approximately how much time did you spend on this problem set: a few hours</li>
+<li>What, if anything, gave you the most trouble: it took me a while to figure out the rvest package</li>
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Seán O&#39;Doherty
+        2023
+      
+    </li>
+    
+      <li class="footer__item">
+        <a
+          class="link"
+          href="/imprint/"
+          
+          title=""
+        >
+          imprint
+        </a>
+      </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
