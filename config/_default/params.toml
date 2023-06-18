@@ -71,10 +71,5 @@ url = "https://github.com/seanodoherty"
 # title = "instagram"
 # url = "https://www.instagram.com/"
 
-[[socialIcons]]
-icon = "fas fa-envelope"
-title = "e-mail"
-url = "sodoherty.mba2024@london.edu"
-
 [mermaid]
 # enable = true
